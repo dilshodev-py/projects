@@ -1,0 +1,18 @@
+Makefile      - commandalar listini qurish
+BotCommand    - bot commandalar ro'yhatini shakilantirish
+Contact       - Contact yasash uchun
+startup       - bot ishga tushishidan oldin vazifa bajarish
+shutdown      - bot o'chib bo'lgandan kyin vazifa bajarish
+CallbackQuery - inline buttonlarni boshqarish
+Middleware    -
+Storage       - KeyBuilder , RedisStorage
+WebApp        - telegram botda saitni ochish
+i18n          - multi_language
+
+
+
+
+
+
+
+

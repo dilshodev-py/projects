@@ -1,0 +1,32 @@
+revision:
+           DATABASE
+       DBMS                           RDBMS
+       nosql                          sql
+       gor, ver                       ver
+       file , key , value , graph     jadval
+       mobile                         web
+
+       apachi , mongodb , spring      postgersql , sqlite
+       casandra                       oracle , MySql
+
+
+DDL - create , alter , truncate , set , drop
+DML - insert , update , delete , select
+DCL - grant , revoke
+TCL - savepoit , begin , rollback , commit
+
+==================== table =======================
+create table table_name (
+    column_name1 type constraint,
+    column_name1 type constraint,
+    column_name1 type constraint,
+    column_name1 type constraint,
+    column_name1 type constraint,
+    column_name1 type constraint,
+    ...
+);
+alter table table_name [rename , drop , add , alter] ;
+
+truncate table table_name ;
+drop table table_name;
+set timezone = 'Asia/Tashkent'

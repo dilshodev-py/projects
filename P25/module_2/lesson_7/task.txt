@@ -1,0 +1,190 @@
+file:
+    "r" - Read - Standart qiymat. Faylni o'qish uchun ochadi, agar fayl mavjud bo'lmasa, xato
+
+    "a" - Append - Faylga Qo'shish uchun faylni ochadi, agar fayl mavjud bo'lmasa, uni yaratadi
+
+    "w" - Write - Faylga yozish uchun ochadi, agar fayl mavjud bo'lmasa, uni yaratadi
+
+    "x" - Create - Belgilangan faylni yaratadi, agar fayl mavjud bo'lsa, xatoni qaytaradi
+
+
+code :
+    file_variable = open(file_path , mode = ['r' , 'a' , 'w' , 'x'])
+    file_variable.read()       # 'r'
+    file_variable.readline() #
+    file_variable.readlines()  #
+    file_variable.write()      # 'a' , 'w'
+    file_variable.seek(number) # cursor joyini belgilash
+    file_variable.close()      # ochilgan faylni yopish !
+
+
+
+task-
+    inputdan ixtiyoriy musbat son qabul qilinsin
+    va 0 dan kiritilgan songacha bo'lgan judt sonlarni fayl ga yozing
+
+
+task-
+    fayl ichida sonlarni probel bilan ajratib yozib olamiz !
+    va bu sonlardan faqat toq sonlar yozilib qoladigan qilinsin !
+
+    example:
+         45 62 43 21 23 46
+
+         45 43 21 23
+
+task-
+    sample.txt faylini qator-qator o'qing va har bir satrni alohida chop eting.
+
+
+task-
+    sample.txt faylidan 'satr' so'zini o'z ichiga olgan barcha satrlarni toping va konsolga chop eting.
+
+
+task-
+    data.txt nomli fayl yarating va unga quyidagi ma'lumotlarni kiriting:
+
+    ism,yosh
+    Ali,25
+    Vali,30
+    Sarvar,22
+
+task-
+    data.txt faylidan yosh qiymati 25 dan katta bo'lgan shaxslarni tanlang
+    va bu ma'lumotni filtered_data.txt fayliga yozing.
+
+
+
+
+task-
+    sample.txt faylidagi barcha matnni kichik harflarga o'tkazib, qayta yozing.
+
+
+task-
+    students.txt nomli matn faylini yarating va unga quyidagi ma'lumotlarni kiriting
+
+
+task-
+    students.txt faylidan faqat bahosi 80 dan yuqori bo'lgan talabalarni o'qing
+    va yangi top_students.txt fayliga yozing.
+
+
+task-
+    students.txt faylidan barcha talabalar baholarining o'rtacha qiymatini hisoblang va konsolga chop eting.
+
+
+task-
+    students.txt faylidan "Javohir" ismini toping va uning bahosini 75 ga yangilang, so'ngra faylni qayta yozing.
+
+
+task-
+    students.txt faylidan "Laylo" ismli talabani toping va uning bahosini konsolga chop eting.
+
+
+
+task-
+    students.txt faylidagi ma'lumotlarni baholarni kichikdan katta tomonga saralab, qayta faylga yozing.
+
+
+
+task-
+    books.txt nomli matn faylini yarating va unga quyidagi ma'lumotlarni kiriting:
+
+    Python Programming, John Zelle
+    Automate the Boring Stuff, Al Sweigart
+    Clean Code, Robert C. Martin
+    The Pragmatic Programmer, Andrew Hunt
+    Code Complete, Steve McConnell
+
+
+task-
+    books.txt faylidan "Robert C. Martin" muallifi tomonidan yozilgan kitoblarni o'qing
+    va yangi martin_books.txt fayliga yozing.
+
+
+task-
+    books.txt faylidan barcha kitoblar sonini hisoblang va konsolga chop eting.
+
+
+task-
+    books.txt faylidan "Automate the Boring Stuff" nomli kitobni toping
+    va uning nomini "Automate the Boring Stuff with Python" ga yangilang, so'ngra faylni qayta yozing.
+
+
+
+task-
+    books.txt faylidan "Clean Code" nomli kitobni toping va uning muallifini konsolga chop eting.
+
+
+task-
+    books.txt faylidagi ma'lumotlarni kitob nomlari bo'yicha alifbo tartibida saralab, qayta faylga yozing.
+
+
+task-
+
+    books.txt faylidagi jami so'zlar sonini hisoblang va konsolga chop eting.
+
+
+task-
+    books.txt faylidagi har bir muallifning ismini va
+    familiyasini teskari qilib, faylni qayta yozing (masalan, "John Zelle" -> "Zelle John").
+
+
+task-
+    employees.txt nomli matn faylini yarating va unga quyidagi ma'lumotlarni kiriting:
+    name , role , salary
+
+
+    John Doe, Manager, 5000
+    Jane Smith, Developer, 4500
+    Emily Davis, Designer, 4000
+    Michael Brown, Analyst, 4200
+    Sarah Johnson, Tester, 3800
+
+
+task-
+    employees.txt faylidan faqat maoshi 4000 dan yuqori bo'lgan xodimlarni o'qing
+    va yangi high_salary_employees.txt fayliga yozing.
+
+task-
+    employees.txt faylidan barcha xodimlarning o'rtacha maoshini hisoblang va konsolga chop eting.
+
+
+task-
+    employees.txt faylidan "Sarah Johnson" ismini toping va uning maoshini 4000 ga yangilang,
+    so'ngra faylni qayta yozing.
+
+
+task-
+    employees.txt faylidan "Michael Brown" ismini toping va uning lavozimini konsolga chop eting.
+
+
+task-
+    employees.txt faylidagi xodimlarni lavozimlariga ko'ra guruhlab,
+    har bir lavozim uchun alohida faylga yozing (masalan, Manager_employees.txt).
+
+
+task-
+    menu.txt nomli matn faylini yarating va unga quyidagi ma'lumotlarni kiriting:
+
+
+    Pizza, 8.99
+    Burger, 5.49
+    Salad, 4.99
+    Soda, 1.99
+    Coffee, 2.99
+
+
+task-
+    menu.txt faylidan "Soda" nomli taomni toping va uning narxini 2.49 ga yangilang,
+    so'ngra faylni qayta yozing.
+
+
+task-
+    menu.txt faylidan "Coffee" nomli taomni toping va uning narxini konsolga chop eting.
+
+
+
+
+
+

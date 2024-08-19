@@ -1,0 +1,14 @@
+Data Structure
+    1. Stack
+    2. Queue
+    3. LinkedList
+
+
+"""Mavzu
+stack - chiziqli malumot saqlash
+queue - chiziqli malumot saqlash
+Linked list
+"""
+# stack - array , collections.deque (FILO or LIFO)
+# queue - array , queue.Queue (FIFO or LILO)
+# Linked - Node

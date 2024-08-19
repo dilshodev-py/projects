@@ -1,0 +1,27 @@
+1. Operators(
+    Arithmetic -> https://www.postgresql.org/docs/9.3/functions-math.html
+    Logic -> or , and , not
+    Taqoslash -> https://www.postgresql.org/docs/current/functions-comparison.html)
+2. type casting
+3. dvdrental dump zip file
+4. PostgreSQL fundamentals
+
+ table and column aliases
+ where
+ order by
+ fetch
+ limit
+ in
+ between
+ like
+ ilike
+ is null
+ group by
+ select distinct
+
+
+1) sudo -i -u postgres psql
+        create database dvdrental;
+        exit
+2) sudo -u postgres pg_restore -d dvdrental -f dvdrental.tar
+

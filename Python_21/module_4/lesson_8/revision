@@ -1,0 +1,44 @@
+1. Functions(aggregate, math, String, Date)
+    REPLACE(100 ,0 , 1)
+    CONCAT      join()
+    LOWER()     lower()
+    UPPER()     upper()
+    TRIM        strip()
+    LENGTH      len()
+    MOD()       %
+    POWER()     **
+    sqrt        sqrt
+    SIGN        -1
+
+
+2. PL/PgSql functions
+
+    create function function_name(arg1 type , arg2 type)
+    returns [setof , table , int , varchar ....]
+    language plpgsql
+    as
+
+    $$
+        declare
+            variable1 type;
+            variable2 type;
+            variable3 type;
+        begin
+            -- return query select  query
+            -- select col into variable1  query
+            return variable1
+        end;
+
+    $$;
+
+3. backup
+
+    Downloads/papka1
+
+    command : sudo chown "$postgres:postgres" Downloads/papka1
+    command : sudo chmod a+x Downloads/papka1
+
+    sudo -u postgres pg_dump -F tar -f 'location + file_name.tar' -d database_name
+
+    sudo -u postgres pg_restore -d database_name -f 'location + file_name'
+

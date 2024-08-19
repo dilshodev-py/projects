@@ -1,0 +1,68 @@
+-- 1981  ls
+-- 1982  cd Downloads/
+-- 1983  LS
+-- 1984  ls
+-- 1985  clear
+-- 1986  mv users1.sql /tmp
+-- 1987  cd /tmp
+-- 1988  ls
+-- 1989  sudo -u postgres psql lesson_6 < users1.sql
+-- 1990  history
+-- 1991  ls
+-- 1992  mv users1.sql ~/Downloads/
+-- 1993  cd ~/Downloads/
+-- 1994  ls
+
+cd /tmp
+mv file_name path
+
+-- Subquery, ANY, ALL, EXISTS, Set
+
+-- select p.name
+-- from projects p
+-- where exists(select 1 from users u where p.manager_id = u.id and u.role = 'manager') order by p.name;
+
+
+-- role manager bo'lgan userlarni projectlarini nomlari chiqarilsin ! Subquery orqali bajarilsin
+--
+-- select current_timestamp;
+--
+-- set timezone = 'Asia/Tashkent';
+--
+-- select current_user;
+--
+set role postgres;
+
+
+select
+    case
+       when project_id % 2 = 0 then 'juft'
+    else 'toq' end
+
+
+from projects;
+
+-- coalesce(null , 1)
+
+-- select coalesce(column_name , 'botir')
+
+
+select nullif(select,select);
+
+
+
+-- select '10'::integer;
+-- select cast('10' as integer);
+
+
+
+select address_id , coalesce(address2 , 'tashkent') , address2 from address limit 5;
+
+-- select count(*) from projects;
+
+-- delete from projects p where exists(select 1 from users u where u.role = 'employee' and p.manager_id = u.id )
+
+
+-- select u.username ,
+--        string_agg(p.name , ' , ') from projects p RIGHT join users u on p.manager_id = u.id where u.email is NULL group by u.id;
+

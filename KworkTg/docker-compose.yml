@@ -1,0 +1,56 @@
+version: '3.11'
+
+services:
+  kworkbot:
+    build: .
+    container_name: kwork_bot
+    restart: always
+    environment:
+      BOT_TOKEN: 6385276113:AAFTkoPVDR3xsV6tQ8PF-4n0h_s20RI6KWI
+      DB_NAME: postgres
+      DB_PASSWORD: 1
+      DB_HOST: pg
+      DB_PORT: 5432
+      DB_USER: postgres
+      TZ: Asia/Tashkent
+    depends_on:
+      - pg
+    command: python3 main.py
+
+  pg:
+    image: postgres:alpine
+    restart: always
+    container_name: kwork_postgres
+    environment:
+      POSTGRES_PASSWORD: 1
+      TZ: Asia/Tashkent
+    ports:
+      - 5432:5432
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+
+
+volumes:
+  pg_data :
+
+
+
+project code start
+1) Dockerfile
+2) docker-compose.yml
+3) docker hub joylash
+4) git hub ga joylash
+5) to seerver clone from git hub
+6) docker compose up
+
+
+
+redis
+
+
+
+
+
+
+
+

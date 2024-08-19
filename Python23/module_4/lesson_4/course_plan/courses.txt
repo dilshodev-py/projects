@@ -1,0 +1,6 @@
+insert into courses (name, created_at) values ('Python', '2019-11-02');
+insert into courses (name, created_at) values ('Java', '2021-10-06');
+insert into courses (name, created_at) values ('C#', '2022-01-16');
+insert into courses (name, created_at) values ('C++', '2023-02-21');
+insert into courses (name, created_at) values ('Flutter', '2023-02-01');
+

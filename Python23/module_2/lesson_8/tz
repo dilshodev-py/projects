@@ -1,0 +1,157 @@
+======================= database ============================
+
+      admins.txt ->      ,     students.txt    ,     groups.txt    ,    students_groups.txt
+
+=====================================================================
+
+      qila oladigan ishlar !
+               Admin:
+                   add_student
+                   show_students
+               Student:
+                   Activ course show map
+                   add_course
+                   student_corse show map
+
+
+
+===============================================================
+
+    class attributes
+
+               Admin:
+                   id
+                   fullname
+                   phone
+                   username
+                   password
+
+               Student :
+                   id
+                   first_name
+                   last_name
+                   birth_day
+                   phone  # Unique
+                   username
+                   password
+
+
+               course:
+                   courseID
+                   name
+                   number of students
+                   is_active  # True or False
+
+               students_groups:
+                   id
+                   student_id
+                   group_id
+
+
+
+
+========================== is_auth ===============================
+
+main()
+1) Register
+2) Login
+3) exit
+
+                ----------------------- Register -----------------------
+                >>> fullname
+                >>> phone
+                >>> username # unique
+                >>> password
+
+                ----------------------- Login --------------------------
+                is_admin[yes/No]>>>
+                >>> username
+                >>> password
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+
+======================= Admin Account ========================
+Welcome Admin fullname!
+1) add course
+2) students map
+3) logout
+
+                                ------------------------- add course --------------------------
+                                >>> name
+                                >>> number_of_students # check 0<number_of_students
+                                add
+
+
+
+
+
+                                ------------------------- students map --------------------------
+                                id) group name
+                                id) group name
+                                id) group name
+                                id) group name
+                                0) back
+                                >>> id
+                                id == 0
+                                <-Admin Account
+
+
+                                id) student all attribute
+                                id) student all attribute
+                                id) student all attribute
+                                id) student all attribute
+                                id) student all attribute
+                                id) student all attribute
+                                <-Admin Account
+
+                                ----------------- logout --------------------
+                                session_user = None
+                                <-auth
+
+
+
+
+======================= Student Account ========================
+Welcome Admin fullname!
+1) Active course
+2) add course
+3) my course
+4) logout
+
+                             ----------------- Active course --------------------
+                             id) group name
+                             id) group name
+                             id) group name
+                             id) group name
+                             id) group name
+                             <-Student Account
+
+                             ----------------- add course --------------------
+                             id) group name
+                             id) group name
+                             id) group name
+                             id) group name
+                             id) group name
+                             0) <-back
+                             >>> id
+                             id == 0
+                                <- student account
+
+                             save - students_groups.txt
+                             <- Student Account
+
+                             ----------------- my course --------------------
+                             id) group name
+                             id) group name
+                             id) group name
+                             id) group name
+                             <- student account
+
+                             ----------------- logout --------------------
+                             <- auth
+
+
+
+

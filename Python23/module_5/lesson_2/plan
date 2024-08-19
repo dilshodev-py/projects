@@ -1,0 +1,55 @@
+getChatMemberCount    - guruh yoki kanal azolar soni olish
+banChatMember         - azolarni ban qilish
+unbanChatMember       - azolarni ban dan olish
+banChatSenderChat     - azolarni guruhga yoki kanalga xabar yuboromidigan qilib qo'yish
+unbanChatSenderChat   - azolarni guruhga yoki kanalga xabar yuboromidiganni olib qo'yish
+getChatAdministrators - Chatda bot bo'lmagan administratorlar ro'yxatini olish uchun ushbu usuldan foydalaning.
+getChatMember         - Chat a'zosi haqida ma'lumot olish uchun ushbu usuldan foydalaning
+getFile               - file_id orqali fileni yuklash
+getUserProfilePhotos  - Foydalanuvchi uchun profil rasmlari ro'yxatini olish uchun ushbu usuldan foydalaning.
+restrictChatMember    - Superguruhdagi foydalanuvchini cheklash uchun ushbu usuldan foydalaning
+leaveChat             - Botingiz guruh, superguruh yoki kanalni tark etishi uchun ushbu usuldan foydalaning.
+pinChatMessage        - Chatdagi qadalgan xabarlar ro'yxatiga xabar qo'shish uchun ushbu usuldan foydalaning.
+promoteChatMember     - Superguruh yoki kanaldagi foydalanuvchini huquq berish yoki huquqni olish uchun ushbu usuldan foydalaning.
+sendPoll              - Vopros so'rovnoma yuborish uchun ushbu usuldan foydalaning.
+setChatMenuButton     - Shaxsiy chatda botning menyu tugmachasini yoki standart menyu tugmasini o'zgartirish uchun ushbu usuldan foydalaning.
+sendDocument          - Umumiy fayllarni yuborish uchun ushbu usuldan foydalaning.
+
+
+
+task-
+    botimiz da gruh azosidan rasm yuborish huquqini olish taski bajarilsin
+
+task-
+    botga murojat qilayotgan foydalanuvchini profile rasmlarini biror bir guruhga tashab boradigan qilinsin
+
+task-
+    Botizni biror guruhga qo'shib qo'ying! Va bot /leave commandasini beradigan bo'lsam azo bo'lgan guruhlardan chiqib ketadigan qilinsin !
+
+task-
+    /pin commandasidan kyin pin qiladigan xabarni yuborishimni so'rasin ! Va uni admin bo'lgan biror guruhga pin qilib qo'ysin !
+
+task-
+    bot guruhga So'rovnoma savollarini tashab turadigan qilinsin ! Botga biz savol va varianlar bilan yozilgan savolni json file tashab beramiz Bot uni guruhga so'ro'vnoma savoli qilib tashab bersin
+
+task-
+    bot tomonidan rasm o'zgartiriladigan qilinsin ! Botga rasmni biz tashab beramiz !
+
+task-
+    guruhga link hisobida yuborilgan habarlarni bir vaqtda o'chiradigan function botga qo'shilsin !
+
+task-
+    botga forward qilib kimidir xabarini tashab beramiz maximum shu forward xabarni egasini malumotlarini bizga qaytarib bersin !
+
+task-
+    Get Me Id nomli bot yaratamiz bo'tni vazifasi tg tomonidan user ga berilgan ID qiymatini qaytarsin
+
+task-
+    botga tashalgan fileni (.py , .xlsx , .csv , .tar)  papkamiz orasiga save qiladigan qilishimiz kerak
+
+task-
+    user larni to'plash kerak
+    userlarga reklama tashab beradigan qilinsin ! /reklama
+
+task-
+    bot yasash : link->

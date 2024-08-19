@@ -1,0 +1,71 @@
+{% extends 'apps/include_base/base.html' %}
+{% load thumbnail %}
+{% load humanize %}
+
+
+{% block body %}
+    <div class="card mb-3 mt-2">
+        <div class="card-body">
+            <div class="col-lg-8 swiper-container">
+                <form method="post" action="{% url 'product_detail' product.id %}">
+                    {% csrf_token %}
+                    <div class="mb-2">
+                        <label class="form-label" for="formGroupNameInput">Ism:</label>
+                        <input class="form-control" required name="name" id="formGroupNameInput" type="text"/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" for="formGroupEmailInput">Telefon nomer:</label>
+                        <input class="form-control" id="phone-mask" required name="phone_number" type="text"/>
+                    </div>
+                        <input value="{{ product.id }}" name="product" hidden/>
+                    <span style="padding-bottom: 100px;">
+                    O'zbekiston bo'ylab yetkazib berish xizmatimiz {{ delivery_price|floatformat:"0"|intcomma }} so'm.
+                </span>
+                    <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 20px;">
+                        <button class="btn btn-primary" type="submit">Buyurtma berish</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 swiper-container" style="margin-top: 20px;">
+
+
+                    {% thumbnail product.first_image.image "375x325" format="PNG" as im %}
+                        <a class="d-block"
+
+                           href="{% url 'product_detail' product.slug %}"><img
+                                class="img-fluid rounded-top"
+                                src="{{ im.url }}"
+                                alt=""/>
+                        </a>
+                    {% endthumbnail %}
+
+                    <div class="row mb-5 thumbs">
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 swiper-container">
+                <h5>
+                    {{ product.name }}
+                </h5>
+                <p class="fs--1">
+                <p>{{ product.description }}</p>
+                <p>O&lsquo;zbekiston bo&lsquo;ylab yetkazib berish xizmati mavjud</p>
+
+                <h4 class="d-flex align-items-center">
+                <span class="text-warning me-2">
+                {{ product.price|floatformat:"0"|intcomma }} so'm
+                </span>
+
+                    <!--
+                    <span class="text-warning me-2">
+                        69000 so'm
+                    </span>
+                     -->
+                </h4>
+            </div>
+        </div>
+    </div>
+{% endblock %}

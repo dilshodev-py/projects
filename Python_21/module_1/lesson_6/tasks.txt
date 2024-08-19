@@ -1,0 +1,17 @@
+https://codingbat.com/python -> string-2
+
+https://www.hackerrank.com/dashboard ->  5 tadan
+
+https://www.codewars.com/kata/search/python?q=&r%5B%5D=-8&r%5B%5D=-7&tags=Matrix&beta=false&order_by=sort_date%20desc -> 5 ta
+
+https://leetcode.com/problemset/ -> 2
+
+
+
+uyga vazifa:
+    https://codingbat.com/python            -> string-2               hammasi
+    https://www.hackerrank.com/dashboard    -> string[easy , medium]  hammasi
+    https://www.codewars.com/               -> string[8 , 7]          20
+    https://leetcode.com/problemset/        -> string[easy]           20
+
+

@@ -1,0 +1,41 @@
+auto backup
+
+    sudo chmod 777 .
+    cd ..
+    sudo chmod 777 backup/
+    sudo chown "$postgres:postgres" backup/
+
+
+
+json, jsonb
+crypt
+ENUM
+DCL - grant , revoke |       ROLE , USER
+trigger
+
+crontab
+* * * * *
+
+
+
+
+===========================================================================
+jsonb
+    '{"country" : "Uzbekistan" , "city" : "Tashkent"}'::jsonb
+
+
+crypt(value , gen_salt('bf' , 12))
+
+crypt(value , hash_password) = hash_password
+
+
+DCL -
+    grant [all privileges ,select , insert , usage , delete , update ..] on [table_name , all tables in schema, sequence ,  ] to user;
+    revoke [all privileges ,select , insert , usage , delete , update ..] on [table_name , all tables in schema, sequence ,  ] from user;
+
+
+CREATE TYPE role_type
+AS
+ENUM('admin', 'manager', 'sales');
+
+alter type role_type add value 'user';

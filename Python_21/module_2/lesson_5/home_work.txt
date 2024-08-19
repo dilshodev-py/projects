@@ -1,0 +1,26 @@
+
+bankomat
+----------------------
+cards
+    id
+    card_number
+    expire
+    password
+    balance
+--------------------------
+
+---------------- TZ ------------------------
+1) enter card
+    card_number>>>
+    password>>>
+    expire>>>
+        1) transfer
+            to_card>>>
+            sum>>>
+
+        2) paynet
+        2) log out
+2) exit
+
+
+

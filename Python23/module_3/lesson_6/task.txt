@@ -1,0 +1,44 @@
+
+                    task 🟢🔴
+
+1) 1 dan  100 gacha son consolega chiqarilsin !
+Time -> 15:15  🔴
+
+2) 50000    -> 50 000
+   500000   -> 500 000
+   5000000  -> 5 000 000
+Time -> 15:20  🔴
+
+3) (1,2,2,3) -> size aniqlansin !
+Time : 15:25 🔴
+
+4) berilgan rasmdan class yaratilsin !
+Time : 15:35 🔴
+
+
+5) Product  <-  uchun json file ochilsin !
+Time : 15:40 🔴
+
+6) 2 sec -> test1() , 4 sec -> test2() thread yordamida
+    shu berilgan (test1, test2) functionlar ishlatilsin !  bajarishga ketgan vaqt ham hisoblansin
+Time : 15:45 🔴
+
+
+7) 2 sec -> test1() , 4 sec -> test2() process yordamida
+   shu berilgan (test1, test2) functionlar ishlatilsin ! bajarishga ketgan vaqt ham hisoblansin
+Time : 15:50 🔴
+
+8) https://jsonplaceholder.typicode.com  <-  shu saitga GET request yuboramiz
+Time : 15:55 🔴
+
+9) https://jsonplaceholder.typicode.com/posts  <-  malumotlari json filega saqlansin
+Time : 16:00 🔴
+
+
+5) https://telegra.ph/file/958ca22356a11a5215a00.png <- shu rasmni img1.png filega yuklang
+
+
+
+
+
+

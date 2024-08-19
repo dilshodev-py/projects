@@ -1,0 +1,26 @@
+revision:
+    magic filter
+    python + postgersql
+
+plan:
+    telegram bot reply button
+    telegram bot inline button
+    telegram bot edits message
+    telegram photo upload to telegra.ph
+    servercha
+bot_token2
+    100 file_id
+practise:
+    regions inline button show
+        district inline button show
+    regions reply button show
+        district reply button show
+
+project:
+    telegram bot calculator
+    telegram bot QrCode
+    telegram bot referal bot
+
+
+
+

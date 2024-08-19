@@ -1,0 +1,20 @@
+{
+   "1": {
+      "id": 1,
+      "name": "Iphone10",
+      "amount": 2,
+      "description": "nimadir",
+      "price": 500,
+      "is_active": "DENIED",
+      "category_id": 1
+   },
+   "2": {
+      "id": 2,
+      "name": "Iphone11",
+      "amount": 4,
+      "description": "nimadir",
+      "price": 700,
+      "is_active": "ACCEPTED",
+      "category_id": 1
+   }
+}

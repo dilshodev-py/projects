@@ -1,0 +1,26 @@
+bcrypt      -> hash
+compile()   -> string python code run qilib beradi , matem amalarni bajaradi -> exec() , eval() , compile()
+try/except  -> Error handling
+json        -> file
+class -> obj , encapsulation , inheritance , abstract , polymorphism
+
+
+class A:
+    def a(self):
+        pass
+
+A().a()
+
+
+1) group add
+    name :>>> P22
+    1) John
+    2) Botijon
+    >>>2
+
+    1) Python
+    2) C++
+    >>> 2
+
+
+

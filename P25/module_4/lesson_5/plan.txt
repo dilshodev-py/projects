@@ -1,0 +1,13 @@
+1. Joining Multiple Tables (
+            inner join,
+            cross join,
+            right join ,
+            left join
+            )
+
+2. Grouping Data (group by, having)
+
+
+
+
+

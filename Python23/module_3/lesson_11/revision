@@ -1,0 +1,39 @@
+collection
+    list
+    set
+    tuple
+    dict
+    Enum (static data)
+    collections -> userString , userList , userDict , orderDict , namedTuple , Counter , deque
+
+data structure
+    list
+    set
+    tuple
+    dict
+
+    stack -> list O(n) , deque  O(1)
+        FILO - LIFO
+        push - at last append
+        pop  - at last remove
+        empty- bool
+        size - len
+        top  - at last data
+
+    queue ->
+        FIFO
+        maxsize - signed size
+        push - at last append
+        push_nowait - at last append
+        get  - at head remove
+        get_nowait  - at head remove
+        empty- bool
+        size - len
+        full - maxsize == size
+
+    Linked List          -> nodes(data , next) -> print , append , insert , remove , find , delete
+    [Tree, BinaryTree]   -> TreeNode (data , left , right) -> insert , print , search , max_dept
+
+
+
+

@@ -1,0 +1,98 @@
+
+Taks1:
+string uzunligini topadigan dastur
+tuzing(len funksiyasini ishlatmasdan)
+
+
+
+=======================================
+            s = "3wre"
+
+            # 3e
+Task2:
+string boshidagi belgi va ohiridagi belgilar
+ajratib olinsin ! Ajratib olingan belgilar ni
+consolega chiqaradigan dastur tuzing
+(-1 soni codeda ishlatilmasin )
+
+
+=======================================
+"234dfdv" # -> 9
+
+Task3:
+string holatida turgan ixtiyoriy qiymatni raqamlari
+yig’indisini topadigan dastur tuzing
+
+
+========================================
+unli = 'aeiouAIOEU'
+
+Task5:
+"Book21{()" - stringda berilgan quydagi misol ko’rinishidagi
+ixtiyoriy qiymatni undosh harflari sonini topadigan dastur
+tuzing (raqam , belgi ishtirok etishi mumkin )
+
+
+==========================================
+'12my1name456is45John87' -> 'my name is John'
+Task6:
+"12my1name456isJohn87" - quydagi berilgan misol ko’rinishidagi ixtiyoriy
+malumot beriladi va ichida turgan so’zlarni ajratib chop etadigan
+dastur tuzing
+
+===========================================
+“65 [-,+,/,*] 12” -> 53
+Task7:
+“65 - 12” - matematika ifoda ko’rsatilgan misolni natijasini
+topadigan dastur tuzing !
+
+
+===========================================
+"1erthgf"       -> False
+"(erthgf"       -> False
+"ert hgf"       -> False
+"ert*hgf"       -> False
+"ert-hgf"       -> False
+"is_variable"   -> True
+Task8:
+"is_variable" - python tilda quydagi string qiymat o’zgaruvchi
+bo’la oladimi yo’qmi , agar mavjud bo’lsa True aks
+holda False qiymat chop etilsin !
+
+
+
+
+
+
+=========================================================
+Task11:
+qwer - berilgan ko’rinishdagi ixtiyoriy matndi boshidagi va ohiridagi
+belgilar joyini almashtiradigan dastur tuzing
+
+==========================================================
+
+Task10:
+76458385 - juft raqamlari sonini va toq raqmlari sonini ayirmasini
+topadigan dastur tuzulsin
+=========================================================
+
+Task9:
+76458385 - juft raqamlari sonini topadigan dastur tuzulsin
+=========================================================
+
+module 1 -> mavzu (algoritm)
+module 2 -> mavzu (project)
+module 3 -> advanced mavzu (project)
+module 4 -> database mavzu (practic)
+module 5 -> advanced technology (project[tg bot])
+
+module 6
+module 7
+module 8         - Django + Fast Api  + Devops + Docker
+module 9
+module 10
+
+staj
+
+
+

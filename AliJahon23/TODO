@@ -1,0 +1,24 @@
+
+google login
+    https://docs.allauth.org/en/latest/
+
+
+send email
+celery
+rabbitmq
+redis
+flower
+celery result
+minio
+celery beat (result)
+verification link
+docker with django
+
+
+
+Vazifa:
+    1) pochtaga 6 xonali son yuborib tastiqlash
+    2) 42.uz dagidek login qilish imkoniyati (aiogram)
+    3) Kanstovar
+
+

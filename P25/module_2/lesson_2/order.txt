@@ -1,0 +1,7 @@
+🚛 Truck()
+       filter_date(from_date , to_date)
+       car_number(car_num)
+       status_search(status)
+       add()
+       empty_truck_with_country(country)
+       filter_size(size)

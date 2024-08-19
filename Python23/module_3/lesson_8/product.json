@@ -1,0 +1,16 @@
+[
+  {
+    "name" : "Iphone 10",
+    "term" : 10,
+    "color" : 10  ,
+    "quantity" : 20,
+    "year" : 2023
+  },
+  {
+    "name" : "Book",
+    "term" : 10,
+    "color" : "black"  ,
+    "quantity" : 20,
+    "year" : 2020
+  }
+]

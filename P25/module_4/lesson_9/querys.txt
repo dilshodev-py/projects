@@ -1,0 +1,71 @@
+-- create table books(
+--     id serial primary key ,
+--     title varchar(255),
+--     genre_id int references genres(id)
+-- );
+--
+-- create function add(num1 int , num2 int)
+-- returns int
+-- language plpgsql
+-- as
+-- $$
+--     declare
+--     result int;
+--     begin
+--         result = num1 + num2;
+--         return result;
+--     end;
+-- $$;
+--
+-- select add(1, 2);
+--
+--
+--
+-- create function get_book(book_id int)
+-- returns setof books
+-- language plpgsql
+-- as
+-- $$
+--
+--     begin
+--         return query select * from books where id = book_id;
+--     end;
+-- $$;
+--
+-- drop function get_book(book_id int);
+--
+--
+-- select * from get_book(2);
+--
+--
+--
+--
+-- create function search_books(ilike_title varchar)
+-- returns setof books
+-- language plpgsql
+-- as
+--     $$
+--     begin
+--      return query select * from books where title ilike concat('%' , ilike_title , '%');
+--     end
+--     $$;
+--
+--
+--
+-- select * from search_books('maz');
+--
+--
+-- create function pagination(num int)
+-- returns setof books
+-- language plpgsql
+-- as
+--     $$
+--     begin
+--         return query select * from books offset (num-1)*10 limit 10;
+--     end;
+-- $$;
+--
+-- select * from pagination(1);
+
+
+

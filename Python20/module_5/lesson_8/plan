@@ -1,0 +1,20 @@
+git commands in terminal
+    git init                # create directory .git
+    git add .               # gitga file papkalarni qo'shib beradi
+    git status              # git ni ko'rish
+    git commit -m 'izoh'
+    git pull
+    git remote add origin https://github.com/dilshodev3234/GitProject.git
+    git git push <remote> <branch>
+
+git marge
+redis
+payment
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dilshodev3234/GitProject.git
+git push -u origin main

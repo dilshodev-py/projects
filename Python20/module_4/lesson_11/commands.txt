@@ -1,0 +1,59 @@
+-- create table products(
+--     id serial primary key ,
+--     name varchar(255) not null ,
+--     properties jsonb
+-- );
+-- insert into products(name, properties)
+-- values ('Ink Fusion T-Shirt','{"color": "white", "size":["S","M","L","XL"]}')
+-- returning *;
+--
+-- select id , name, products.properties from products;
+
+-- select id , name ,properties -> 'size' ->> 0 color from products;
+
+
+create table cars(
+    id serial primary key ,
+    make varchar(50),
+    model varchar(50),
+    color varchar(50)
+);
+
+select count(*) from cars;
+
+select generate_series range from generate_series(1,  1000000);
+
+
+
+insert into cars (make , model , color)
+ select md5(generate_series::varchar) , md5(generate_series::varchar) , md5(generate_series::varchar) from generate_series(1,  1000000);
+
+
+-- CREATE EXTENSION pgcrypto;
+-- $2a$12$Lb6Fb08ZZ668cnWvaideluXerUntcCAIshsRw6zZ.p02BpxRjkEyS
+-- select crypt('1' , gen_salt('bf' , 12));
+
+-- select crypt('1', '$2a$12$Lb6Fb08ZZ668cnWvaideluXerUntcCAIshsRw6zZ.p02BpxRjkEyS' ) = '$2a$12$Lb6Fb08ZZ668cnWvaideluXerUntcCAIshsRw6zZ.p02BpxRjkEyS';
+
+
+-- select username , password from users where crypt('2' ,password ) = password;
+
+
+-- korzinka:
+--     10 ta mahsulot
+--     100 000 sum
+--     100 000 < balance
+--     balance - 100 000
+--     oshibka
+--     100 000 + karzinka_card
+--
+
+
+-- begin , rollback , commit
+
+-- begin;
+-- delete from cars where id <= 10;
+-- delete from lesson_11.public.products where id = 1;
+-- rollback ;
+-- commit ;
+

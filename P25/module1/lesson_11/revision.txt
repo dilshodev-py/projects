@@ -1,0 +1,165 @@
+hackerrank
+
+
+mutable -
+immutable -
+
+hashable -
+unhashable -
+
+set, tuple
+
+set, dict
+
+t = {2,3,4,5,6}
+
+
+
+s = {2, 3, 4, 5, 6, {3, 4}}
+l = [[2, 3]]
+l = (2, (2,3))
+
+dict, set
+
+d = {
+    {4}: {(2, 3, 4), [3, 4]}
+}
+[1,2,3,4,7,8,9,10]
+
+product = {
+  "name": "Watch",
+  "color": "black",
+  "count": 100
+}
+brand_value = thisdict['brand']
+print(brand_value)
+======================================================
+
+
+binary file
+
+yield
+async generator
+
+async three_num():
+    yield 1
+    yield 2
+    yield 3
+
+async def main():
+    gen_= await three_num()
+    async for i in gen_ :
+        print(i)
+
+
+
+filter, map
+l = ['abc', 'vdsfds', 'gfdhgfgda']
+
+
+mutable
+
+context manager
+slots
+
+__file__
+__name__
+
+async gen
+OOP concepts
+encapsulation -
+polymorphism -
+inheritance -
+
+
+staticmethod
+classmethod
+
+class
+object
+self
+iterable
+<<
+
+class A: pass
+class B: pass
+class C(A, B): pass
+class D(B): pass
+class E(C, D):
+dunder method, magic method
+
+
+all attr in obj
+type()
+
+
+def f(a, b):
+    print(a, b)
+
+def f(a, b, c):
+    print(a, b, c)
+
+f(2, 3)
+
+
+hashing, caching
+http method
+
+400
+
+volume image
+group by
+
+
+users
+id, name
+1, botirjon
+2, botirjon
+3, botirjon
+4, botirjon
+
+
+category(id, name)
+1|texnika
+2|oziq-ovqat
+
+
+product(id,name,category_id)
+1|Olma|2
+2|Redmi|1
+3|Iphone|1
+
+
+product_name, category_name
+
+
+view
+index
+subquery
+
+
+context processor
+
+class, function based views
+
+DetailView -
+
+class meta
+
+
+template tag
+form
+
+celery
+
+
+class Course:
+    name = CharField(max_length=255)
+
+class Student:
+    name = CharField(max_length=255)
+    course = ForeignKey('apps.Course', CASCADE, 'botirjon')
+
+    def __str__(self):
+        return ' ' + self.name
+

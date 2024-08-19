@@ -1,0 +1,7 @@
+AGGREGATE FUNCTIONS : sum , min , max , count , string_agg , array_agg
+
+substr() , length() , replace()
+
+substr() , lower('Hello') , upper('hello')
+
+

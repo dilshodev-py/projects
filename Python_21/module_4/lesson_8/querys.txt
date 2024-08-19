@@ -1,0 +1,140 @@
+select first_name , last_name from actor;
+
+
+create function all_actor()
+-- returns table(first varchar(45) , last varchar(45))
+returns setof actor
+language plpgsql
+as
+    $$
+    begin
+        return query select * from actor;
+    end;
+    $$;
+
+
+drop function all_actor();
+select * from all_actor();
+
+
+create function filter_film(from_id int , to_id int)
+returns table(id int , f_title varchar)
+language plpgsql
+as
+$$
+    begin
+        return query select film_id , title from film where film_id between from_id and to_id;
+    end;
+    $$;
+
+drop function filter_film(from_id int, to_id int);
+
+select * from filter_film(1, 5);
+
+
+
+create function get_total_films_rented(cust_id int)
+returns int
+language plpgsql
+as
+    $$
+        declare
+            count_ int;
+        begin
+            select count(*)::int into count_ from rental r
+            where r.customer_id = cust_id group by r.customer_id;
+            return count_;
+        end;
+    $$;
+
+drop function get_total_films_rented(cust_id int);
+select * from get_total_films_rented(5);
+
+
+
+
+select count(*) from customer c join rental r on c.customer_id = r.customer_id  where c.customer_id = 2 group by c.customer_id;
+
+
+select count(*) from rental r where r.customer_id = 5 group by r.customer_id;
+
+select md5(generate_series::varchar) from generate_series(1,4000000);
+
+create table animals(
+    id serial primary key ,
+    name varchar,
+    hebitate varchar
+);
+
+
+
+=============================================================
+
+create table animals(
+    id serial primary key ,
+    name varchar,
+    hebitate varchar
+);
+
+insert into animals (name, hebitate) select md5(generate_series::varchar) , md5(generate_series::varchar) from generate_series(1, 4000000);
+
+-- dvdrental.tar -> backup
+
+-- select count(*) from animals;
+
+-- sudo chown "$postgres:postgres" backups/
+-- sudo chmod a+x backups/
+
+-- 4 000 000
+
+==============================================================
+
+select now();
+select current_timestamp;
+
+
+
+select now() + interval '5 h';
+
+select (600 * interval '1m')::varchar::time;
+
+
+select '2025-08-12'::date - extract(day from now());
+
+select '2025-08-12'::date -(extract(day from '1990-07-17 12:23:54'::timestamp) || ' days')::interval;
+
+
+============================================================
+
+
+
+copy salaries to '/home/dilshod/backups/salaries.csv' DELIMITER ',' CSV HEADER ;
+copy salaries from '/home/dilshod/backups/salaries.csv' DELIMITER ',' CSV HEADER ;
+
+truncate salaries;
+
+
+create table customers(
+    id serial primary key ,
+    name varchar
+);
+
+create table address(
+    id serial primary key ,
+    customer_id int references customers(id) on delete cascade
+);
+
+
+create function add(id_ int)
+returns table(emp_id int , employee_name varchar)
+language plpgsql
+as
+    $$
+    begin
+        return query select id , name from employees e where id_ = e.id;
+    end;
+    $$;
+
+drop function add(id_ int);
+
+select * from add(4);

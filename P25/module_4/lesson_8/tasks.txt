@@ -1,0 +1,21 @@
+                    task 1
+role manager bo'lgan userlarni projectlarini nomlari chiqarilsin ! Subquery orqali bajarilsin
+
+select p.name from projects p where p.user_id in (select id from users u where u.role = 'manager')
+select p.name from projects join user u on u.id = p.user_id where u.role = 'manager'
+                    task 2
+user.role = employee -> projectlari o'chirib yuborilsin !
+
+delete from projects p where p.user_id in (select id from users u where u.role = 'employee')
+
+
+                    task 3
+users jadvalidagi email ustuni null bo'lgan userlarni ->  user_name | "project_name1 , project_name2 , project_name3"
+select u.name , string_agg(p.name , ' , ') from users u join projects p on p.user_ir = u.id email where u.email is None;
+
+                    task 4
+
+Products(1000)                   Categories(16)                   Customers(100)              Orders (200)       Order Details(300)
+
+Time 16:00 tables schema
+Time 16:20 add data

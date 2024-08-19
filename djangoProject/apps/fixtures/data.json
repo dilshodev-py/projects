@@ -1,0 +1,30 @@
+[
+{
+  "model": "apps.newproduct",
+  "pk": 1,
+  "fields": {
+    "name": "product 1"
+  }
+},
+{
+  "model": "apps.newproduct",
+  "pk": 2,
+  "fields": {
+    "name": "product 2"
+  }
+},
+{
+  "model": "apps.newproduct",
+  "pk": 3,
+  "fields": {
+    "name": "product 3"
+  }
+},
+{
+  "model": "apps.newproduct",
+  "pk": 4,
+  "fields": {
+    "name": "product 4"
+  }
+}
+]

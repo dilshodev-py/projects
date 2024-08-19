@@ -1,0 +1,106 @@
+from string import ascii_lowercase
+            task 1
+s = "abcdefghijklmnopqrstuvwxyz"
+ab
+bc
+cd
+de
+fg
+hi
+....
+
+      task 2
+s = "abcdefghijklmnopqrstuvwxyz"
+ab
+cd
+ef
+gh
+ij
+........
+
+
+
+      task 3
+
+
+s = "abz"
+
+tartib to'g'rimi yoki yo'q .
+Agar tartib to'g'ri bolsa True aks holda False
+
+      task 4
+
+l = [4,2,3,7,8,6,4,5,6]
+eng katta son topilsin va eng kichik
+son bilan almashtirilsin
+
+output : [4,8,3,7,2,6,4,5,6]
+
+
+       task 5
+d = {
+  "id": 1,
+  "todo": "Do something nice for someone I care about",
+  "completed": true,
+  "userId": 26
+}
+
+"todo" va "completed" keylarning qiymatlari bir biriga almashtirilsin
+
+
+        task 6
+
+d = {
+  "id": 59,
+  "title": "Spring and summershoes",
+  "price": 20,
+  "quantity": 3,
+  "total": 60,
+  "discountPercentage": 8.71,
+  "discountedPrice": 55,
+  "thumbnail": "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"
+}
+
+Qiymati son bo'lgan keylar topilsin ! Va list ko'rinishda to'plansin !
+
+
+
+
+
+        task 7
+
+d = {
+  "id": 59,
+  "ti45tle": "Spring10 and summershoes",
+  "price": 20,
+  "qu43antity": 3,
+  "total": 60,
+  "discountPercentage": 8.71,
+  "dis12countedPrice": 55,
+  "thumbnail": "https://cdn.dummyjson.com/product-images/59/thumbnail.jpg"
+}
+
+Barcha raqamlar topilsin !
+output :
+    59452043360871551259
+
+
+
+        task 8
+
+carts.json tashab beriladi
+1 ta cartga tegishli productlarni hamma quantitysini(product nechtaligi)
+yig'indisi hisoblanilganda eng katta chiqadigan cart ning idsi topilsin !
+
+
+20 cart
+1 cart -> product soni 10 ta
+2 cart -> product soni 5 ta
+3 cart -> product soni 8 ta
+
+
+
+
+
+
+

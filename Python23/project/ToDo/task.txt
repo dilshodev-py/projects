@@ -1,0 +1,24 @@
+class User:
+    def __init__(self,
+                 id: int = None,
+                 fullname: str = None,
+                 phone_number: str = None,
+                 password: str = None,
+                 join_at: str = None):
+        self.id = id
+        self.fullname = fullname
+        self.phone_number = phone_number
+        self.password = password
+        self.join_at = join_at
+
+    def validator_password(self):
+        password [num , lower , upper , belgi, len > 4]
+
+    def is_phone_number(self):
+        phone_number formatini check qilamiz
+
+    def validator_fullname():
+        fullname 2 tadan kup so'zdan iboratligiga
+
+    def validator_join_at():
+        join_at

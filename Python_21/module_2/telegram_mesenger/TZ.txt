@@ -1,0 +1,101 @@
+# ========================= TZ =======================
+database
+
+
+users.txt
+    {
+    "id" : id,
+    "fullname" : fullname,
+    "username" : username,
+    "phone_number" : phone_number,
+    "bio" : bio,
+    "photo" : photo
+    }
+
+groups.txt
+    {"id" : id,
+    "name" : name,
+    "status" : status,
+    "description" : description,
+    "username" : username,
+    "admin_id" : admin_id}
+
+
+groups_member.txt
+{
+    "id": id,
+    "group_id": group_id,
+    "user_id": user_id
+}
+
+
+
+channels.txt
+{
+    "id" : id ,
+    "name" : name ,
+    "username" : username ,
+    "admin_id" : admin_id
+}
+
+channels_members.txt
+{
+    "id" : id,
+    "channel_id" : channel_id,
+    "user_id" : user_id
+    }
+
+messages.txt
+    {
+    "id" : id,
+    "type" : type, [GROUP]
+    "message" : message,
+    "status" : status,
+    send_user_id: id,
+    to_receiver_id : id,
+    date_time : id,
+    }
+
+
+contacts.txt
+    {
+    "id" : id,
+    "user_id" : user_id,
+    "owner_id" : owner_id
+    }
+
+
+groups
+    1) search
+        >>>group
+        1) group
+        >>>1
+        join [Yes/no]
+
+    2) my group
+        1) -----
+        2) -----
+        3) -----
+        >>>3
+    3) create
+        >>>
+        >>>
+        >>>
+    4) delete
+        1) -----
+        2) -----
+        3) -----
+        >>>2
+        [No/yes]
+    0) back
+
+
+
+
+
+
+
+
+    0) back
+
+

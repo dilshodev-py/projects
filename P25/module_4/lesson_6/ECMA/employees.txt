@@ -1,0 +1,37 @@
+create table employees (
+	id INT,
+	name VARCHAR(50),
+	age INT,
+	speciality_id INT,
+	created_at DATE
+);
+insert into employees (id, name, age, speciality_id, created_at) values (1, 'Lynnea', 25, 6, '2024-02-21');
+insert into employees (id, name, age, speciality_id, created_at) values (2, 'Karina', 30, 5, '2023-02-09');
+insert into employees (id, name, age, speciality_id, created_at) values (3, 'Hyman', 18, 5, '2023-10-31');
+insert into employees (id, name, age, speciality_id, created_at) values (4, 'Cesare', 30, 2, '2023-08-01');
+insert into employees (id, name, age, speciality_id, created_at) values (5, 'Stormi', 30, 1, '2022-12-13');
+insert into employees (id, name, age, speciality_id, created_at) values (6, 'Tabor', 20, 4, '2023-10-19');
+insert into employees (id, name, age, speciality_id, created_at) values (7, 'Caron', 26, 6, '2023-12-27');
+insert into employees (id, name, age, speciality_id, created_at) values (8, 'Elene', 25, 4, '2023-02-06');
+insert into employees (id, name, age, speciality_id, created_at) values (9, 'Maegan', 18, 4, '2023-10-03');
+insert into employees (id, name, age, speciality_id, created_at) values (10, 'Rena', 19, 5, '2023-04-10');
+insert into employees (id, name, age, speciality_id, created_at) values (11, 'Gwenore', 24, 5, '2022-09-15');
+insert into employees (id, name, age, speciality_id, created_at) values (12, 'Johnnie', 18, 6, '2024-02-03');
+insert into employees (id, name, age, speciality_id, created_at) values (13, 'Gerardo', 24, 5, '2022-09-14');
+insert into employees (id, name, age, speciality_id, created_at) values (14, 'Berthe', 29, 5, '2023-05-05');
+insert into employees (id, name, age, speciality_id, created_at) values (15, 'Lonnard', 20, 4, '2023-07-26');
+insert into employees (id, name, age, speciality_id, created_at) values (16, 'Timmi', 30, 3, '2023-11-12');
+insert into employees (id, name, age, speciality_id, created_at) values (17, 'Malinde', 20, 1, '2023-08-04');
+insert into employees (id, name, age, speciality_id, created_at) values (18, 'Myrah', 20, 2, '2022-07-27');
+insert into employees (id, name, age, speciality_id, created_at) values (19, 'Sheilah', 30, 5, '2023-12-05');
+insert into employees (id, name, age, speciality_id, created_at) values (20, 'Christean', 27, 1, '2023-09-14');
+insert into employees (id, name, age, speciality_id, created_at) values (21, 'Loree', 23, 2, '2024-01-28');
+insert into employees (id, name, age, speciality_id, created_at) values (22, 'Malynda', 26, 2, '2023-11-03');
+insert into employees (id, name, age, speciality_id, created_at) values (23, 'Craggy', 30, 1, '2024-04-06');
+insert into employees (id, name, age, speciality_id, created_at) values (24, 'Drusi', 21, 6, '2024-05-29');
+insert into employees (id, name, age, speciality_id, created_at) values (25, 'Nehemiah', 20, 4, '2022-11-23');
+insert into employees (id, name, age, speciality_id, created_at) values (26, 'Antony', 29, 5, '2023-04-21');
+insert into employees (id, name, age, speciality_id, created_at) values (27, 'Meggy', 24, 6, '2022-12-09');
+insert into employees (id, name, age, speciality_id, created_at) values (28, 'Brand', 21, 3, '2023-01-10');
+insert into employees (id, name, age, speciality_id, created_at) values (29, 'Vanda', 28, 4, '2023-06-25');
+insert into employees (id, name, age, speciality_id, created_at) values (30, 'Urson', 28, 2, '2023-05-17');

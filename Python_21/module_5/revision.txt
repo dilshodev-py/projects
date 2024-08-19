@@ -1,0 +1,27 @@
+# database #
+
+DDL
+DCL
+DML
+TCL
+
+backup
+
+crontab
+
+function
+
+trigger
+
+view
+
+copy
+
+index
+
+DRW SQL - create schema
+
+Fake data
+
+python + postgresql
+

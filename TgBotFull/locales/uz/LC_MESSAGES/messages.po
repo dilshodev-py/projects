@@ -1,0 +1,41 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-06 09:59+0500\n"
+"PO-Revision-Date: 2024-03-06 09:24+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: uz\n"
+"Language-Team: uz <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: main.py:36
+msgid "CHoose : "
+msgstr "Tilni tanlang"
+
+#: main.py:47
+msgid "First name : "
+msgstr "Ismni kiriting : "
+
+#: main.py:53
+msgid "Last name : "
+msgstr "Familyani kiriting : "
+
+#: main.py:71
+msgid "Change to English lang"
+msgstr "Til Ing tiliga o'zgardi"
+
+#: main.py:76
+#, fuzzy
+msgid "Change to Uzbek lang"
+msgstr "Til Uzbek tiliga o'zgardi"
+
+#: main.py:81
+msgid "Hello, {name}!"
+msgstr "Salom {name}"
+

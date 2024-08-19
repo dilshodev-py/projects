@@ -1,0 +1,17 @@
+clear     - yes
+copy      - yes
+append    - yes
+insert    - yes
+extend    - yes
+pop       - yes
+remove    - yes
+index     - yes
+count     - yes
+reverse   - yes
+sort      - yes
+
+Home Work:
+    leetcode : string(25+)
+    leetcode : array(25+)
+    algo     : 101-129
+

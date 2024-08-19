@@ -1,0 +1,26 @@
+                    task 1
+role manager bo'lgan userlarni projectlarini nomlari chiqarilsin ! Subquery orqali bajarilsin
+
+
+
+                    task 2
+users jadvalidagi email ustuni null bo'lgan userlarni ->  user_name | "project_name1 , project_name2 , project_name3"
+
+
+                    task 3
+Employee xodimlarni projectlari o'chirib yuborilsin !
+
+
+                    task 4
+
+Products                   Categories                   Customers               Orders        Order Details
+
+
+shu tablelar yaratilsin va mackkaro site orqali malumotlar to'ldirilsin !
+!!dump from in terminal!!
+
+
+
+
+
+

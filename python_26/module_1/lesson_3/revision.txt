@@ -1,0 +1,6 @@
+# 2-misol
+# text = "name2 is3 My1 John4 .5 you7 are8 ?9"
+# result = []
+# for i in text.split():
+#     result += i[-1::]
+# print(min(result[-1::],min(result[-2::],min(result[-3::],min(result[-4::],min(result[-5::],min(result[-6::],min(result[-7::],result[-8::]))))))))

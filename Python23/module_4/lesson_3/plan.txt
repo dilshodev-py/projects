@@ -1,0 +1,24 @@
+
+1. Operators(
+    Arithmetic -> https://www.postgresql.org/docs/9.3/functions-math.html
+    Taqoslash -> https://www.postgresql.org/docs/current/functions-comparison.html)
+    Logic -> or , and , not
+3. dvdrental dump zip file
+
+
+4. PostgreSQL fundamentals
+ table and column aliase
+ where
+ order by
+ fetch
+ limit
+ in
+ between
+ like
+ ilike
+ is null
+ select distinct
+ group by
+
+
+

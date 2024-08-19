@@ -1,0 +1,6 @@
+
+1) task
+https://dummyjson.com/products
+    total price
+
+

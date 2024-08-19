@@ -1,0 +1,99 @@
+-- create table courses(
+--     course_id serial primary key ,
+--     name varchar(50) not null ,
+--     created_at date
+-- );
+
+-- create table students(
+--     id serial primary key ,
+--     first_name varchar(255),
+--     last_name varchar(255),
+--     email varchar(255),
+--     course_id integer references courses(course_id),
+--     created_at date default timezone('Asia/Tashkent' , current_date::timestamptz)
+-- );
+
+
+
+
+
+
+
+                    1 task
+1) lesson_6 nomli database yaratamiz
+2) courses and students table yaratamiz
+3) table larini ichini malumotga to'ldiramiz
+
+                    2 task
+1) author_book and authors and books  table yaratamiz
+2) shu table lar ichga malumot to'ldiramiz
+
+                    3 task
+1) specialities and employees and projects  table yaratamiz
+2) shu table lar ichga malumot to'ldiramiz
+
+
+
+
+
+
+
+
+
+
+
+                    3 task
+1) kitoblar nechta ligini oladigan query yozilsin                                                 🟢
+2) A , B , R harflari bilan boshlangan name authorlar topilsin (*)                                🟢
+3) idsi 2 ,3 bo'lgan authorlarnini kitoblari nechta ! (author_id , count_book)                    🟢
+4) kitoblari soni 20 tadan kop bo'lgan author_id toping !  (author_id , count_book)               🟢
+5) author_id juft bo'lganlarini kitoblar soni chiqarilsin  (author_id,book_count)                 🟢
+6) eng kop kitobga ega bo'lgan author_id topilsin ! (author_id , count_book)                      🟢
+7) postgres -> password '2';                                                                      🟢
+8) author name , kitoblar soni !                                                                  🟢
+
+1) Delete a Student : first_name('Alice') , last_name('Johnson') returning  id                    🟢
+2) Java kursida o'qiydigan studentlarni ismi , familyasi , email, course nomi chiqarilsin         🟢
+3) 2023-01-01 shu sanadan kyin ro'yhatdan o'tgan studentlar chiqarilsin                           🟢
+4) students jadvaliga phone_number ustuni qo'shilsin va shu ustunga unique constraint o'rnatilsin 🟢
+5) speciality name    |    project_count                                                          🟢
+6) fail project count !                                                                           🟢
+7) speciality.* , employees.* , projects.*                                                        🟢
+8) b.title     |      e.name      - on books.id = employees.id                                           🟢
+9) students -> new users
+10) users -> users.csv
+
+
+
+uyga vazifa :
+    Schema
+    Savollar tuzib kelish 20 tadan
+
+
+
+select a.name , count(ab.book_id) from author a
+join author_book ab on a.id = ab.author_id group by a.id
+
+select s.first_name , s.last_name , s.email , c.name from students as s
+join course as c on s.course_id = c.course_id where c.name = 'Java'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

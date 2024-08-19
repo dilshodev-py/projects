@@ -1,0 +1,102 @@
+.services {
+    margin-bottom: 134px;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    height: 572px;
+    padding-top: 103px;
+
+
+    background-image: url('./../../images/sevices-background.svg');
+    background-repeat: no-repeat;
+    background-position: calc(50%) 0px;
+
+    &__heading {
+        font-family:'Fira Sans', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 48px;
+        text-align: left;
+        color: white;
+        margin-bottom: 40px;
+    }
+
+
+    &__list {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+
+
+    &__item-text:nth-child(1){
+        margin-bottom: 6px;
+    }
+
+
+    &__item-text {
+        max-width: 237px;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 17.58px;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+
+    &__item-heading {
+        font-family: 'Roboto', sans-serif;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 26.95px;
+        text-align: left;
+        color: white;
+        margin-bottom: 17px;
+    }
+
+    @media only screen and (max-width: 1200px){
+        &__heading {
+            text-align: center;
+        }
+        
+        &__list {
+            grid-template-columns: auto auto;
+            justify-content: center;
+            gap: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 645px){
+        &__heading {
+            font-size: 30px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        &__list {
+            grid-template-columns: auto;
+            justify-content: center;
+            text-align: center;
+            gap: 50px;
+        }
+
+        &__item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item-text {
+            text-align: center;
+        }
+        
+        
+        &__item-heading {
+            text-align: center;
+            font-size: 18px;
+            line-height: 20px;
+      
+        }
+    }
+}

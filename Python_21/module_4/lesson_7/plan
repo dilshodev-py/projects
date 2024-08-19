@@ -1,0 +1,26 @@
+1. Functions(aggregate, math, String, Date)
+    REPLACE()
+    CONCAT   -> join
+    LOWER()
+    UPPER()
+    TRIM    - > strip()
+    LENGTH  - > len()
+    MOD()   - > qoldiqli bulish
+    POWER() - > daraja
+    sqrt  - > ildiz
+    SIGN    - > manfiy -1 and musbat 1
+
+2. PL/PgSql functions
+
+3. backup
+
+
+-- 1 task Actor table(last_update)
+-- year  | month  | day
+10:47
+
+-- 2 task Actor table
+-- first_name(l[0])
+-- John(D)
+11:00
+

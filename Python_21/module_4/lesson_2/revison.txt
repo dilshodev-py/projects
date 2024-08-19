@@ -1,0 +1,40 @@
+DABASE
+    RDBMS - Relation DataBase Managment Systeam
+        sql - structure query language
+        verticale
+        table ko'rinishda
+        web sait da
+
+        postgresql
+            DDL - Data Defination Language
+                create
+                alter
+                drop
+                truncate
+
+            DML - Data Manupulation language
+                insert
+                select
+                update
+                delete
+
+            TCL - Transaction Control lang
+                save point
+                rollback
+                commit
+
+            DCl - Data
+                grant
+                revoke
+
+
+
+
+
+    NORDBMS - NO Relation DataBase Managment Systeam
+        nosql - no structure query language
+        gorizantal va verticale
+        file , graf , key - value ...
+        mobile
+
+

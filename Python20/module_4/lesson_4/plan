@@ -1,0 +1,15 @@
+group by
+select distinct
+
+join
+    inner , left , right , full , cross
+
+UNION
+
+agg functions
+
+dvdrental.tar
+
+
+
+

@@ -1,0 +1,54 @@
+                                        Module 2
+
+1. Javob uchun (10 ball)
+2. Javob uchun (20 ball)
+3. Javob uchun (20 ball)
+4. Javob uchun (20 ball)
+5. Javob uchun (30 ball)
+                                               savollar
+
+
+1) Probel orqali ajratilgan butun sonlardan tashkil topgan TEXT fayl berilgan.
+   Uning juft o‘rindagi har bir elementi 2ta 0(nol) bilan almashtirilsin.
+
+
+
+2) Matematika ifoda yozilgan text fayl berilgan !  Bu fayldagi matematika ifodani hisoblab bo’lsa ifadani natijanisini,
+   agar hisoblab bulmasa ‘Matematika ifodada xatto bor’ degan matn chop etilsin !
+	(13 + 7) * 7                                                   (13 + 7) / 2 - 4)
+	output : 140                                                   output:  Matematika ifodada xatto bor
+
+
+
+3) JSON file ustida amal bajaradigan class va methodlarini yaratib bering ! (write , read , clear)
+   TEXT file ustida amal bajaradigan class va methodlarini yaratib bering ! (write , read , clear)
+
+
+4) "https://jsonplaceholder.typicode.com/posts"
+   shu link orqali posts malumotlarini copy qilib olib json fileda elon qivolamiz !
+   Va shu ma’lumotlar ustida Create , Delete  , Update  , Read methodlar bor class yaratamiz !
+   2 class bo’ladi : File , Post
+   Abstract , Encapsulation , Polymorphism ishlatilsin
+
+
+
+5)  https://telegra.ph/file/866af130faa3d3cdfbeaf.png
+
+
+
+				Javoblarni topshirish :
+Title ga ism familyangiz bilan  TEXT file yaratasiz ! Natijalarni shu ko’rinishda yozib botga tashab berasiz !
+
+1)
+
+2)
+
+3)
+
+4)
+
+5)
+
+
+
+

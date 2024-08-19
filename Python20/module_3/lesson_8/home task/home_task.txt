@@ -1,0 +1,75 @@
+class PizzaSize(Enum):
+    FULL = "full"
+    MEDIUM = "medium"
+    SMALL = "small"
+
+1)# enum
+DayOfWeek
+UserRole
+Color
+PizzaSize
+HTTPStatus
+Gender
+Coin
+FileType
+PaymentMethod
+
+PlasticCard:
+    UZCARD = 9860
+Language
+    EN = "English"
+    EN = "Russian"
+MusicGenre
+ComputerComponent
+
+
+2)berilgan 3 ta rasmni -> DTO
+
+
+3) product.json
+        1) name
+        2) term
+        4) color
+        5) term
+        >>>5
+
+        data.id
+
+
+6) BALLI sistema(project)
+
+    1) Admin
+        login
+           1) group settings -> CRUD
+           2) teacher settings -> CRUD
+           3) subject settings -> CRUD
+           4) student          -> CR
+           4) group + teacher  ->
+
+    2) Teacher
+        login
+            1) My group
+                .....
+            2) Settings
+            3)
+        3) back <-
+
+    3) Student
+        login
+            pass
+
+    4) exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+

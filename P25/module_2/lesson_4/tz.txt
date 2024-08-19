@@ -1,0 +1,20 @@
+
+                                        ToDo(id ,title , description , execute_at)
+                                            sequence_id():
+                                            create():
+                                            update(id_, attribute, new_value):
+                                            delete( id_):
+                                            read():
+                                            search(short_title):
+
+                                        while True:
+                                            menu = """
+                                                *) search
+                                                1) create
+                                                2) update
+                                                3) delete
+                                                4) read
+                                                0) exit
+                                                >>>"""
+
+

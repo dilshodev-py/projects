@@ -1,0 +1,10 @@
+extract:
+	pybabel extract bot -o locales/messages.pot
+init:
+	pybabel init -i locales/messages.pot -d locales -D messages -l en
+update:
+	pybabel update -d locales -D messages -i locales/messages.pot
+compile:
+	pybabel compile -d locales -D messages
+
+

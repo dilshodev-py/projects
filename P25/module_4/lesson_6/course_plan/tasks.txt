@@ -1,0 +1,10 @@
+
+1) Delete a Student : first_name('Alice') , last_name('Johnson')
+
+2) Java o'qiydigan studentlarni ismi , familyasi , email, course nomi chiqarilsin
+
+3) 2023-01-01 shu sanadan kyin ro'yhatdan o'tgan studentlar chiqarilsin
+
+4) students jadvaliga phone_number ustuni qo'shilsin va shu ustunga unique constraint o'rnatilsin
+
+5)

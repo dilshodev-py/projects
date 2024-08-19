@@ -1,0 +1,125 @@
+-- create table if not exists students(
+--     id serial primary key ,
+--     name varchar(50),
+--     age smallint,
+--     ball float
+-- );
+--
+-- insert into students (name, age , ball)
+-- values ('Jalol' , 24 , 100),
+--        ('Nuriddin' , 21 , 10),
+--        ('Kamol' , 22 , 50);
+--
+-- insert into students (name, age , ball)
+-- values ('Shoxrux' , 20 , 100) returning *;
+--
+--
+-- select * from students where name = 'Jalol' or name = 'Nuriddin';
+--
+-- update students
+-- set age = 20 where name = 'Jalol';
+--
+-- update students
+-- set ball =  ball + 20 where name = 'Nuriddin';
+--
+-- update students
+-- set name = 'Botirjon' where name = 'Botir' returning name;
+--
+--
+-- delete from students where age > 30 or ball = 100 or name = 'Botirjon';
+
+create table courses(
+    id serial primary key ,
+    name varchar(255)
+);
+
+create table students(
+    id serial primary key ,
+    name varchar(50) not null ,
+    age smallint,
+    ball numeric
+--     course_id integer references courses(id),
+--      foreign key (course_id) references courses(id),
+--      constraint constraint_name foreign key (course_id) references courses(id)
+);
+
+
+-- alter table students drop column course_id;
+-- alter table students add column course_id integer not null default 1 references courses(id);
+-- alter table students add
+--     constraint students_course_id_fkey
+--     foreign key (course_id) references courses(id);
+--
+-- alter table students drop constraint students_course_id_fkey;
+
+
+-- One To One
+-- One to Many
+-- Many To Many
+
+-- create table users(
+--     id serial primary key ,
+--     name varchar(255)
+-- );
+-- ONE to ONE
+-- create table passports(
+--     id serial primary key ,
+--     num varchar(7)  ,
+--     seria varchar(2) ,
+--     user_id integer references users(id) unique ,
+--     unique (num ,seria)
+-- );
+
+
+create table regions(
+    id serial primary key ,
+    name varchar(255) unique
+);
+
+create table districts(
+    id serial primary key ,
+    name varchar(255),
+    region_id integer references regions(id)
+);
+
+-- regions and district
+
+-- courses and students
+-- MYM
+
+create table courses(
+    id serial primary key ,
+    name varchar(255) unique
+);
+
+create table students(
+    id serial primary key ,
+    name varchar(255)
+);
+
+
+create table courses_students(
+    id serial primary key ,
+    course_id integer references courses(id),
+    student_id integer references students(id)
+);
+
+-- alter table districts drop constraint districts_region_id_fkey;
+-- alter table districts add  constraint districts_region_id_fkey foreign key (region_id) references regions(id) on delete cascade ;
+
+
+-- create table users(
+--     id serial primary key ,
+--     first_name varchar(255),
+--     last_name varchar(255),
+--     phone varchar(12) ,
+--     email varchar(255) unique
+-- );
+
+
+
+
+
+
+
+

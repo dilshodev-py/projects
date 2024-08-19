@@ -1,0 +1,11 @@
+User:
+    id
+    fullname
+    username
+    password
+
+
+auth
+    login -> [username , password]
+    register -> [id , fullname , username , password
+

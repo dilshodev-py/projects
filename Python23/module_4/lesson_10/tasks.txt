@@ -1,0 +1,39 @@
+create database egg_database;
+
+
+statistics_by_day(20 int , 30 int) # 30 kundan oshib ketgan to'lov qilgan
+    customer_name , dept , order_date , day
+
+function : search_customer(ilike_fullname varchar)
+    customer *
+
+function : filter_order(status varchar) # options -> processing , completed
+    returns table(customer_fullname , phone , address['region , district , target'] , dept)
+
+view eggs_statistic(category_egg_name , sold_out_count , total_amount)
+view deptors (qarzi bor barcha mijozlar ro'yhati)
+view dealer_statistic(dealerni ismi , mijozlari soni)
+
+
+
+============== trigger ========================
+
+statistics_customer
+    debt + -> insert order
+    debt - -> insert payment
+
+delete payment:
+    save -> history_table_payment
+
+
+insert order:
+    product quantity - order.total_amount
+    if product.quantity == 0 : delete product
+
+
+
+
+
+
+
+

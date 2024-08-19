@@ -1,0 +1,76 @@
+# Uzbek translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-17 16:05+0500\n"
+"PO-Revision-Date: 2024-08-17 15:29+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: uz\n"
+"Language-Team: uz <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: bot/buttons/reply.py:13
+msgid "🏢 About company"
+msgstr "🏢 Kompaniya haqida"
+
+#: bot/buttons/reply.py:14
+msgid "📍 Branches"
+msgstr ""
+
+#: bot/buttons/reply.py:15
+msgid "💼 Work Place"
+msgstr ""
+
+#: bot/buttons/reply.py:16
+msgid "Menu"
+msgstr ""
+
+#: bot/buttons/reply.py:17
+msgid "🆕 News"
+msgstr ""
+
+#: bot/buttons/reply.py:18
+msgid "📞 Contact/Address"
+msgstr ""
+
+#: bot/buttons/reply.py:19
+msgid "🇺🇿/🇷🇺/🇬🇧 Lang"
+msgstr ""
+
+#: bot/buttons/reply.py:40
+msgid "🇺🇿 uz"
+msgstr ""
+
+#: bot/buttons/reply.py:41
+msgid "🇬🇧 en"
+msgstr ""
+
+#: bot/buttons/reply.py:42
+msgid "🇷🇺 ru"
+msgstr ""
+
+#: bot/handlers/language.py:17
+msgid "Choose language"
+msgstr ""
+
+#: bot/handlers/language.py:24
+msgid "Change language"
+msgstr ""
+
+#: bot/handlers/work_place.py:16
+msgid "Join the EVOS team!"
+msgstr "Evos jamosiga qo'shiling"
+
+#: bot/handlers/work_place.py:17
+msgid "📍 Select a city."
+msgstr "📍 Shaxarni tanlang"
+

@@ -1,0 +1,24 @@
+1)
+    dvdrental schema (actor,film_actor, film):
+    savol -> actorlar nechta filmda role o'ynaganligini topuvchi query yozing
+
+
+
+2)
+    dvdrental schema:
+    savol -> actorlar nechta filmda role o'ynaganligini topuvchi query yozing
+    top 10 talik
+
+3)
+    dvdrental schema (country , city , address , store):
+    savol -> DAVLATLARDA NECHTA FILIAL BORLIGINI TOPUVCHI QUERY YOZILSIN
+    OUT PUT : COUNTRY.NAME , COUNT(STORE)
+
+
+
+
+
+
+
+
+

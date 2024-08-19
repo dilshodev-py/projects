@@ -1,0 +1,164 @@
+-- CREATE FUNCTION trigger_function()
+--    RETURNS TRIGGER
+--    LANGUAGE PLPGSQL
+-- AS $$
+-- BEGIN
+--    -- trigger logic
+-- END;
+-- $$;
+--
+-- CREATE TRIGGER trigger_name
+-- {BEFORE | AFTER} { insert , update , delete }
+-- ON table_name
+-- [FOR [EACH] { ROW | STATEMENT }]
+-- EXECUTE PROCEDURE trigger_function
+
+create table a
+(
+    id         serial primary key,
+    name       varchar,
+    created_at timestamp default current_timestamp
+);
+
+
+delete
+from a
+where id <= 3;
+
+create table a_delete
+(
+    a_id       integer primary key,
+    name       varchar,
+    deleted_at timestamp default current_timestamp
+);
+
+create trigger a_delete_trigger
+    before delete
+    on a
+    for each row
+execute function trigger_delete_a_table();
+
+CREATE FUNCTION trigger_delete_a_table()
+    returns trigger
+    language plpgsql
+as
+$$
+begin
+
+    insert into a_delete(a_id, name)
+    values (OLD.id, OLD.name);
+    return OLD;
+end;
+$$;
+
+
+
+create table customers
+(
+    id           serial primary key,
+    name         varchar,
+    phone_number varchar
+
+
+);
+
+create table changes_customer
+(
+    customer_id      integer,
+    old_name         varchar,
+    new_name         varchar,
+    old_phone_number varchar,
+    new_phone_number varchar,
+    change_at        timestamp default current_timestamp
+);
+
+
+create trigger customer_change_trigger
+    after update
+    on customers
+    for each row
+    execute function customer_change_trigger();
+
+
+
+CREATE FUNCTION change_customer_function()
+    returns trigger
+    language plpgsql
+as
+$$
+begin
+    if old.name != new.name and old.phone_number != new.phone_number then
+        insert into changes_customer(customer_id, old_name, new_name, old_phone_number, new_phone_number)
+        values (old.id, old.name, new.name, old.phone_number, new.phone_number);
+    elsif old.name != new.name then
+        insert into changes_customer(customer_id, old_name, new_name)
+        values (old.id, old.name, new.name);
+    elsif old.phone_number != new.phone_number then
+        insert into changes_customer(customer_id, old_phone_number, new_phone_number)
+        values (old.id, old.phone_number, new.phone_number);
+    end if;
+    return new;
+end ;
+$$;
+
+
+
+drop trigger customer_change_trigger on customers;
+
+
+
+-- categories
+--     id
+--     name
+--     product_count
+
+-- products
+--     id
+--     name
+--     price
+--     category_id
+
+create table categories
+(
+    id            serial primary key,
+    name          varchar,
+    product_count int default 0
+);
+
+create table products
+(
+    id          serial primary key,
+    name        varchar,
+    price       varchar,
+    category_id integer references categories (id)
+);
+
+create trigger category_product_count
+    after insert
+    on products
+    for each row
+execute function category_product_count_function();
+
+drop trigger category_product_count on products;
+
+CREATE FUNCTION category_product_count_function()
+    returns trigger
+    language plpgsql
+as
+$$
+    begin
+        update categories c set product_count = product_count + 1 where c.id = old.category_id;
+        return old;
+    end ;
+$$;
+
+drop function category_product_count_function() cascade;
+
+
+
+
+
+
+
+
+

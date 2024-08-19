@@ -1,0 +1,35 @@
+
+create table if not exists users(
+    id integer primary key ,
+    first_name varchar(255),
+    last_name varchar(255),
+    email varchar(30),
+    password varchar(50),
+    created_at timestamp default current_timestamp
+);
+
+
+create table if not exists tasks(
+    id integer primary key ,
+    title varchar(200),
+    description text,
+    execute_at date,
+    user_id integer references users(id),
+    created_at timestamp default current_timestamp
+);
+create database kwork;
+
+
+alter table tasks rename to taskss;
+
+-- alter
+-- create
+-- drop
+-- truncate
+
+
+1) Factor db : Users jadvalini 'lang' ustuni nomi 'language' o'zgartirilsin
+2) Factor db : Book jadvalini 'title' ustuni type text ga o'zgartirilsin
+3) Factor db : Book jadvalini 'vol' ustuni o'chirib yuborilsin
+4) Factor db : Categories jadvaliga yangi 'image' ustuni qo'shilsin
+5) Factor db : Network jadvali o'chirib yuborilsin

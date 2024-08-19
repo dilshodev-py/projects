@@ -1,0 +1,96 @@
+1)
+try:
+    with open('matem_ifoda.txt' , 'r') as f:
+        ifoda = f.read()
+        print(eval(compile(ifoda, ' ' ,'eval')))
+except Exception as e:
+    print("ERROR" , e)
+
+4)
+import json
+from abc import ABC, abstractmethod
+
+
+class JsonFile:
+    def __init__(self , file_path):
+        self.file_path = file_path
+
+    def read(self):
+        with open(self.file_path , "r") as f:
+            data = json.load(f)
+        return data
+
+    def write(self , data):
+        with open(self.file_path ,'w') as f:
+            json.dump(data ,  f , indent=3)
+
+    def clear(self):
+        self.write([])
+
+class CRUD(ABC):
+    @abstractmethod
+    def create(self):
+        pass
+
+    @abstractmethod
+    def delete(self):
+        pass
+
+    @abstractmethod
+    def read(self):
+        pass
+
+    @abstractmethod
+    def update(self, filed , new_val):
+        pass
+
+
+class Post(CRUD):
+    def __init__(self , userId = None , id = None , title = None , body = None):
+        self.userId = userId
+        self._id = id   # protected
+        self.title = title
+        self.body = body
+    @property
+    def id(self):
+        return self._id
+
+
+    def create(self):
+        new_post = self.__dict__
+        f = JsonFile("posts.json")
+        data = f.read()
+        data.append(new_post)
+        f.write(data)
+
+    def read(self):
+        f = JsonFile("posts.json")
+        posts = f.read()
+        for post in posts:
+            if post.get('id') == self.id:
+                return post
+
+    def update(self, field , new_val):
+        f = JsonFile("posts.json")
+        posts = f.read()
+        for post in posts:
+            if post.get("id") == self.id:
+                if field == "body":
+                    post['body'] = new_val
+                elif field == "title":
+                    post['title'] = new_val
+        f.write(posts)
+
+    def delete(self):
+        f = JsonFile("posts.json")
+        posts = f.read()
+        for post in posts:
+            if post.get("id") == self.id:
+                posts.remove(post)
+                break
+        f.write(posts)
+
+
+
+5)
+

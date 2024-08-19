@@ -1,0 +1,23 @@
+Uyga vazifa:
+    0) FUNCTION -> fibanachi(num) sonlarni chiqaradigan function yozing
+    1) FUNCTION -> eng max payment(amount) qilgan customer topadigan query yozilsin (from_date , to_date)
+    2) FUNCTION -> Language, Film ! ANY LANGUAGE tarjima qilingan hamma kinolarni chiqaradigan query yozilsin
+    3) FUNCTION -> Eng uzun fullname bo'lgan actorlarni top 2 taligini chiqaruvchi query yozilsin
+    4) FUNCTION -> count_customer(country) -> Country , o !      country_name | count(customer)
+    5) FUNCTION -> pow(num1 , num2)
+
+
+
+cars table (id , name , model, price) 800
+orders table(id , user_id(1,1000), car_id(1,800)) 300
+users table (id , fullname , age) 1000
+books table (id , title , language , author_name) 1000
+
+film_pagination(page_num int)
+
+crontab
+8:00 menu tayor
+8:30 menu tayor
+9:00 menu tayor
+9:30 menu tayor
+10:00 menu tayor

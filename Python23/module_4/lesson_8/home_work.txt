@@ -1,0 +1,30 @@
+Uyga vazifa:
+    0) FUNCTION -> fibanachi(num) sonlarni chiqaradigan function yozing
+    1) FUNCTION -> eng max payment(amount) qilgan customer topadigan query yozilsin (from_date , to_date)
+    2) FUNCTION -> Language, Film ! ANY LANGUAGE tarjima qilingan hamma kinolarni chiqaradigan query yozilsin
+    3) FUNCTION -> Eng uzun fullname bo'lgan actorlarni top 2 taligini chiqaruvchi query yozilsin
+    4) FUNCTION -> count_customer(country) -> Country , o !      country_name | count(customer)
+    5) FUNCTION -> pow(num , num)
+
+
+
+cars table (id , name , model, price) 50000
+orders table(id , user_id(1,2000), car_id(1,1000)) 300
+users table (id , fullname , age) 400000
+books table (id , title , language , author_name) 10000
+
+film_pagination(page_num int)
+
+
+backup.tar
+crontab
+* * * * *
+
+backup.sh
+BACKUP_DIR="/home/dilshod/backups/"
+FILE_NAME=$BACKUP_DIR`date +%d-%m-%Y-%I-%M-%S`.tar
+PGPASSWORD='1' pg_dump -U postgres -h localhost dvdrental -F tar -f $FILE_NAME
+
+
+
+

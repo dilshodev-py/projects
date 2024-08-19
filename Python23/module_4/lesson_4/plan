@@ -1,0 +1,10 @@
+create database -> lesson_4
+
+0. sequence , constraint , python+postgresql
+1. AGGREGATE FUNCTIONS (count, avg, max, min, sum)
+2. Joining Multiple Tables (inner join, cross join, right join , left join)
+3. Grouping Data (group by, having)
+
+
+coffee break : 5 min
+

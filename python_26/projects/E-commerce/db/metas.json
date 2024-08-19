@@ -1,0 +1,9 @@
+[
+   {
+      "id": 1,
+      "barcode": "1",
+      "qr_code": "https://assets.dummyjson.com/public/qr-code.png",
+      "created_at": "2024-05-23T08:56:21.618Z",
+      "updated_at": "2024-05-23T08:56:21.618Z"
+   }
+]

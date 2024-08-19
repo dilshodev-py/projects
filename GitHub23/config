@@ -1,0 +1,11 @@
+git config --global user.name "dilshodev3234"
+git config --global user.email "absaitovdev@gmail.com"
+
+sudo apt install git
+
+ssh-    key
+    ssh-keygen -t rsa
+    cat ~/.ssh/id_rsa.pub
+
+
+

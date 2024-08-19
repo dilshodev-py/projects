@@ -1,0 +1,34 @@
+select a.first_name from actor a;
+select a.first_name ism from actor a;
+
+
+select * from actor where actor_id <> 1;
+select * from actor order by first_name;
+
+select * from payment order by amount desc ;
+
+
+select * from actor offset 5 rows fetch first 20 rows only ;
+
+select * from actor offset 10*(4-1) limit 10;
+
+
+select * from actor where first_name in ('Zero' , 'Uma');
+
+
+select * from actor where actor_id between 9 and 10;
+select * from actor where actor_id >= 9 and actor_id <= 10;
+
+
+
+select * from actor where first_name ilike '_%c%_';
+
+
+select * from address where address2 is not NULL;
+
+
+-- Drama |   2
+-- Family |   1
+
+select name , sum(category_id) from category group by name, category_id;
+

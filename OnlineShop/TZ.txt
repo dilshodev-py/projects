@@ -1,0 +1,18 @@
+user menu:
+    shop
+        categories
+        basket
+        <-back
+    product placement
+        1.category choose
+        2.then product data
+    my_products
+    settings
+    log out
+
+admin menu:
+    category
+    give admin
+    statistics
+    new product(+0)
+    log out

@@ -1,0 +1,24 @@
+-- create table courses(
+--     course_id serial primary key ,
+--     name varchar(50) not null ,
+--     created_at date
+-- );
+
+-- create table students(
+--     id serial primary key ,
+--     first_name varchar(255),
+--     last_name varchar(255),
+--     email varchar(255) check ( email like '%@%.com'),
+--     course_id integer references courses(id),
+--     created_at date default timezone('Asia/Tashkent' , current_date::timestamptz)
+-- );
+
+
+-- alter table students add constraint students_email_check check ( email like '%@%');
+
+
+
+
+
+
+

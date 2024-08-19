@@ -1,0 +1,20 @@
+
+print(print("Hello"))
+
+Hello
+None
+
+
+
+
+'0' -> True
+
+if "":
+    print("hi")
+else:
+    print("bye")
+
+
+input(input())
+
+

@@ -1,0 +1,103 @@
+ALGO = 100-128
+
+========================= task 1=========================
+Kiruvchi malumot nums !
+Vazifa nums itemlarini ikki martaga ortirib berish
+
+Input: nums = [1,2,1]
+Output: [1,2,1,1,2,1]
+
+
+========================= task 2 ======================
+Kiruchi malumot nums !
+Massiv ichidagi itemlarni index sifatida ko'rib
+massivni o'ziga nisbatan indexga qarab yangi massiv hosil qilinsin
+
+Input: nums = [0,2,1,5,3,4]
+Output: [0,1,2,4,5,3]
+
+========================= task 3 ======================
+Kiruvchi malumot nums !
+4 ta yaxshi juftlik (0,3), (0,4), (3,4), (2,5)
+Bunda siz bir biriga teng juftliklar nechta borligini topuvchi dastur tuzing
+
+Input: nums = [1,2,3,1,1,3]
+Output: 4
+
+========================= task 4 ======================
+Kiruvchi malumot nums !
+juft o'rinda turgan sonlarni yig'indisi ,
+toq o'rinda turgan sonlarni yig'indisiga bo'lingan ifoada topilsin
+
+Input: nums = [1,2,3,1,1,3]
+Output: 1.2
+
+========================= task 5 ======================
+Kiruvchi malumot nums va n !
+nums massivini o'rtasidan 2 ga ajratib 2 ta massiv hosil qilinsin va
+bu 2 ta massivdan  1 ta dan qiymatlar olinib yangi massiv hosil qilinsin
+
+Example 1:
+
+Input: nums = [2,5,1,3,4,7], n = 3
+Output: [2,3,5,4,1,7]
+
+Example 2:
+
+Input: nums = [1,2,3,4,4,3,2,1], n = 4
+Output: [1,4,2,3,3,2,4,1]
+
+========================= task 6 ======================
+Kiruvchi malumot nums !
+nums massivini itemlar summasi topilsin
+
+Input: nums = [1, 5.2, 4, 0, -1]
+Output: 9.2
+
+Input: nums =  []
+Output: 0
+
+Input: nums = [-2.398]
+Output: -2.398
+
+========================= task 7 ======================
+Kiruvchi malumot nums !
+nums dagi har bir item ni 2 ga ko'paytma qilib yangi massiv hosil qilinsin
+
+input : nums = [1, 2, 3]
+output : [2, 4, 6]
+
+input : []
+output : []
+
+========================= task 8 ======================
+Kiruvchi malumot nums !
+nums dagi har bir item ni 2 ga ko'paytma qilib yangi massiv hosil qilinsin
+
+input :  nums = [1, 2, 3] # 12345678
+output : [2, 4, 6] # 12345678
+
+input : []
+output : []
+
+========================= task 9 ======================
+
+monkey_count(5) -> [1,2,3,4,5]
+monkey_count(9) -> [1,2,3,4,5,6,7,8,9]
+
+
+========================= task 10 ======================
+
+Input : l =  ["tail", "body", "head"]
+Output : ["head", "body", "tail"]
+
+Input : ["lower legs", "torso", "upper legs"]
+Output : ["upper legs", "torso", "lower legs"]
+
+
+
+
+
+
+
+

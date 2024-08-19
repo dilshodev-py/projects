@@ -1,0 +1,88 @@
+
+
+
+
+
+
+================ task 1 ==================
+actor : actor table dagi actor_id ustunini orderlab barcha ustunlari chiqarilsin
+kamayish tartibida
+
+
+
+
+================ task 2 ==================
+
+address : address2 ustun null bo'gan listlar chiqarilsin
+
+
+
+================ task 3 ==================
+category : category_id ustun qiymatlari juft bo'ganlarini chiqarilsin
+
+
+
+
+
+
+
+
+
+
+
+
+================ task 4 ==================
+city : city ustun qiymatlari 'ara' bilan boshlanganlarini malumotlari chiqarilsin
+
+
+
+
+
+
+
+
+
+
+
+================ task 5 ==================
+country : country ustun qiymatlari 'germany' bo'ganlarini country_id chiqarilsin
+
+
+
+
+
+
+
+
+
+
+================ task 6 ==================
+customer : customer_id va store_id ustun qiymatlari ayirish amali bajarilgandagi qiymatlar chiqarilsin
+
+select customer_id - store_id from customer;
+
+
+
+================ task 7 ==================
+film : length ustunidagi eng kichkina qiymatga ega 1 ta malumot chiqarilsin
+
+
+select * from film order by name limit 1;
+
+
+
+
+
+================ task 8 ==================
+rental : rental_id , inventory_id , customer_id va staff_id
+ustun qiymatlari qo'shilish amali bajarilgandagi qiymatlar chiqarilsin
+
+
+
+
+
+================ task 9 ==================
+staff : username ustuni 'Mike' bilan boshlanadiganlari chiqarilsin
+
+
+

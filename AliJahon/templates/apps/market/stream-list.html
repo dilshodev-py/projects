@@ -1,0 +1,68 @@
+{% extends 'apps/include_base/base.html' %}
+
+
+{% block body %}
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="container">
+                <br>
+                <h3 class="text-center"> Mening havolalarim </h3>
+                <br>
+
+                <div class="row">
+                    {% for stream in page_obj %}
+                        <div class="col-sm-4">
+                            <div class="card-header">
+                                <h5>{{ stream.name }}</h5>
+                            </div>
+                            <div class="card">
+                                <div class="card-body" style="position: relative;">
+                                    <div class="form-group">
+                                        <input type="text" value="{{ request.get_host }}/oqim/{{ stream.id }}" readonly
+                                               class="ref_link form-control" id="ref_link_{{ stream.id }}">
+                                    </div>
+                                    <button class="copy_ref_bn btn btn-primary" data-streamid="{{ stream.id }}"
+                                            style="float:left; margin-right:9px; margin-top: 9px;">Nusxa ko'chirish
+                                    </button>
+                                    <a href="{% url 'product_detail' stream.product__slug %}" target="_blank"><img class="mt-3" width="24" height="24" src="https://img.icons8.com/external-flat-icons-inmotus-design/67/external-Forward-basic-ui-navigation-elements-flat-icons-inmotus-design-2.png" alt="external-Forward-basic-ui-navigation-elements-flat-icons-inmotus-design-2"/></a>
+                                    <a href="#" target="_blank"><img class="ms-3 mt-3" width="24" height="24" src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/24/external-telegram-is-a-cloud-based-instant-messaging-and-voice-over-ip-service-logo-filled-tal-revivo.png" alt="external-telegram-is-a-cloud-based-instant-messaging-and-voice-over-ip-service-logo-filled-tal-revivo"/></a>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                    {% endfor %}
+
+
+                </div>
+                <div class="card-footer bg-light d-flex justify-content-center">
+                        <div>
+                            {% if page_obj.has_previous %}
+                                <a class="btn btn-falcon-default btn-sm me-2" type="button"
+                                   data-bs-toggle="tooltip" data-bs-placement="top" title="Prev"
+                                   href="?page={{ page_obj.previous_page_number }} "><span
+                                        class="fas fa-chevron-left"></span></a>
+                            {% endif %}
+                            <a class="btn btn-sm btn-falcon-default text-primary me-2"
+                               href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+
+                            {% if page_obj.number != page_obj.paginator.num_pages %}
+                                <a class="btn btn-sm btn-falcon-default me-2"
+                                   href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                            {% endif %}
+                            {% if page_obj.has_next %}
+                                <a class="btn btn-falcon-default btn-sm" data-bs-toggle="tooltip"
+                                   data-bs-placement="top" title="Next"
+                                   href="?page={{ page_obj.next_page_number }}"><span
+                                        class="fas fa-chevron-right">  </span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

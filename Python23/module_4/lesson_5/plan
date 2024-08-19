@@ -1,0 +1,68 @@
+
+0. case
+1. dvdrental simple
+2. Joining Multiple Tables (inner join, cross join, right join, left join, full join)
+3. AGGREGATE FUNCTIONS (count, avg, sum , string_agg , array_agg)
+
+
+
+
+
+
+
+case
+    when condition1 then value
+    when condition3 then value
+    when condition2 then value
+    when condition4 then value
+    else value
+end
+
+
+Downloads -> dvdrental.zip
+
+terminal:
+
+    /home/dilshod/ : cd Downloads
+    /home/dilshod/Downloads : unzip dvdrental.zip
+    /home/dilshod/Downloads : ls
+    dvdrental.zip     dvdrental.tar
+    /home/dilshod/Downloads : mv dvdrental.tar /tmp
+    /home/dilshod/Downloads : cd /tmp
+    /tmp : sudo -u postgres pg_restore -d dvdrental < dvdrental.tar
+
+
+join:
+    inner join -> join
+    right outer join -> right join
+    left outer join  -> left join
+    full join
+    cross join
+
+
+
+
+select count() from
+table1 <-> table2
+
+select table1.col , table2.col , count(table2.col) from table1
+left join table2 on table1.id = table2.table1_id
+group by table1.id;
+
+
+count -> group by ?
+
+avg, sum , string_agg , array_agg
+
+
+
+student
+id     course_id
+
+
+course
+c1
+c2
+c3
+
+

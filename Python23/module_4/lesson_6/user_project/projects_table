@@ -1,0 +1,15 @@
+Column Name	        Data Type	    Description
+
+
+projects
+
+id      	        INT	            Unique identifier for the project (Primary Key)
+name	            VARCHAR(100)	Name of the project
+description	        TEXT	        Description of the project
+start_date	        DATE	        Start date of the project
+end_date	        DATE	        End date of the project
+status	            VARCHAR(20)	    Status of the project (e.g., "in_progress", "completed", "on_hold") default in_progress
+user_id	            INT	            ID of the project manager (Foreign Key referencing Users table)
+created_at	        TIMESTAMP	    Timestamp when the project was created
+updated_at	        TIMESTAMP	    Timestamp when the project was last updated
+

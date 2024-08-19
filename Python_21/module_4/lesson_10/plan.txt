@@ -1,0 +1,9 @@
+jsonb
+crypt
+DCL - grant , revoke
+trigger
+
+RDBMS
+    DDL - create , drop , alter , truncate
+    DML - select , insert , update , delete
+    DSL - grant , revoke

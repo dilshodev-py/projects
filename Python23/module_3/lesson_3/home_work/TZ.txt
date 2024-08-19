@@ -1,0 +1,23 @@
+users.json
+===========================================
+Aktiv Foydalanuvchilar soni: 1000 🟢
+
+Bugungi kirgan userlar soni: 0 🆕
+Kechagi kirgan userlar soni: 10 👥
+Shu oyda qo'shilgan userlar soni : 100 ta
+===========================================
+
+
+Processing
+async
+web scraping
+net image download to file
+
+
+csv
+xlsx
+matrix
+collection
+
+
+

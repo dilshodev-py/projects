@@ -1,0 +1,1 @@
+print('Bolla nima gapee contr tashkilashtrilikee')

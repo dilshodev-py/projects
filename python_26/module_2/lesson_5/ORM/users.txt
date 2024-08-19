@@ -1,0 +1,5 @@
+1|Kamol|Komilov|25
+2|Kamol|Hoshimov|25
+3|Farhod|Farhodov|25
+3|Farhod|Farhodov|25
+3|Farhod|Farhodov|25

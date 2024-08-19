@@ -1,0 +1,48 @@
+
+============================== account ==============================
+
+
+Tel :
+1) Order
+    1) 🚛 Truck
+    2) 🛫 Avia
+    3) 🚄 Train
+    0) <- back
+
+        --------------------------- 🚛 Truck ---------------------------
+
+            >>> from_location
+            >>> to_location
+            >>> product name
+            >>> size
+
+        --------------------------- 🛫 Avia -----------------------------
+
+            >>> from_location
+            >>> to_location
+            >>> category
+                > ticket
+                > product deliver
+            >>> count
+
+        --------------------------- 🚄 Train ----------------------------
+            >>> from_location
+            >>> to_location
+            >>> category
+                > ticket
+                > product deliver
+            >>> count
+
+2) settings
+    1) update profile
+    2) delete account
+    0) <- back
+
+3) company info
+
+    Company name
+    Tel : +99899 123 00 00
+    Address : Uzbekistan , Tashkent shayxontohur ko'chasi 32-UY
+    <-account
+
+0) logout

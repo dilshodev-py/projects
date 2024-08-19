@@ -1,0 +1,148 @@
+select s.name, avg(u.ball) from subjects s
+inner join users u on s.id = u.subject_id
+group by s.name ;
+
+-- ---------------------------------------------------
+
+select u.phone_number from users u
+group by u.phone_number having count(u.phone_number)>1;
+
+-- ---------------------------------------------------
+
+select s.name, count(s.id) student_count from subjects s
+    inner join users u on s.id = u.subject_id
+where s.name like 'X%'or s.name like 'O%' or s.name like 'T%'
+group by s.id;
+
+-- ---------------------------------------------------
+
+-- delete groups (student_count < 20)
+
+delete from groups
+where id in
+(select g.id from groups g
+    inner join users u on u.group_id = g.id
+             group by g.id
+             having count(u.id) filter ( where u.role = 'student' ) < 20);
+
+
+-- --------------------------------------------------------
+
+-- UPDATE groups.is_full = True (student_count >= groups.max_space)
+-- Time - 16:24
+
+
+update groups g2 set is_full = True
+                 where g2.id in (select g.id from groups g
+                    inner join users u on u.group_id = g.id
+                             group by g.id
+                             having count(u.id) >= g2.max_space) returning g2.id;
+
+
+-- -------------------------------------------------------------
+
+-- Time - 16:59
+
+select u.id, u.first_name from users u
+where u.id > 10 and u.id::text = reverse(u.id::text) ;
+
+------------------------------------------------------------------
+
+
+select id, first_name , creaed_at from users where current_date-creaed_at<=7;
+
+------------------------------------------------------------------
+
+-- Time - 17:18
+
+
+update groups g set is_full = case when is_full = 'true' then 'false'  else 'true' end where g.id in (
+    select g2.id from groups g2 inner join users u on u.group_id = g2.id
+                 where u.role = 'teacher' and length(u.password) > 15
+    ) returning g.id;
+
+
+------------------------------------------------------------------
+
+-- Time - 17:33
+
+-- user.role = 'teacher' or 'admin'
+-- bo'lganlarini passwordlarini ichida ortiqcha belgi va sonlarni olib update qilinsin !
+
+-- update users set password = regexp_replace(password,'[\d\W]+', '', 'g') where  role in ('teacher', 'admin');
+
+
+------------------------------------------------------------------
+
+-- Time - 17:42
+
+CREATE OR REPLACE FUNCTION is_prime(n INT) RETURNS BOOLEAN AS $$
+BEGIN
+    IF n < 2 THEN
+        RETURN FALSE;
+    END IF;
+    FOR i IN 2..sqrt(n)::INT LOOP
+        IF n % i = 0 THEN
+            RETURN FALSE;
+        END IF;
+    END LOOP;
+    RETURN TRUE;
+END;
+$$ LANGUAGE plpgsql;
+
+
+select id, name, teacher_id, subject_id from groups g
+    where g.subject_id + g.teacher_id < g.id and is_prime(g.subject_id) = true and is_prime(g.teacher_id) = true;
+
+------------------------------------------------------------------
+-- Time - 18:03
+
+-- role = teacher and subject.name.is_upper()
+
+-- t.group_id |  s.name  |  t.first_name
+
+-- select u.group_id , s.name , u.first_name from users u
+--     join groups g on u.group_id = g.id
+--     join subjects s on s.id = u.subject_id
+-- where u.role = 'teacher' and upper(s.name)=s.name;
+
+
+-- select case
+--     when s.id % 2 = 0 then true
+--     when s.id % 2 = 1 then false
+-- end
+-- ,
+-- s.name
+-- from subjects s;
+
+-- select s.id, s.name , sum(s.id) from subjects s group by s.name , s.id;
+-- select s.name , string_agg(s.id::varchar, ',') from subjects s group by s.name;
+-- select s.name , array_agg(s.name) from subjects s group by s.name;
+
+
+select age('2005-08-25'::date);
+select extract(century from current_date);
+select extract(decade from current_date;
+select extract(dow from current_date);
+select extract(doy from '2024-12-31'::date)
+select to_date('01/02/2024' , 'mm/dd/YYYY');
+
+
+select ascii('A');
+select chr(97);
+select concat('Hello' ,' ', 'World');
+select 'Hello' || ' ' || 'World';
+select concat_ws(' ' , 'Hello' , 'World');
+select format('%s %s' ,'Hello' , 'World'  );
+select initcap('salom dunyo') -- title
+select left('salom' , 3);
+select right('salomertyukjfhgdfd' , length('salomertyukjfhgdfd')-1);
+select upper('salom');
+select position('al' in 'asalom');
+
+
+
+
+
+
+

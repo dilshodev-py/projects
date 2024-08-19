@@ -1,0 +1,6 @@
+Operators of python:
+    arifmetic: + , - , / , * , // , % , **
+    mantiqiy : and , or , not
+    taqoslash : == , != , > , < , >= , <=
+
+

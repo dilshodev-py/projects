@@ -1,0 +1,44 @@
+docker version                                                          ✅ verisyasi ko'radi 🟢
+docker login                                                            ✅ authentication 🟢
+docker images                                                           ✅ images list 🟢
+docker pull                                                             ✅ images pull 🟢
+docker image rm [id or name]                                            ✅ image delete 🟢
+docker rmi [id or name]                                                 ✅ image delete 🟢
+docker ps -a                                                            ✅ container list 🟢
+docker ps                                                               ✅ run container list 🟢
+docker logs [name or id]                                                ✅ container loglarni ko'rish 🟢
+docker rm [name or id]                                                  ✅ remove container 🟢
+docker run -it --name con_name image                                    ✅ container create 🟢
+docker stop [name or id]                                                ✅ container stop qiladi  🟢
+docker restart [name or id]                                                      ✅ stop and run container 🟢
+docker kill [name or id]                                                        ✅ container kill 🟢
+docker exec [name]                                                      ✅ enter in container 🟢
+docker history [name or id]                                                          ✅ container history 🟢
+docker volume                                                        ✅ volume list 🟢
+docker volume rm [name]                                                 ✅ volume delete 🟢
+docker logout                                                           ✅ login qilingan accountdan chiqib ketadi 🟢
+docker push                                                             ✅ image push
+
+docker <- postgres:alpine
+
+
+docker run -it -d --name pg -e POSTGRES_PASSWORD=1 -p 5432:5432 postgres:alpine
+sudo systemctl stop postgresql
+sudo systemctl status postgresql
+sudo systemctl start postgresql
+
+docker build -t image_name .
+
+Dockerfile
+    FROM python:3.11-alpine
+    WORKDIR /app
+    COPY . .
+    RUN pip install -r requirements.txt
+    CMD python3 main.py
+
+
+docker login
+docker tag fitnesbot:latest dilshodev/fitnesnot:alpine
+docker push dilshodev/fitnesnot:alpine
+
+

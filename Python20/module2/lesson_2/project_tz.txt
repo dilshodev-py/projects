@@ -1,0 +1,20 @@
+
+
+product:
+    id
+    name
+    price
+    term
+    count
+    join_at
+
+start:
+    1) product add [id , name , price , term , count , join_at]
+    2) product delete [id]
+    3) product list []
+    4) product update [id][field][new_value]
+
+
+
+
+

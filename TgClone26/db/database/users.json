@@ -1,0 +1,26 @@
+[
+   {
+      "id": 1,
+      "first_name": "botirjon",
+      "last_name": "Qodir",
+      "username": "botir_",
+      "image": "\ud83e\udd20",
+      "phone_number": "998993583234",
+      "bio": "Auf",
+      "birthdate": "2005-12-12",
+      "lang": "uz",
+      "created_at": "2024-07-20 11:15:17.398236"
+   },
+   {
+      "id": 2,
+      "first_name": "Alijon",
+      "last_name": "Valiyev",
+      "username": null,
+      "image": "\ud83d\udc68\u200d\ud83c\udf3e",
+      "phone_number": "998991112233",
+      "bio": null,
+      "birthdate": null,
+      "lang": "uz",
+      "created_at": "2024-08-05 20:58:48.863055"
+   }
+]

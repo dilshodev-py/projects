@@ -1,0 +1,80 @@
+===================== task 1 =====================
+Kiruvchi malumot butun son - num !
+1 dan num qiymatigacha bo'lgan sondi text file ga yozib beruvchi dastur tuzing
+
+input : 5
+to file : 1 2 3 4 5
+
+input : 10
+to file : 1 2 3 4 5 6 7 8 9 10
+
+====================== task 2 =====================
+
+Kiruvchi malumot butun son - num1 va num2 !
+num1 dan num2 gacha bo'lgan sonlarni juft qiymatlarini nums.txt file ga yozadigan qilinsin
+
+input : 2 10
+to file : 2 4 6 8 10
+
+input : 10 20
+to file : 10 12 14 16 18 20
+
+====================== task 3 =====================
+Kiruvchi malumot dictionary malumot turi - user !
+user malumotlarini
+
+"fullname1|age1|address1"
+    shu tartibda users.txt file ga saqlaydigan qilinsin
+
+input : {"fullname" : "Nazerov Kamron" , "age" : 24 , "address" : "Toshkent"}
+to file : Nazerov Kamron|24|Toshkent
+
+====================== task 4 =====================
+Kiruvchi malumot  todos.json file !
+Shu malumotni todos.txt file ga yozadigan qilinsin
+
+input : todos.json ({"userId": 1, "id": 1, "title": "delectus aut autem","completed": false} ....)
+to file : 1,1,delectus aut autem,false
+
+====================== task 5 =====================
+Kiruvchi malumot NUM.TXT FILE DA YOZILGAN - 11 23 32 41 57 16 37 8 !
+Shu file da faqat toq sonlar qoladigan dastur tuzulsin
+
+before file : 11 23 32 41 57 16 37 8
+after file : 11 23 41 57 37
+
+====================== task 6 =====================
+Kiruvchi malumot sentences.txt FILE DA YOZILGAN - 1            2      3    4 5         6 7 8 !
+Shu file da keraksiz probellarni olib tashlash dastur tuzulsin
+
+before file : 1            2      3    4 5         6 7 8      !
+after file : 1 2 3 4 5 6 7 8 !
+
+
+====================== task 7 =====================
+Kiruvchi malumot sentences.txt FILE DA YOZILGAN - users malumoltlar '|' belgisi bilan ajratilgan !
+Shu file da user malumotlarini dict ga type casting qilib print qilinsin
+
+
+before file :
+    "Botir|25|Toshkent"
+    "Kamol|24|Sirdaryo"
+
+terminal output:
+    {"fullname" : "Borir", "age" : 25 , "address": "Tashkent"}
+    {"fullname" : "Kamol", "age" : 24 , "address": "Sirdaryo"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

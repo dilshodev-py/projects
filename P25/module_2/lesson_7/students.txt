@@ -1,0 +1,4 @@
+Ali,85
+Vali,78
+Sarvar,90
+Laylo,95

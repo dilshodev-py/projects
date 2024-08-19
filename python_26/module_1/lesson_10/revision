@@ -1,0 +1,45 @@
+clear                   - yes
+add()                   - yes
+remove(data)            - yes
+copy                    - yes
+differance              - yes
+differance_update       - yes
+discard                 - yes
+pop                     - yes
+union(iterable)         - yes
+intersection
+intersection_update
+isdisjoint
+issubset
+issuperset
+symmetric_difference          - yes
+{}.symmetric_difference_update- yes
+update(iterable)              - yes
+
+
+hashable        - int , float , complex , string , tuple , bool
+unhashable      - set , list , tuple , dict
+
+
+immutable       - hashable
+mutable         - unhashable
+
+unpacking
+packing
+
+a = 1,2,3,4              packing
+a , b, c , d = 1,2,3,4   unpacking
+
+
+
+def function(*args , **kwargs): # packing
+    pass'
+
+function(*[1,2,3,4,5,6,7] , num = 10) # unpacking
+
+print(*[1,2,3,4,5,6,7]) # unpacking
+
+
+
+
+

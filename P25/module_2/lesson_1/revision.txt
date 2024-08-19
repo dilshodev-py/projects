@@ -1,0 +1,85 @@
+mutable     - list , set , dict , tuple[list , set , dict]
+immutable   - str , int , float , bool , tuple ,
+
+
+hashable    - immutable
+unhashable  - mutable
+
+memory
+    stack   - o'zgaruchi saqlanadi
+    heap    - qiymat saqlanadi
+
+
+
+set[value] , dict[key : value]
+list , tuple[fast, memory]
+str - "" , '' , """""" , '''''' , str()
+for var in iterable:
+    logic
+
+
+while condition:
+    logic
+
+
+if condition:
+    logic
+elif condition:
+    logic
+else:
+    logic
+
+
+if condition:
+    logic
+if condition:
+    logic
+
+
+
+def function_name(param1 , param2 ....):
+    logic
+
+function_name(arg1 , param2=agr2 , arg3)
+position arg
+key_word arg
+
+
+
+
+
+
+
+
+
+unpacking
+    a,  b, c = 1,2,3,4
+    a = (1,2,3,4)
+    print(*a)
+
+packing
+    a = 1,2,34,5,6
+
+
+lambda param1 , param2 : logic
+
+
+match var:
+    case value:
+        logic
+    case value:
+        logic
+    case value:
+        logic
+
+math
+    pow , sqrt , cos , sin , log , log2, log10 , pi , e , factorial
+type casting
+    a = 10
+    a = str(a)
+
+
+type hint
+    a : int = 10
+
+

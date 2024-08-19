@@ -1,0 +1,7 @@
+=============== menu ===================
+
+1) Prayer Time
+2) suras
+3) language
+4) exit
+

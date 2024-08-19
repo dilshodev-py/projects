@@ -1,0 +1,11 @@
+referal link
+pagination
+Interlocutor bot
+I18n
+webhook run tg bot
+deploy to free server
+
+project:
+    evos bot
+    register by qr code
+    converter money bot

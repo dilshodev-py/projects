@@ -1,0 +1,2 @@
+DCL -> revoke , grant -> user (role)
+trigger

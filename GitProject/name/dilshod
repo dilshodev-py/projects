@@ -1,0 +1,10 @@
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dilshodev3234/GitProject.git
+git push -u origin main
+
+
+git config user.name dilshodev3234
+git config user.email absaitovdev@gmail.com

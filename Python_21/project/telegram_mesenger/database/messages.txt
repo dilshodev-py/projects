@@ -1,0 +1,2 @@
+1|GROUP|Hello|SEND
+1|GROUP|Hello|SEND

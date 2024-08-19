@@ -1,0 +1,54 @@
+{
+   "1": {
+      "name": "Toshkent viloyati",
+      "link": "toshkent"
+   },
+   "12": {
+      "name": "Andijon viloyati",
+      "link": "andijon"
+   },
+   "3": {
+      "name": "Farg'ona viloyati",
+      "link": "fargona"
+   },
+   "9": {
+      "name": "Samarqand viloyati",
+      "link": "samarqand"
+   },
+   "2": {
+      "name": "Buxoro viloyati",
+      "link": "buxoro"
+   },
+   "4": {
+      "name": "Sirdaryo viloyati",
+      "link": "sirdaryo"
+   },
+   "5": {
+      "name": "Jizzax viloyati",
+      "link": "jizzax"
+   },
+   "6": {
+      "name": "Navoiy viloyati",
+      "link": "navoiy"
+   },
+   "8": {
+      "name": "Qoraqalpog'iston Respublikasi",
+      "link": "qoraqalpogistonrespublikasi"
+   },
+   "10": {
+      "name": "Surxondaryo viloyati",
+      "link": "surxondaryo"
+   },
+   "11": {
+      "name": "Qashqadaryo viloyati",
+      "link": "qashqadaryo"
+   },
+   "7": {
+      "name": "Namangan viloyati",
+      "link": "namangan"
+   },
+   "13": {
+      "name": "Xorazm viloyati",
+      "link": "xorazm"
+   }
+}

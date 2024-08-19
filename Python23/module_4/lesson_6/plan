@@ -1,0 +1,28 @@
+1. Subquery, ANY, ALL, EXISTS
+2. CONDITIONAL EXPRESSIONS (shartli iboralar) & OPERATORS (case, coalesce, nullif, cast)
+sudo -u postgres psql lesson_6 < users_.sql
+1996  mv users_.sql /tmp
+1997  cd /tmp
+1998  ls
+2001  sudo -u postgres psql lesson_6 < users_.sql
+2003  history
+
+
+table1 -> table2
+
+ANY -> or
+ALL -> and
+
+select * from table1 where col > ALL(select col from ....)
+select * from table1 where col > ANY(select col from ....)
+select * from table1 where EXISTS(select 1 from table2 where table1.col = table2.col)
+
+delete from projects p where  EXISTS(select id from users u where u.role = 'employee' and p.user_id = u.id) returning *;
+
+
+
+coalesce(null , null),
+
+nullif,
+
+

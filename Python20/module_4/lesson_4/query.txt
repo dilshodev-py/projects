@@ -1,0 +1,111 @@
+-- select count(*) from authors;
+-- select count(*) from books;
+-- select count(*) from author_book;
+
+-- book(title) | author(name)
+
+-- select b.title , a.name from books b
+--     inner join author_book ab on b.id = ab.book_id
+--     inner join authors a on ab.author_id = a.id;
+--
+-- create table customer(
+--     id serial primary key ,
+--     name varchar(255)
+-- );
+--
+
+
+--
+-- create table product(
+--     id serial primary key ,
+--     customer_id integer references customer(id) ,
+--     name varchar(255)
+-- );
+--
+-- select c.name,count(p.id) from product p
+--     inner join customer c on c.id = p.customer_id
+-- group by c.id;
+--
+-- select p.name,count(c.name) from product p
+--     join customer c on c.id = p.customer_id
+-- group by p.id;
+--
+-- select c.name, p.name from product p
+--     full join customer c on c.id = p.customer_id
+-- where c.name is NULL or p.name is NULL;
+--
+-- select c.name, p.name from product p
+--     join customer c on c.id = p.customer_id
+-- where c.name is NULL;
+
+
+-- join 70
+-- left , right 25
+-- full 5
+
+
+
+
+
+
+
+
+
+-- c.name | count(product)
+
+
+-- select c.name from customer c
+-- union all
+-- select p.name from product p;
+
+-- ================== task 1 =======================
+-- authors(birthday > date(1980-01-01))
+-- 11:30
+-- select * from authors where birthday > '1980-01-01'::date;
+
+-- ================== task 2 =======================
+-- authors(birthday > date(1980-01-01))
+-- authors(name) | count(books) count_book
+-- 11:35
+-- select a.name , count(ab.book_id) , a.birthday from authors a
+--     join author_book ab on a.id = ab.author_id
+-- where a.birthday > '1980-01-01'::date
+-- group by a.id;
+
+
+
+-- ================== task 3 =======================
+-- category and film
+-- category(name) | count(film)
+-- 11:45
+
+
+
+
+
+
+================================ dvdrental querys =========================
+
+
+select c.name , count(fc.film_id) count_film from category c
+join film_category fc on c.category_id = fc.category_id
+group by c.category_id
+order by count_film desc limit 3;
+
+-- film and actor
+-- film(title) | "name1 , name2 ...."
+-- 11:57
+
+select f.title , string_agg(a.first_name, ','), count(a.actor_id) from film f
+join film_actor fa on f.film_id = fa.film_id
+join actor a on a.actor_id = fa.actor_id
+group by f.film_id;
+
+select a.first_name , string_agg(f.title, ',') from film f
+join film_actor fa on f.film_id = fa.film_id
+join actor a on a.actor_id = fa.actor_id
+group by a.actor_id;
+
+
+
+

@@ -1,0 +1,112 @@
+File -> read() , write(data : list[dict])
+ToDo -> save() , update() , delete , get()
+User -> is_valid() , is_login , is_email() , send_email() -> code , save() , delete() , update()
+
+
+ToDo ->
+    user
+        id
+        fullname
+        phone_number # unique
+        password
+        join_at
+
+    todo
+        id
+        title
+        body
+        datetime
+        status [True , False]
+        user_id
+
+
+
+=========================== auth ============================
+
+1) Register
+2) Login
+3) exit
+
+                ----------------------- Register -----------------------
+                >>> fullname
+                >>> email (send code : 123123)
+                >>> password
+                >>> email code
+
+                ----------------------- Login --------------------------
+
+                >>> email
+                >>> password
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+======================= Account ========================
+1) ToDO
+2) My ToDO
+3) settings
+0) logout
+
+                ----------------------- ToDo --------------------------
+                >>> title
+                >>> body
+                >>> date
+                create
+                <-Account
+
+                ----------------------- My ToDO --------------------------
+                1) title1
+                2) title2
+                3) title3
+                4) title4
+                0) <-back
+                >>>0
+                <-Account
+
+                1) show
+                2) update
+                    title
+                    body
+                    date
+                    status
+                3) delete
+                0) <-back
+                <-Account
+
+                ----------------------- Settings --------------------------
+
+                1) My info
+                2) Edit
+                3) Delete account
+                0) <-back
+
+                            +++++++++++++++++++++++++ My info ++++++++++++++++++++++++++++++
+
+                            {session_user}
+
+                            +++++++++++++++++++++++++ Edit +++++++++++++++++++++++++++++++++
+                            1) fullname
+                            2) phone number
+                            3) password
+                            0) <-back
+                            >>> key
+                            >>> new_value
+                            Success edit
+
+                            +++++++++++++++++++++++++ Delete account +++++++++++++++++++++++
+                            Success Delete
+                            session_user = None
+                            <-logout
+
+                            +++++++++++++++++++++++++ <-back +++++++++++++++++++++++
+
+                            <-Account
+
+
+
+
+                ----------------------- logout --------------------------
+
+                session_user = None
+                <-auth
+

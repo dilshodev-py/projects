@@ -1,0 +1,1 @@
+from game import function_image

@@ -1,0 +1,29 @@
+[
+   {
+      "fullname": "John Smith",
+      "age": 25,
+      "phone_number": "+998991234567",
+      "location": {
+         "long": 23456,
+         "lat": 2345
+      }
+   },
+   {
+      "fullname": "Botir Qodirov",
+      "age": 30,
+      "phone_number": "+998991234567",
+      "location": {
+         "long": 23456,
+         "lat": 2345
+      }
+   },
+   {
+      "fullname": "Nodir Komilov",
+      "age": "21",
+      "phone_number": "+998993583234",
+      "location": {
+         "long": 69.228455,
+         "lat": 41.32658
+      }
+   }
+]

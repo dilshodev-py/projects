@@ -1,0 +1,9 @@
+webhook tg bot
+
+register by qr code
+
+converter money bot
+    https://open.er-api.com/v6/latest/USD
+
+
+

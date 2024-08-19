@@ -1,0 +1,100 @@
+-- json
+-- jsonb
+
+select '[
+  14,
+  90,
+  3,
+  47,
+  5,
+  6
+]'::jsonb -> 1;
+
+select '{
+  "name": "Botir",
+  "age": 25,
+  "address": {
+    "country": "Uzbekistan",
+    "region": "tashkent"
+  }
+}'::json -> 'address' ->> 'region';
+
+-- userda ko'p telefon nomer bo'lsa
+
+
+-- customers
+--     id
+--     first_name
+--     last_name
+--     phone_numbers jsonb        # '["998991234567"]'
+--     address jsonb              # '{"region" : "Samarqand" , }'
+
+-- insert 3 ta data
+
+create table customers2
+(
+    id            serial primary key,
+    first_name    varchar,
+    last_name     varchar,
+    phone_numbers jsonb,
+    address       jsonb
+);
+
+insert into customers2(first_name, last_name, phone_numbers, address)
+values ('Botir', 'Qodirov', '[
+  981234567,
+  991234567,
+  887654321
+]', '{
+  "region": "Toshkent",
+  "district": "Yunusobod"
+}'),
+       ('kamol', 'Komilov', '[
+         981234569,
+         991234565,
+         887654324
+       ]', '{
+         "region": "Samarqand",
+         "district": "Qoshrabod"
+       }'),
+       ('Jalol', 'Jalilov', '[
+         981234567,
+         991234567,
+         887654321
+       ]', '{
+         "region": "Jizzah",
+         "district": "paxtakor"
+       }');
+
+-- region == Jizzah
+
+select * from customers where address ->> 'region' = 'Jizzah';
+
+
+
+-- insert into customers(first_name) select generate_series from generate_series(1, 100);
+
+
+insert into customers2(first_name, last_name, phone_numbers, address)  select first_name, last_name, phone_numbers, address from customers;
+
+
+-- =================== crypt ===========================================
+-- create extension pgcrypto;
+-- select crypt('1' , gen_salt('bf',12));
+--
+-- select '$2a$12$Mrlz5IRD9V8qNICzRsHDheik/jgYy1US.Ze3xXIqoUKbGZw8q9/tu' = crypt('1' , '$2a$12$Mrlz5IRD9V8qNICzRsHDheik/jgYy1US.Ze3xXIqoUKbGZw8q9/tu')
+
+
+
+create table users(
+    id serial primary key ,
+    username varchar,
+    password varchar
+);
+
+insert into users(username, password)
+values ('Kamol' , crypt('1' , gen_salt('bf' , 12))),
+       ('Botir' , crypt('2' , gen_salt('bf' , 12)));
+
+select * from users where username = 'Botir' and password = crypt('1' , password);
+

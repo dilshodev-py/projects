@@ -1,0 +1,44 @@
+case
+    when condition1 then value
+    when condition3 then value
+    when condition2 then value
+    when condition4 then value
+    else value
+end
+
+==================================================================
+
+count -> group by
+avg, sum , string_agg , array_agg , count
+
+==================================================================
+
+built-in function
+    DATE:
+        age
+        extract:
+            century - asr
+            decade - har 10 yillik 1 decade ga teng
+            dow - week
+            doy - year number day
+
+        to_date('01/01/2024' , 'mm/dd/YYYY')
+        to_timestamp('01/01/2024 10:10:34' , 'mm/dd/YYYY HH24:MI:SS')
+
+    STRING:
+        ascii()
+        chr()
+        concat(values)
+        concat_ws(sep , values)
+        format()
+        initcap()  # title
+        left()
+        right()
+        length()
+        upper()
+        lower()
+        position() # index
+
+==================================================================
+
+

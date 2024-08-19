@@ -1,0 +1,5 @@
+TOKEN: 7008756551:AAEQwgy8tRidl-EsOnZzAbk_704f9ekBzSA
+https://api.telegram.org/bot7008756551:AAEQwgy8tRidl-EsOnZzAbk_704f9ekBzSA/getMe
+https://api.telegram.org/bot7008756551:AAEQwgy8tRidl-EsOnZzAbk_704f9ekBzSA/getUpdates
+https://api.telegram.org/bot7008756551:AAEQwgy8tRidl-EsOnZzAbk_704f9ekBzSA/sendPhoto?chat_id=1148477816&text=Assalom
+https://api.telegram.org/bot7008756551:AAEQwgy8tRidl-EsOnZzAbk_704f9ekBzSA/sendPhoto?chat_id=1148477816&photo=https://telegra.ph/file/78adb7b266d5477ad395c.png

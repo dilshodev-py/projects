@@ -1,0 +1,59 @@
+ 1268  sudo -i -u postgres psql
+ 1269  sudo -u postgres pg_dump -d dvdrental dvdrental.tar
+ 1270  sudo -u postgres pg_dump -U postgres -d dvdrental dvdrental.tar
+ 1271  sudo -U postgres pg_dump -u postgres -d dvdrental dvdrental.tar
+ 1272  sudo -u postgres pg_restore -d dvdrental dvdrental.tar
+ 1273  sudo -U postgres pg_restore -d dvdrental dvdrental.tar
+ 1274  sudo -u postgres pg_restore -d dvdrental dvdrental.tar
+ 1275  sudo -u postgres pg_restore -d dvdrental -f dvdrental.tar
+ 1276  sudo -u postgres psql pg_restore -d dvdrental -f dvdrental.tar
+ 1277  sudo -u postgres psql pg_restore -d dvdrental dvdrental.tar
+ 1278  sudo -u postgres psql pg_restore -p 5432 -d dvdrental dvdrental.tar
+ 1279  sudo -U postgres psql pg_restore -p 5432 -d dvdrental dvdrental.tar
+ 1280  sudo -u postgres psql pg_restore -p 5432 -d dvdrental -f dvdrental.tar
+ 1281  sudo systemctl status postgersql
+ 1282  sudo systemctl status postgresql
+ 1283  clear
+ 1284  sudo -u postgres psql  -p 5432 -d dvdrental -f dvdrental.tar
+ 1285  sudo -u postgres psql  -p 5432 -d dvdrental dvdrental.tar
+ 1286  sudo -u postgres psql -u postgres-p 5432 -d dvdrental dvdrental.tar
+ 1287  sudo -u postgres psql -U postgres-p 5432 -d dvdrental dvdrental.tar
+ 1288  sudo -u postgres psql postgres-p 5432 -d dvdrental dvdrental.tar
+ 1289  sudo -u postgres psql -p 5432 -d dvdrental dvdrental.tar
+ 1290  sudo -u postgres psql -p 5432 -d dvdrental -f dvdrental.tar
+ 1291  history
+ 1292  sudo -u postgres psql -h localhost -p 5432 -d dvdrental dvdrental.tar
+ 1293  sudo -u postgres psql -p 5432 -d dvdrental dvdrental.tar
+ 1294  sudo -u postgres pg_restore -p 5432 -d dvdrental dvdrental.tar
+ 1295  sudo -u postgres -U postgres -p 5432 -d dvdrental dvdrental.tar
+ 1296  sudo -u postgres psql -U postgres -p 5432 -d dvdrental dvdrental.tar
+ 1297  history
+ 1298  sudo -u postgres pg_restore -d dvdrental dvdrental.tar
+ 1299  sudo -u postgres pg_restore -p 5432 -d dvdrental dvdrental.tar
+ 1300  sudo -u postgres pg_restore -U postgers -d dvdrental dvdrental.tar
+ 1301  ls
+ 1302  mv dvdrental.tar /tmp
+ 1303  ls
+ 1304  cd /tmp
+ 1305  ls
+ 1306  sudo pg_restore -d dvdrental dvdrental.tar
+ 1307  cd ~
+ 1308  pwd
+ 1309  cd Downloads/
+ 1310  ls
+ 1311  unzip dvdrental.zip
+ 1312  sudo -u postgres pg_restore -d dvdrental dvdrental.tar
+ 1313  history
+ 1314  sudo chmod wrx+ .
+ 1315  sudo chmod wrx+
+ 1316  sudo chmod wr .
+ 1317  sudo chmod wrx
+ 1318  sudo chmod w+r+
+ 1319  sudo chmod w+r+ .
+ 1320  sudo chmod a+r dvdrental.tar
+ 1321  mv dvdrental.tar /tmp
+ 1322  cd /tmp
+ 1323  ls
+ 1324  sudo -u postgres pg_restore -d dvdrental dvdrental.tar
+ 1325  history
+ 1326  sudo -i -u postgres psql

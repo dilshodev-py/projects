@@ -1,0 +1,12 @@
+[
+  {
+    "id" : 1,
+    "fullname" : "Kamil Karate",
+    "age" : 24
+  },
+  {
+    "id" : 2,
+    "fullname" : "Botir Hoshimov",
+    "age" : 25
+  }
+]

@@ -1,0 +1,196 @@
+{% extends 'apps/include_base/base.html' %}
+{% load humanize %}
+{% load thumbnail %}
+
+{% block body %}
+
+    <div class="card mt-2 mb-2">
+        <div class="card-header bg-light">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h5 class="mb-0" id="followers"></h5>
+                </div>
+                <div class="col text-end"><a class="font-sans-serif" href="http://10.10.1.202:8000/category">Kategoriyalar</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body bg-light px-1 py-0">
+            <div class="row g-0 text-center fs--1">
+                <div class="row g-0 text-center fs--1">
+                    {% if not current_category %}
+                        {% for category in categories %}
+                            <div class="col-4 col-md-3 col-lg-3 col-xx1-2 mb-1">
+                                <div class="bg-600 dark__bg-1100 p-1 h-100 pt-5">
+                                    {% thumbnail category.image "300x300" format="PNG" as im %}
+                                        <a href="{% url 'product_list_by_category' category.slug %}">
+                                            <img
+                                                    class="img-thumbnail img-fluid  mb-3 shadow-sm bg-danger"
+                                                    src="{{ im.url }}"
+                                                    alt="" width="100"/>
+                                        </a>
+                                    {% endthumbnail %}
+                                    <h6 class="mb-1"><a
+                                            href="{% url 'product_list_by_category' category.slug %}">{{ category.name }}</a>
+                                    </h6>
+                                    <p class="fs--2 mb-1"></p>
+                                </div>
+
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="container border-bottom-4">
+                <div class="header_tab_menu">
+                    <div class="header_menu active" style="overflow: auto">
+                        <a href="{% url 'product_all_list_by_category' %}" class="btn btn-default">
+                            Barchasi
+                        </a>
+                        {% for category in categories %}
+                            {% if category.slug == current_category %}
+                                <a href="{% url 'product_list_by_category' category.slug %}"
+                                   class="btn btn-default active">
+                                    {{ category.name }}
+                                </a>
+                            {% else %}
+                                <a href="{% url 'product_list_by_category' category.slug %}" class="btn btn-default">
+                                    {{ category.name }}
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                    {% endif %}
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row flex-between-center">
+                <div class="col-sm-auto mb-2 mb-sm-0">
+                    <h6 class="mb-0">Showing 1-24 of 205 Products</h6>
+                </div>
+                <div class="col-sm-auto">
+                    <div class="row gx-2 align-items-center">
+                        <div class="col-auto">
+                            <form class="row gx-2">
+                                <div class="col-auto"><small>Sort by:</small></div>
+                                <div class="col-auto">
+                                    <select class="form-select form-select-sm" aria-label="Bulk actions">
+                                        <option selected="">Best Match</option>
+                                        <option value="Refund">Newest</option>
+                                        <option value="Delete">Price</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-auto pe-0"><a class="text-600 px-1"
+                                                      href="../../../app/e-commerce/product/market.html"
+                                                      data-bs-toggle="tooltip" data-bs-placement="top"
+                                                      title="Product List"><span class="fas fa-list-ul"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                {% for product in products %}
+                    <div class="mb-4 col-md-6 col-lg-4">
+                        <div class="border rounded-1 h-100 d-flex flex-column justify-content-between pb-3">
+                            <div class="overflow-hidden">
+                                <div class="position-relative rounded-top overflow-hidden">
+                                    {% thumbnail product.first_image.image "250x200" format="PNG" as im %}
+                                        <a class="d-block"
+                                           href="{% url 'product_detail' product.slug %}"><img
+                                                class="img-fluid rounded-top"
+                                                src="{{ im.url }}"
+                                                alt=""/>
+                                        </a>
+                                    {% endthumbnail %}
+                                    <span
+                                            {% if product.is_new %}
+                                                class="badge rounded-pill bg-success position-absolute mt-2 me-2 z-index-2 top-0 end-0"
+                                                >New</span>
+                                            {% endif %}
+
+
+                                </div>
+                                <div class="p-3">
+                                    <h5 class="fs-0"><a class="text-dark"
+                                                        href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>
+                                    </h5>
+                                    <p class="fs--1 mb-3"><a class="text-500" href="#!">Computer &amp;
+                                        Accessories</a></p>
+                                    <h5 class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                        ${{ product.price|floatformat:"0"|intcomma }}</h5>
+                                    <p class="fs--1 mb-1">Shipping Cost: <strong>${{ product.shipping_cost }}</strong>
+                                    </p>
+                                    {% if product.count > 0 %}
+                                        <p class="fs--1 mb-1">Stock: <strong class="text-success">Available</strong>
+                                            {% else %}
+                                        <p class="fs--1 mb-1">Stock: <strong class="text-danger">Sold-Out</strong>
+                                    {% endif %}
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-between-center px-3">
+                                <div><span class="fa fa-star text-warning"></span><span
+                                        class="fa fa-star text-warning"></span><span
+                                        class="fa fa-star text-warning"></span><span
+                                        class="fa fa-star text-warning"></span><span
+                                        class="fa fa-star text-300"></span><span class="ms-1">(8)</span>
+                                </div>
+                                {% if product in user.wishlists.all %}
+                                    <div><a class="btn btn-sm btn-falcon-default me-2 bg-white like-button"
+                                            {#                                            href="{% url 'add_remove_wishlist' product.id %}"#}
+                                            id="like{{ product.id }}"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-pid="{{ product.id }}"
+                                            title="Add to Wish List"><span class="far fa-heart"></span></a><a
+                                            class="btn btn-sm btn-falcon-default" href="#!" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Add to Cart"><span
+                                            class="fas fa-cart-plus"></span></a></div>
+                                {% else %}
+                                    <div><a class="btn btn-sm btn-falcon-default bg-white me-2 likebutton"
+                                            {#                                            href="{% url 'add_remove_wishlist' product.id %}"#}
+                                            id="like{{ product.id }}"
+                                            data-productid="{{ product.id }}"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Add to Wish List"><span class="far fa-heart"></span></a><a
+                                            class="btn btn-sm btn-falcon-default" href="#!" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Add to Cart"><span
+                                            class="fas fa-cart-plus"></span></a></div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="card-footer bg-light d-flex justify-content-center">
+            <div>
+                <button class="btn btn-falcon-default btn-sm me-2" type="button" disabled="disabled"
+                        data-bs-toggle="tooltip" data-bs-placement="top" title="Prev"><span
+                        class="fas fa-chevron-left"></span></button>
+                <a class="btn btn-sm btn-falcon-default text-primary me-2" href="#!">1</a><a
+                    class="btn btn-sm btn-falcon-default me-2" href="#!">2</a><a
+                    class="btn btn-sm btn-falcon-default me-2" href="#!"> <span
+                    class="fas fa-ellipsis-h"></span></a><a class="btn btn-sm btn-falcon-default me-2"
+                                                            href="#!">35</a>
+                <button class="btn btn-falcon-default btn-sm" type="button" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Next"><span class="fas fa-chevron-right">     </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+OOP tamoillari:
+    class         (maket)
+    object        (mahsulot)
+    inheritance   (vorislik)
+    encapsulation
+    polymorphism
+    abstraction

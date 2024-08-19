@@ -1,0 +1,19 @@
+
+
+encapsulation
+    public
+    protected
+    private
+
+
+polymorphism:
+    override
+    overload
+
+
+parent class - other_function()
+
+child class - other_function()
+
+
+

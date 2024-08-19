@@ -1,0 +1,21 @@
+all([10>5 , ])          - yes
+any         - yes
+ord(str)    - yes
+chr(int)    - yes
+oct         - yes
+bin         - yes
+enumerate   - yes
+compile     - yes
+exec        - run yes
+def         - yes
+hash        - yes
+lambda      - yes
+isinstance  - yes
+slice       - yes
+sum         - yes
+shifr       - yes
+return      - yes
+docstring   - yes
+params      - yes
+
+

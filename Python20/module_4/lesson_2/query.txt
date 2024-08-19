@@ -1,0 +1,179 @@
+terminal:
+
+    sudo -i -u postgres psql
+        postgres=# alter user postgres with password '1';
+
+
+DDL -> defination
+    create table table_name(column_name type constraint , ....)
+    alter table table_name [add , rename , drop  , alter] column
+    alter table table_name rename to new_table_name;
+    drop table table_name ;
+    truncate table table_name
+
+
+DML -> data
+    select  - get
+    insert  - add
+    update  - change
+    delete  - remove
+
+
+-- create table products(
+--     id serial primary key ,
+--     name varchar(255) not null ,
+--     term date,
+--     create_at timestamp default current_timestamp
+-- );
+--
+-- insert into products (name , term)
+-- values ('Iphone 18' , current_date + interval '10 year') returning term , id;
+--
+-- select * from products where name ilike '%samsung%';
+--
+-- update products set name = 'Samsung2' , term = current_date where id = 1 returning name;
+--
+--
+-- delete from products where name like '%14' returning id;
+-- select * from products; -- ctrl+enter
+-- truncate products;
+--
+-- insert into products (name , term) select name , term from products;
+--
+-- delete from products where id = 2;
+
+
+-- Group
+--     id
+--     name
+
+
+-- Student
+--     id
+--     fullname
+--     group_id integer
+CREATE TABLE groups
+(
+    id   serial primary key,
+    name varchar(255)
+);
+
+
+CREATE TABLE students
+(
+    id       serial primary key,
+    fullname varchar(255),
+    group_id int not null references groups (id) on delete set default
+);
+
+alter table students
+    alter column group_id drop not null;
+--
+
+-- SET NULL    ->  default null
+-- SET DEFAULT ->  p20
+-- RESTRICT  -> error
+-- NO ACTION -> error
+-- CASCADE -> relation data delete
+--
+-- students
+--     1 Botir  Null
+--
+-- insert into groups (name)
+-- values   ('P20'),
+--          ('P21'),
+--          ('P22'),
+--          ('P23');
+--
+-- delete from groups where name = 'P23';
+--
+-- insert into students (fullname, group_id)
+-- values ('Akbar Qosimov' , 4);
+--
+-- alter table students drop constraint groups_students_fkey;
+-- alter table students add constraint groups_students_fkey foreign key (group_id) references groups(id);
+-- delete from students where group_id = 5;
+
+-- foreign key ->
+--     one to one
+--     one to many
+--     many to one
+--     many to many
+
+
+create table users
+(
+    id   serial primary key,
+    name varchar(255)
+);
+
+-- one to one
+create table passport
+(
+    id     integer references users (id) unique,
+    seria  varchar(2),
+    number varchar(7)
+);
+
+
+create table users
+(
+    id   serial primary key,
+    name varchar(255)
+);
+-- one to many
+create table products
+(
+    id      serial primary key,
+    name    varchar(255),
+    user_id integer references users (id)
+);
+-- groups
+--     id name
+-- -- many to many :
+-- group_student
+--     id student_id  group_id
+--     1      1           2
+--     2      1           1
+--     3      2           2
+--
+-- students
+--     id name
+
+
+create table students
+(
+    student_id serial primary key,
+    name       varchar(255)
+
+);
+create table groups
+(
+    id   serial primary key,
+    name varchar(255)
+);
+create table group_student
+(
+    id serial primary key ,
+    student_id int references students (student_id),
+    group_id int  references groups(id)
+);
+
+
+select * from group_student where student_id = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

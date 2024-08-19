@@ -1,0 +1,128 @@
+-- create table courses(
+--     course_id serial primary key ,
+--     name varchar(50) not null ,
+--     created_at date
+-- );
+
+-- create table students(
+--     id serial primary key ,
+--     first_name varchar(255),
+--     last_name varchar(255),
+--     email varchar(255),
+--     course_id integer references courses(course_id),
+--     created_at date default timezone('Asia/Tashkent' , current_date::timestamptz)
+-- );
+
+🟢🔴
+                    1 task
+1) lesson_4 nomli database yaratamiz          🔴
+2) courses and students table yaratamiz       🔴
+3) table larini ichini malumotga to'ldiramiz  🔴
+
+                    2 task
+1) lesson_4 nomli database yaratamiz                  🔴
+2) author_book and authors and books  table yaratamiz 🔴
+3) shu table lar ichga malumot to'ldiramiz            🔴
+
+
+
+
+
+
+
+
+
+                    3 task
+1) kitoblar nechta ligini oladigan query yozilsin                   🔴
+2) A , B , R harflari bilan boshlangan name authorlar topilsin (*)  🔴
+
+
+
+
+
+
+
+3) idsi 2 ,3 bo'lgan authorni kitoblari nechta !                 🔴
+
+select author_id , count(book_id) count_book from author_book
+where author_id in (2 , 3) group by author_id;
+
+
+
+
+
+
+
+
+
+🟢🔴
+
+4) kitoblari soni 20 tadan kop bo'lgan author id toping !    🔴
+
+select author_id from author_book group by author_id having count(book_id) > 20;
+
+
+
+
+
+
+
+
+
+
+5) author_id juft bo'lganlarini kitoblar soni chiqarilsin     (author_id,book_count)
+
+
+
+
+
+
+
+
+
+
+6) eng kop kitobga ega bo'lgan author_id topilsin ! (author_id , count_book)
+
+select author_id , count(book_id) count_book from author_book
+group by author_id order by count_book desc, author_id desc limit 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+7) postgres -> password '2';
+
+
+authors , author_book
+8) author name , kitoblar soni !
+
+select a.name , count(ab.book_id) from authors a
+inner join author_book ab on ab.author_id = a.id
+group by a.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

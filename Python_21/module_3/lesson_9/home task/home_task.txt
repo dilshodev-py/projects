@@ -1,0 +1,48 @@
+class PizzaSize(Enum):
+    FULL = "full"
+    MEDIUM = "medium"
+    SMALL = "small"
+
+
+1)# enum
+DayOfWeek
+UserRole
+Color
+PizzaSize
+HTTPStatus
+Gender
+Coin
+FileType
+PaymentMethod
+PlasticCard
+Language
+MusicGenre
+ComputerComponent
+
+
+2)berilgan 3 ta rasmni -> DTO
+
+
+3) product.json
+        1) name
+        2) term
+        3) color
+
+        >>>1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

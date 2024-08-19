@@ -1,0 +1,17 @@
+8. multi_language
+0. dict          (collection)
+0. tuple         (collection)
+0. set           (collection)
+0. list          (collection)
+0. numpy         (collection)
+1. UserString    (collection)
+2. UserList      (collection)
+3. OrderDict     (collection)
+4. NamedTuple    (collection)
+5. Counter       (collection)
+6. Enum          (enum)(collection)
+7. curses
+
+
+
+

@@ -1,0 +1,30 @@
+# DATABASE #
+list
+.txt
+.json
+.csv
+.xlsx 1000000
+
+.sqlite
+postgresql
+
+================================
+
+DBMS - Data Base Management System
+structure query language
+
+no structure query language
+
+DB:
+    DML - Database Manipulation Language : insert , select , update , delete
+    DDl - Database Definition Language : create , alter , drop , truncate , set
+    DCL - Database Control Language : revoke , grant
+    TCL - Transaction Control Language : SavePoint, begin , rollback , commit
+
+
+Postgresql
+
+
+
+
+

@@ -1,0 +1,56 @@
+[
+   {
+      "id": 1,
+      "message": "Salom Alijon",
+      "type": "user_chat",
+      "receiver_id": 2,
+      "sender_id": 1,
+      "is_seen": false,
+      "send_at": "2024-08-05 22:03:12"
+   },
+   {
+      "id": 2,
+      "message": "Hi",
+      "type": "user_chat",
+      "receiver_id": 1,
+      "sender_id": 2,
+      "is_seen": false,
+      "send_at": "2024-08-05 22:06:01.152307"
+   },
+   {
+      "id": 3,
+      "message": "Nima gap",
+      "type": "user_chat",
+      "receiver_id": 2,
+      "sender_id": 1,
+      "is_seen": false,
+      "send_at": "2024-08-05 22:07:51.558495"
+   },
+   {
+      "id": 4,
+      "message": "Hayrli kun !",
+      "type": "user_chat",
+      "receiver_id": 2,
+      "sender_id": 1,
+      "is_seen": false,
+      "send_at": "2024-08-06 18:09:43.288605"
+   },
+   {
+      "id": 5,
+      "message": "niamdir",
+      "type": "user_chat",
+      "receiver_id": 2,
+      "sender_id": 1,
+      "is_seen": false,
+      "send_at": "2024-08-06 18:09:43.288605"
+   },
+   {
+      "id": 6,
+      "message": "jgf",
+      "type": "user_chat",
+      "receiver_id": 1,
+      "sender_id": 2,
+      "is_seen": false,
+      "send_at": "2024-08-06 18:10:52.532976"
+   }
+]

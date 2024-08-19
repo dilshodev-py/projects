@@ -1,0 +1,85 @@
+Student
+        name
+        __marks
+
+
+Car:
+        made
+        model
+        year
+        __km
+    drive(miles)
+    display_info()
+
+c = Car("GM" , 'Chevrolet' , 2000)
+c.drive(100)
+c.drive(50)
+
+BankAccount:
+        account_number
+        __balance
+
+    deposit(amount)
+    withdraw(amount)
+    display_balance()
+
+
+
+
+Product:
+       name
+       price
+       __quantity
+
+    calculate_total_value()
+    restock(additional_quantity)
+    sell(sold_quantity)
+
+
+
+Employee:
+        name
+        position
+        __salary
+
+    put_employee(new_position, new_salary)
+    calculate_bonus(bonus_percentage)
+    __salary = (bonus/100)*salary
+
+
+
+Book:
+        title
+        author
+        genre
+        pages
+        __current_page=1
+
+    read(20)
+    display_info()
+
+
+Title : Oq Kema
+Author : CHingiz Aytmatov
+
+
+
+
+MusicPlayer:
+        playlist = []
+
+
+    add_song(song)
+    remove_song(song)
+    play()
+    display_playlist()
+
+
+
+ShoppingCart:
+
+    	products = {}
+
+    add_item(item, quantity)
+    remove_item(item, quantity)
+    view_cart()

@@ -1,0 +1,10 @@
+constraint
+    NOT NULL Constraint
+    UNIQUE Constraint
+    PRIMARY Key
+    FOREIGN Key
+    CHECK Constraint
+
+1. Subquery, ANY, ALL, EXISTS, Set
+2. CONDITIONAL EXPRESSIONS & OPERATORS (case, coalesce, nullif, cast)
+4. python + postgresql

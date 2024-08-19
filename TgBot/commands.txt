@@ -1,0 +1,12 @@
+"""
+venv config by terminal
+    sudo apt install python3-venv
+    sudo apt-get -y install python3-pip
+    deactivate
+
+    python3 -m venv .venv
+    . .venv/bin/activate    # venv activate in terminal
+"""
+
+create file -> requirements.txt
+pip freeze > requirements.txt

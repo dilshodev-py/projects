@@ -1,0 +1,4 @@
+itertools : py file -> module
+iterable: tuple , set, str , list , dict
+generator: def , yield
+iterator :iterable , generator

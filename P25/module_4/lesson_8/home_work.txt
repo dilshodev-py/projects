@@ -1,0 +1,39 @@
+1)
+    dvdrental schema (actor,film_actor, film):
+    savol -> actorlar nechta filmda role o'ynaganligini topuvchi query yozing
+
+
+select a.first_name as actors, count(f.film_id) as film_count from film_actor fa
+    join actor a on a.actor_id = fa.actor_id
+    join film f on f.film_id = fa.film_id
+group by a.actor_id;
+
+15:15
+
+2)
+    dvdrental schema:
+    savol -> actorlar nechta filmda role o'ynaganligini topuvchi query yozing
+    top 10 talik
+
+15:25
+
+3)
+    dvdrental schema (country , city , address , store):
+    savol -> DAVLATLARDA NECHTA FILIAL BORLIGINI TOPUVCHI QUERY YOZILSIN
+    OUT PUT : COUNTRY.NAME , COUNT(STORE)
+
+15:35
+
+
+--------------------------------------------------------------
+example   (books(1000) , janrs(100))
+dump < database
+truncate database
+dump -> database
+
+16:10
+
+
+
+Hackerrank saitdan misol ishlash join, select ga tegishli hammasini
+leetcode -> sql

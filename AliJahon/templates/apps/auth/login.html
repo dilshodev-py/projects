@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'apps/auth/style.css' %}" rel="stylesheet">
+    <script src="{% static 'apps/auth/auth.js' %}" rel="stylesheet"></script>
+
+</head>
+<body>
+<div class="login-page">
+    <div class="form">
+        {% if messages %}
+            
+                {% for message in messages %}
+                    <h4 style="color: red">{{ message }}</h4>
+                {% endfor %}
+           
+        {% endif %}
+        <form class="login-form" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="phone number" id="phone-mask" name="phone_number"/>
+            <input type="password" placeholder="password" name="password"/>
+            <button>login</button>
+        </form>
+    </div>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+<script>
+    $('#phone-mask').inputmask({
+        "mask": "+\\9\\98(99) 999-99-99"
+    });
+
+    $('#messages-modal').modal('show');
+</script>
+</body>
+</html>
+

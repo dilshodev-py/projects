@@ -1,0 +1,108 @@
+-- console
+-- user     : postgres
+-- database : postgres
+-- password : 1
+-- connection
+-- query
+-- sudo -i -u postgres psql
+--     postgres #:alter user postgres with password '1'
+
+-- alter user postgres with password '1';
+
+-- DDL -> create , alter , set , truncate , drop : database
+-- DML -> insert , update , delete , select : database
+
+-- ============== postgres data types ==========
+-- string:
+--     char      limit  20
+--     varchar   limit  255
+--     text      description
+--
+--
+-- Numeric:
+--     integer:
+--         smallint                        -2^15 : +2^15    2byte
+--         int , integer                   -2^31 : +2^31    4byte
+--         bigint                          -2^63 : +2^63    8bytes
+--
+--         serial (sequence , integer)     -2^31 : +2^31    4byte
+--
+--     float:
+--         float             8 bytes
+--         real , float8     4 byte
+--         numeric (1234567890 , 2)  # 1234
+--
+--     datetime:
+--         date
+--         time
+--         timestamp
+--         timestamptz
+--         interval
+--
+--     array:
+--         array     {1,2,3,4,5}
+--     json:
+--         json      {key : value}
+--         jsonb     {key : value}
+--
+--     uuid:
+--         uuid - id
+
+
+
+-- ============== create table =================
+-- create table table_name(
+--     column_name type constraint ,
+--     column_name type constraint ,
+--     column_name type constraint ,
+--     column_name type constraint ,
+--     column_name type constraint ,
+--     column_name type constraint
+-- )
+
+-- categories
+--     id
+--     name
+--     created_at
+--
+-- products
+--     id
+--     name not null
+--     category_id not null
+--     created_at
+
+-- primary key (not null , unique , index)
+-- create table if not exists categories(
+--     id serial primary key ,
+--     name varchar(50) not null unique,
+--     created_at timestamp default current_timestamp
+-- );
+--
+--
+-- create table if not exists products(
+--     id serial primary key ,
+--     name varchar(255) not null ,
+--     category_id integer ,
+--     created_at timestamp default current_timestamp
+-- );
+
+-- set timezone = 'Asia/Tashkent';
+
+-- ======================= alter ========================
+
+-- alter table products rename product_name to name;
+--
+-- alter table products alter column category_id type bigint;
+--
+-- alter table products rename to product;
+--
+-- alter table product alter column name drop not null ;
+-- alter table categories drop constraint categories_name_key;
+
+-- alter table product drop column category_id;
+-- create
+-- alter
+-- drop
+
+drop table product ;
+truncate table product ;

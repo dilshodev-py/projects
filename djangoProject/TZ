@@ -1,0 +1,63 @@
+CreateView, ListView, UpdateView, FormView
+
+category,product,order,stream
+
+https://bootdey.com/snippets/view/Shop-product-list
+
+https://bootdey.com/snippets/view/shop-product-detail
+
+https://bootdey.com/snippets/view/update-my-profile
+
+
+dvdrental -> model
+
+Available subcommands:
+
+[auth]
+    changepassword ✅
+    createsuperuser ✅
+
+[contenttypes]
+    remove_stale_contenttypes X
+
+[django]
+    check ✅
+    compilemessages ✅
+    createcachetable
+    dbshell ✅
+    diffsettings
+    dumpdata ✅
+    flush ✅
+    inspectdb ✅
+    loaddata ✅
+    makemessages (i18n) ✅
+    makemigrations ✅
+    migrate ✅
+    optimizemigration
+    sendtestemail ✅
+    shell ✅
+    showmigrations ✅
+    sqlflush ✅
+    sqlmigrate
+    sqlsequencereset X
+    squashmigrations
+    startapp ✅
+    startproject ✅
+    test
+    testserver
+
+[sessions]
+    clearsessions ✅
+
+[staticfiles]
+    collectstatic ✅
+    findstatic
+    runserver ✅
+
+python3 manage.py
+
+django-admin
+
+
+
+django using out of django

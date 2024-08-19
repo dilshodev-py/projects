@@ -1,0 +1,105 @@
+1-task:
+    dvdrental (category , film)
+
+    category_name1 | {'film_title' ,'film_title' }
+    category_name2 | {'film_title' ,'film_title' }
+    category_name3 | {'film_title' ,'film_title' }
+    category_name4 | {'film_title' ,'film_title' }
+    .......
+
+2-task:
+    dvdrental (customer , payment)
+    eng kup to'lovni amalga oshirgan odamni top 10 ta ligini kamayish tartibida chiqaring
+
+    customer_first_name1 | 1000000000
+    customer_first_name2 | 100000000
+    customer_first_name3 | 20000000
+    customer_first_name4 | 1000000
+    ......
+
+3-task:
+    dvdrental (customer , payment , address)
+    eng kup to'lovni amalga oshirgan odamni addressini chiqaring
+
+    customer_first_name1  |  address district
+
+
+Umumiy ijara daromadi uchun view yaratish :
+    Film nomi boʻyicha guruhlash va ijara toʻlovlarini oʻz ichiga olgan holda
+    film ijarasidan olingan jami daromadni hisoblaydigan viewni ishlab chiqing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Film toifalari uchun view yaratish :
+    Har bir categoryga tegishli filmlar soni bilan birga film categorylar nomini koʻrsatadigan view yarating.
+
+
+
+
+
+Filmlar inventarizatsiyasi uchun view yarating :
+    film nomi va miqdorini oʻz ichiga olgan holda inventardagi mavjud
+    film nusxalari haqida maʼlumot beruvchi viewni yarating.
+
+
+
+
+
+
+
+
+Mijoz tranzaksiyalari uchun view yaratish :
+    Mijozlarning ismlari, mijozlar tranzaktsiyalarini summalari bilan   viewni ishlab chiqish.
+
+10
+5
+20
+8
+10
+
+
+
+
+
+Mashhur aktyorlar uchun view yaratish :
+    Ommabop aktyorlar top 10 talik roʻyxatini ular suratga tushgan filmlar soniga qarab tuzadigan view yarating.
+
+
+
+
+
+
+
+
+
+Ijara statistikasi uchun view yarating :
+    Ijara statistikasini, jumladan, har bir film uchun ijara soni
+    va har bir filmdan olingan umumiy daromadni taʼminlovchi viewni yarating.
+
+
+
+
+
+
+
+
+toifalarni ijara daromadi ko'rinishini yarating :
+    Har bir film toifasi uchun daromadni ko'rsatuvchi ijara
+    daromadini hisoblaydigan ko'rinishni ishlab chiqing.
+
+
+
+
+
+

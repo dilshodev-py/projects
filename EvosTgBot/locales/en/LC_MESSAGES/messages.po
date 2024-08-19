@@ -1,0 +1,69 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-07 12:05+0500\n"
+"PO-Revision-Date: 2024-03-07 11:29+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: bot/buttons/text.py:5
+msgid "🏢 About Company"
+msgstr ""
+
+#: bot/buttons/text.py:6
+msgid "📍 Branches"
+msgstr ""
+
+#: bot/buttons/text.py:7
+msgid "💼 Vacancy"
+msgstr ""
+
+#: bot/buttons/text.py:8
+msgid "🍽 Menu"
+msgstr ""
+
+#: bot/buttons/text.py:9
+msgid "🗣  News"
+msgstr ""
+
+#: bot/buttons/text.py:10
+msgid "☎️Contact/Location"
+msgstr ""
+
+#: bot/buttons/text.py:11
+msgid "🇺🇿/🇬🇧 lang"
+msgstr ""
+
+#: bot/handlers/start.py:16 bot/handlers/start.py:22 bot/handlers/start.py:24
+msgid "Uzbek 🇺🇿"
+msgstr ""
+
+#: bot/handlers/start.py:17 bot/handlers/start.py:22
+msgid "English 🇬🇧"
+msgstr ""
+
+#: bot/handlers/start.py:19
+msgid "Choose language"
+msgstr ""
+
+#~ msgid "Enlish 🇬🇧"
+#~ msgstr ""
+
+#~ msgid "Change language to uz"
+#~ msgstr ""
+
+#~ msgid "Change language to en"
+#~ msgstr ""
+

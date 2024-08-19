@@ -1,0 +1,9 @@
+1. pagination   http://127.0.0.1:8000/
+2. http://127.0.0.1:8000/admin_page/stats?period=last_day
+3. tolov
+4. konkurs
+5. profile, settings
+6. tovarni sotilgandan keyin beriladigan summa
+7. oqimdagi foyda va chegirma
+8. operator login qilganda avtomatik operator page ga otish
+9. operator ish vaqtini admin orqali belgilash

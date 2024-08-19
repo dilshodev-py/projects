@@ -1,0 +1,10 @@
+sqlalchemy ORM
+relationship
+
+
+categories - texnika
+products - Phone
+
+phone_obj.category
+category_obj.products
+

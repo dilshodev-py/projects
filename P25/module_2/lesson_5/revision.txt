@@ -1,0 +1,33 @@
+class ClassName:
+    a = 10 # class attribute
+    def __init__(self , a): # konstruktr , dunder , magic
+        self.a = a  # class instance attribute
+
+    def method_name(self):
+        pass
+
+
+function
+method ni farqi
+
+ClassName().method_name()
+
+inheritance
+parent class
+child class
+
+
+========================================
+
+encapsulation(attribute , method)
+attribute:
+    self.attribute   # public
+    self._attribute  # protected
+    self.__attribute # private
+    mangle -> _Class__attribute
+
+
+
+
+
+

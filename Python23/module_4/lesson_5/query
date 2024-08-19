@@ -1,0 +1,12 @@
+SELECT m.NAME , count(c.id) cars_count FROM models m
+    left JOIN cars c ON m.id = c.model_id
+group by m.id order by cars_count ;
+
+
+select m.name , c.id from models m cross join cars c;
+
+select avg(id) from models;
+select c.name , m.id , sum(m.id) from models m
+join cars c on m.id = c.model_id
+group by c.id , m.id;
+

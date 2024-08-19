@@ -1,0 +1,34 @@
+wakatime
+ckeditor
+django resized
+mptt
+
+Tasks:
+
+    1) template , menularni ishlidigan qilamiz
+    2) Bosh sahifa + pagination
+    3) Mahsulotlar + pagination
+    4) Wishlist + pagination
+    5) like
+    6) product detail
+    7) product order
+    8) market
+
+    9) fixture for category
+    10)stream link copy
+    11)market batafsil button ishlidigan qilamiz
+    12)market Reklama post button ishlidigan qilamiz
+    14)stream form
+    13)Order model StatusType qo'shamiz
+    15) read : F , Q , annotate
+    wakatime
+
+
+New information:
+    select_related
+    prefetch_related
+    content_type
+    annotate
+    F , Q
+    git hub : branch
+

@@ -1,0 +1,56 @@
+
+============================== Home Work ====================================
+
+
+users = [
+    {
+        "id": 1,
+        "username": "botir",
+        "password": "1111",
+        "role": "ADMIN"
+    },
+    {
+        "id": 2,
+        "username": "baxa",
+        "password": "2222",
+        "role": "USER"
+    },
+    {
+        "id": 3,
+        "username": "jamol",
+        "password": "0000",
+        "role": "USER"
+    }
+]
+
+
+
+@permission(role = ["USER"])
+def summa(*args , **kwargs):
+    return sum(args)
+
+print(summa(1, 2, username="baxa123", password='2222'))
+# Not Found Account
+print(summa(1, 2, username="baxa", password='2222'))
+# 3
+print(summa(1, 2, username="botir", password='1111'))
+# permission denied
+
+================================================================
+file = False bo'lsa print qilinsin
+file = True bo'lsa file ga yozilsin
+
+# @to_print(file = False)
+# def create_calendar(*args):
+#     pass
+# create_calendar(2025,2)
+
+====================================================================
+
+@slice_world(3)
+def make_world(text):
+    return text + "TEST"
+
+make_world("dssf df er dsfdrg efre4gt")  # ['dssf' ,'df', 'er']
+
+

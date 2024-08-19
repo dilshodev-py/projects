@@ -1,0 +1,6 @@
+
+1) Factor db : Users jadvalini 'lang' ustuni nomi 'language' o'zgartirilsin
+2) Factor db : Book jadvalini 'title' ustuni type text ga o'zgartirilsin
+3) Factor db : Book jadvalini 'vol' ustuni o'chirib yuborilsin
+4) Factor db : Categories jadvaliga yangi 'image' ustuni qo'shilsin
+5) Factor db : Network jadvali o'chirib yuborilsin

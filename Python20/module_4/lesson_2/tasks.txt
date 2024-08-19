@@ -1,0 +1,34 @@
+========== task 1 =========
+create 5 ta kitob to books table
+
+time =>
+
+========== task 2 =========
+books table dagi description ustunning
+data type ni text ga o'zgartiring
+
+time =>
+
+========== task 3 =========
+authors table ga birthday nomli ustun qo'shing !
+Data type date qilib yaratilsin
+
+time =>
+
+========== task 4 =========
+products table dagi join_at nomli ustuni olib tashlansin
+
+time =>
+
+========== task 5 =========
+orders table dagi amount ustunining nomini count nomi ga o'zgartirilsin
+
+time =>
+
+========== task 6 =========
+cards tabledagi vendor_id ustunining defaultiga 1 soni qo'yilsin
+
+time =>
+
+
+

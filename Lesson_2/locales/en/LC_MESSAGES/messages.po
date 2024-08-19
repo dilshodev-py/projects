@@ -1,0 +1,52 @@
+# English translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-03-07 11:13+0500\n"
+"PO-Revision-Date: 2024-03-07 10:46+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: main.py:33 main.py:38
+msgid "Uzbek 🇺🇿"
+msgstr ""
+
+#: main.py:34 main.py:43
+msgid "Enlish 🇬🇧"
+msgstr ""
+
+#: main.py:36
+msgid "Choose language"
+msgstr ""
+
+#: main.py:41
+msgid "Change language to uz"
+msgstr ""
+
+#: main.py:46
+msgid "Change language to en"
+msgstr ""
+
+#: main.py:50
+msgid "Hello!"
+msgstr ""
+
+#: main.py:52
+msgid "today"
+msgstr ""
+
+#: main.py:54
+msgid "Today"
+msgstr ""
+

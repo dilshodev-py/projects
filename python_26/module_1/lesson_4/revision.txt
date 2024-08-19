@@ -1,0 +1,14 @@
+
+for                 - yes
+while               - yes
+break               - yes
+continue            - yes
+else                -
+print(end = ' ')    - yes
+range()             -  yes
+
+range(start , end , step)
+
+
+
+

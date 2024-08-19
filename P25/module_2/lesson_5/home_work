@@ -1,0 +1,139 @@
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name = name
+#         self.__marks = marks
+#
+#     @property
+#     def marks(self):
+#         return self.__marks
+#
+#     @marks.setter
+#     def marks(self, value):
+#         self.__marks = value
+#
+#
+# class BankAccount:
+#     def __init__(self, account_number, balance):
+#         self.account_number = account_number
+#         self.__balance = balance
+#
+#     @property
+#     def balance(self):
+#         return self.__balance
+#
+#     @balance.setter
+#     def balance(self, value):
+#         self.__balance = value
+#
+#     def deposit(self, amount):
+#         self.__balance += amount
+#         print(f"Deposit : ${amount}. Current balance : ${self.__balance}")
+#
+#     def withdraw(self, amount):
+#         if self.__balance < amount:
+#             print('Mablag\' yetarli emas')
+#         self.__balance -= amount
+#         print(f"withdraw : ${amount}. Current balance : ${self.__balance}")
+#
+#     def display_balance(self):
+#         print(f"Current balance : ${self.__balance}")
+#
+#
+# # b = BankAccount("1234123412341234" , 1_000_000)
+# #
+# # b.deposit(300_000)
+# # b.withdraw(1_000_000)
+# # b.display_balance()
+#
+#
+# class Employee:
+#     def __init__(self, name, position, salary):
+#         self.name = name
+#         self.position = position
+#         self.__salary = salary
+#
+#     @property
+#     def salary(self):
+#         return self.__salary
+#
+#     @salary.setter
+#     def salary(self, value):
+#         self.__salary = value
+#
+#     def put_employee(self, new_position: str, new_salary: float):
+#         self.position = new_position
+#         self.__salary = new_salary
+#
+#     def calculate_bonus(self, bonus: int):
+#         self.__salary = bonus + self.__salary
+#
+#
+# class MusicPlayer:
+#     playlist = []
+#
+#     def add_song(self, song):
+#         self.playlist.append(song)
+#
+#     def remove_song(self, song):
+#         if song in self.playlist:
+#             self.playlist.remove(song)
+#         else:
+#             print("Not found song")
+#
+#     def play(self):
+#         print(f"Play : {self.playlist[0]}")
+#
+#     def display_playlist(self):
+#         p = 1
+#         for song in self.playlist:
+#             print(f"{p}) {song}")
+#             p += 1
+#
+#
+# # mp = MusicPlayer()
+# #
+# # mp.add_song("Ko'k Jiguli")
+# # mp.add_song("Ona")
+# # mp.add_song("Ota")
+# # mp.display_playlist()
+# # mp.play()
+# # mp.remove_song("Ko'k Jiguli")
+# # mp.display_playlist()
+#
+#
+# class ShoppingCart:
+#     products = {}
+#
+#     def add_product(self, product_name, quantity):
+#         self.products[product_name] = quantity
+#         # self.products.update({product_name : quantity})
+#
+#     def remove_product(self,  product_name, quantity):
+#         if product_name in self.products.keys():
+#             self.products[product_name] -= quantity
+#         else:
+#             print("No Found Product")
+#     def view_cart(self):
+#         for product_name , quantity in self.products.items():
+#             print(f"{product_name} : {quantity}")
+
+
+# cart = ShoppingCart()
+# cart.add_product("Non" , 5)
+# cart.add_product("Kartoshka" , 1)
+# cart.add_product("Piyoz" , 2)
+# cart.view_cart()
+# cart.remove_product("Non" , 5)
+# cart.view_cart()
+
+
+# test = {
+#     "a" : "variant1",
+#     "b" : "variant2"
+# }
+#
+# print(list(test.items())[0])
+
+# for a , b , c in [(1,2,3) , (4,5,6)]:
+#     print(a)
+

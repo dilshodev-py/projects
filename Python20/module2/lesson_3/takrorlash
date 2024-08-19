@@ -1,0 +1,39 @@
+inheritance -vorislik
+
+    parent class , child class
+
+single -> 1 ta parent , 1 ta child
+multilevel -> 1!
+hierarchical -> 1ta parent , n ta child
+multiple -> n ta parent ,1 ta child
+hybrid -> 1 ta parent , n ta sub child , 1 ta child
+
+class tamoilari :
+    inheritance
+    encapsulation
+    polmymorhizm
+    abstraction
+
+
+objects = []
+
+class A:
+    a = 6
+    def __init__(a = None,  b=None , c= None , d= None) -> None:
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+
+    def save():
+        pass
+
+
+    def a_list(self):
+        pass
+
+
+
+
+
+

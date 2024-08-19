@@ -1,0 +1,232 @@
+ToDo
+
+user:
+    id
+    first_name
+    last_name
+    email
+    password
+    created_at
+
+task:
+    id
+    title
+    description
+    status = False
+    user_id
+    time
+    created_at
+
+======================== main ==================================
+1) Register
+2) Login
+3) exit
+
+
+
+                          ----------------- Register --------------
+                          >>> first name
+                          >>> last name
+                          >>> email
+                          >>> password
+                          🟢is_valid(email , password)
+                          🟢save()
+                          ⬅️main
+
+                          ----------------- Login ------------------
+                          >>> email
+                          >>> password
+                          🟢 is_auth(email , password)
+                          ⬇️ account
+
+                          ----------------- exit -------------------
+                          Finish !
+
+
+=========================== account =============================
+Welcome first_name lastname
+1) Todo
+2) settings
+0) logout
+
+                          ----------------- Todo -------------------
+                          *) 🔎 search
+                          1) todos
+                          2) add
+                          0) back
+                          >>>
+
+                                                     ################ 🔎 search ################
+                                                     🔎 name >>>
+                                                     id) todo_title
+                                                     id) todo_title
+                                                     ....
+                                                     >>>id
+
+                                                     1) about
+                                                     2) update
+                                                     3) delete
+                                                     0) back
+                                                     >>>
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ about $$$$$$$$$$$$$$$$$$$
+
+                                                                                    Title :       value
+                                                                                    Description : value
+                                                                                    status :      value
+                                                                                    Time :        value
+                                                                                    Created_at:   value
+
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ update $$$$$$$$$$$$$$$$$$$
+
+                                                                                    >>> field
+                                                                                    >>> new value
+                                                                                    🟢 change()
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ delete $$$$$$$$$$$$$$$$$$$
+
+                                                                                    🟢delete()
+                                                                                    ⬅️ Todo
+
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ back $$$$$$$$$$$$$$$$$$$
+                                                                                    ⬅️ Todo
+
+                                                     ################ todos ################
+
+                                                     id) todo_title
+                                                     id) todo_title
+                                                     ....
+                                                     >>>id
+
+                                                     1) about
+                                                     2) update
+                                                     3) delete
+                                                     0) back
+                                                     >>>
+                                                                                    $$$$$$$$$$$$$$$$$$$$ about $$$$$$$$$$$$$$$$$$$
+
+                                                                                    Title :       value
+                                                                                    Description : value
+                                                                                    status :      value
+                                                                                    Time :        value
+                                                                                    Created_at:   value
+
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ update $$$$$$$$$$$$$$$$$$$
+
+                                                                                    >>> field
+                                                                                    >>> new value
+                                                                                    🟢 change()
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ delete $$$$$$$$$$$$$$$$$$$
+
+                                                                                    🟢delete()
+                                                                                    ⬅️ Todo
+
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ back $$$$$$$$$$$$$$$$$$$
+                                                                                    ⬅️ Todo
+
+                                                     ################ add ################
+                                                     >>> title
+                                                     >>> description
+                                                     >>> time
+
+                                                     🟢 save()
+                                                     ⬅️ Todo
+
+                                                     ################ back ################
+
+                                                     ⬅️ Account
+
+
+                          -------------------- settings   -------------------
+
+                          1) About
+                          2) Edit account
+                          3) Delete account
+                          0) back
+
+                                                     ################ About ################
+
+                                                     Fullname : First Name Last Name
+                                                     email :    value
+                                                     password : value
+
+                                                     ################ Edit Account ################
+
+                                                     *) full edit
+                                                     1) first name
+                                                     2) last name
+                                                     3) email
+                                                     4) password
+                                                     0) back
+                                                     >>>
+                                                                                    $$$$$$$$$$$$$$$$$$$$ full edit $$$$$$$$$$$$$$$$$$$
+                                                                                    >>> First Name
+                                                                                    >>> Last Name
+                                                                                    >>> Email
+                                                                                    >>> Password
+
+                                                                                    🟢 edit()
+                                                                                    ⬅️ Edit Account
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ back $$$$$$$$$$$$$$$$$$$
+
+                                                                                    ⬅️ settings
+
+                                                                                    $$$$$$$$$$$$$$$$$$$$ other $$$$$$$$$$$$$$$$$$$
+
+                                                                                    >>> new_value
+                                                                                    🟢 edit()
+                                                                                    ⬅️ Edit Account
+
+
+                                                     ################ Delete Account ################
+
+                                                     🟢 delete()
+
+                                                      ⬅️ main
+
+                                                     ################ back ################
+
+                                                     ⬅️ account
+
+
+                          ================= logout ==========================
+                          ⬅️ main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

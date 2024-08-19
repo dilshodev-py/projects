@@ -1,0 +1,245 @@
+-- create table users(
+--     id serial primary key,
+--     first_name varchar,
+--     last_name varchar ,
+--     fullname varchar generated always as ( first_name || ' ' ||  last_name ) stored
+--
+-- );
+
+-- -- Sequences -> ketma ketlik
+--
+-- create sequence my_sequence
+-- start 6
+-- increment 1
+-- minvalue 5
+-- maxvalue 10
+-- cycle ;
+--
+-- select nextval('my_sequence');
+--
+-- drop sequence my_sequence;
+--
+-- alter sequence my_sequence restart ;
+--
+-- create table tests(
+--     id integer not null default nextval('my_sequence')
+-- )
+
+
+-- json -> '{"country" : "Uzbekistan"}'
+-- hstore -> '"country" => "Uzbekistan"'
+
+
+-- create extension hstore;
+--
+-- drop table users;
+-- create table users(
+--     id serial primary key,
+--     first_name varchar,
+--     last_name varchar ,
+--     attr hstore
+-- );
+--
+-- insert into users(first_name, last_name, attr)
+-- values ('Botir' , 'Kamolidinov' , '"test1" => "value1" , "test2" => "value2"');
+--
+-- select * from users;
+--
+-- select attr -> 'test2' from users;
+--
+--
+--
+-- CREATE TYPE role_type
+-- AS
+-- ENUM('admin', 'manager', 'sales');
+--
+-- alter type role_type add value 'user';
+--
+-- drop type role_type cascade ;
+--
+-- create table employees(
+--     id serial primary key ,
+--     role role_type default 'user'
+-- );
+--
+-- insert into employees(role)
+-- values ('nimadir');
+
+
+create table managers
+(
+    id         serial primary key,
+    first_name varchar,
+    last_name  varchar
+);
+
+create table admins
+(
+    id         serial primary key,
+    first_name varchar,
+    last_name  varchar
+);
+
+-- select first_name , last_name from admins
+-- except
+-- select first_name , last_name from managers
+-- union
+-- select first_name , last_name from managers
+-- except
+-- select first_name , last_name from admins
+-- union
+-- select first_name , last_name from managers
+-- intersect
+-- select first_name , last_name from admins;
+
+select first_name, last_name
+from managers
+union
+distinct
+select first_name, last_name
+from admins;
+
+
+insert into managers(first_name, last_name)
+select md5(generate_series::varchar), md5(generate_series::varchar)
+from generate_series(1, 1000000);
+
+
+select count(*)
+from managers;
+
+
+create index managers_first_name on managers (first_name);
+
+
+
+drop table employees;
+
+create table employees
+(
+    id         serial primary key,
+    first_name varchar,
+    last_name  varchar,
+    manager_id integer references employees (id) on delete set null
+);
+
+
+insert into employees(first_name, last_name, manager_id)
+values ('Sunatillo', 'Marafjonov', 3);
+
+
+-- hodimni_fullname | manager_fullname
+
+
+-- select concat(e.first_name ,' ', e.last_name) employee , concat(m.first_name ,' ', m.last_name) from employees e
+--     left join employees m on e.manager_id = m.id;
+
+-- delete from managers where id in (select id from admins);
+-- delete from managers m using admins a  where m.id = a.id;
+--
+--
+--
+-- update managers set first_name = 'abc' where id in (select id from admins);
+-- update managers m set first_name = 'abc' from admins a where m.id = a.id;
+
+
+CREATE TABLE leads
+(
+    lead_id serial PRIMARY key,
+    name    VARCHAR(255) NOT NULL,
+    email   VARCHAR(255) NOT NULL UNIQUE,
+    active  bool         NOT NULL DEFAULT TRUE
+);
+CREATE TABLE customers
+(
+    customer_id serial PRIMARY key,
+    name        VARCHAR(255) NOT NULL,
+    email       VARCHAR(255) NOT NULL UNIQUE,
+    active      bool         NOT NULL DEFAULT TRUE
+);
+
+INSERT INTO leads(name, email)
+VALUES ('John Doe', 'john.doe@gmail.com'),
+       ('Jane Doe', 'jane.doe@yahoo.com')
+RETURNING *;
+
+
+CREATE TABLE inventory
+(
+    id       INT PRIMARY KEY,
+    name     VARCHAR(255)   NOT NULL,
+    price    DECIMAL(10, 2) NOT NULL,
+    quantity INT            NOT NULL
+);
+
+INSERT INTO inventory(id, name, price, quantity)
+VALUES (1, 'A', 15.99, 100),
+       (2, 'B', 25.49, 50),
+       (3, 'C', 19.95, 75)
+RETURNING *;
+
+-- insert into inventory(id, name, price, quantity)
+-- values (1 , 'T' , 20.634 , 30)
+-- on conflict (name)
+-- DO UPDATE SET
+--     price = excluded.price,
+--   quantity = EXCLUDED.quantity;
+
+
+-- TCL - transaction control language
+begin;
+rollback;
+commit;
+savepoint test_variable;
+
+
+
+-- karzinka
+--  100 000
+-- query - customer
+-- query + account number
+
+
+drop table cards;
+
+create table cards
+(
+    id          serial primary key,
+    card_number varchar(16),
+    balance     decimal default 0
+);
+
+insert into cards(card_number, balance)
+VALUES ('1234567812345678', 1000000),
+       ('8765432187654321', 2000);
+
+
+-- do
+-- $$
+--     begin
+--         update cards set balance = balance - 100000 where card_number = '1234567812345678';
+--         update cards set balance = balance + 100000 where card_number = '8765432187654321';
+--         commit;
+--     end;
+-- $$;
+--
+-- rollback;
+
+
+select name, sum(price)
+from inventory
+group by name, price;
+
+
+select name, sum(price)
+from inventory
+group by grouping sets (name, price);
+
+
+with test as (
+    select *
+    from cards
+)
+SELECT *
+FROM test;
+

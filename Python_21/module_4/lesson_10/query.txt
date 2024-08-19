@@ -1,0 +1,63 @@
+create function statistics_by_day(from_day int, to_day int)
+    returns table
+            (
+                customer_name varchar,
+                dept          float,
+                order_d       date,
+                dayy          int
+            )
+    language plpgsql
+as
+$$
+begin
+    return query select c.first_name                                                        customer_name,
+                        sum(o.total_price) - sum(p.amount_price)                            dept,
+                        max(o.order_date)                                                   order_d,
+                        extract(day from (current_timestamp - min(p.payment_time)))::int as dayy
+                 from customers c
+                          join orders o on c.id = o.customer_id
+                          join payments p on c.id = p.customer_id
+                 group by c.id
+                 having extract(day from (current_timestamp - min(p.payment_time))) between from_day and to_day;
+end;
+$$;
+
+drop function statistics_by_day(from_day int, to_day int);
+
+select *
+from statistics_by_day(1, 10);
+
+
+-- ==================================================================
+
+
+select c.first_name || ' ' || c.last_name customer_fullname, c.phone_number , r.name || ' ' || d.name || ' ' || a.target address , s.debt
+from customers c
+         join address a on c.id = a.customer_id
+         join statistics s on c.id = s.customer_id
+         join district d on d.id = a.district_id
+         join region r on a.region_id = r.id
+        join orders o on c.id = o.customer_id
+where o.status = 'PROCESSING';
+
+
+
+
+================================================================================
+
+
+select current_user;
+
+set role dilshod;
+set role postgres;
+
+select * from users;
+-- grant [select, delete, ALL PRIVILEGES ] to dilshod;
+
+
+grant all privileges on all tables in schema public to dilshod;
+revoke all privileges on all tables in schema public from dilshod;
+-- delete from users;
+
+
+https://tableplus.com/blog/2018/04/postgresql-how-to-grant-access-to-users.html

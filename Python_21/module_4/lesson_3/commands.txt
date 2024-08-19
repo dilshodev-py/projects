@@ -1,0 +1,49 @@
+select a.actor_id id from actor a;
+select * from actor a where a.last_update > '2013-05-27';
+select * from actor order by first_name , last_name  desc ;
+
+
+select * from film order by film_id offset 5*(3-1) fetch first 5 row only;
+select * from film order by film_id offset 5*(3-1) limit 5;
+
+select * from actor where actor_id in (1,100,5,3) order by actor_id;
+
+
+select * from film where film_id >= 5 and film_id <= 20;
+select * from film where film_id between 5 and 20;
+
+
+select * from city where city ilike '_a%';
+
+select * from address where address2  is not NULL;
+select * from address where address2  is not NULL;
+
+
+select first_name , count(*) from actor group by first_name;
+
+select count(*) from actor;
+select count(distinct first_name) from actor;
+
+
+
+select actor_id ,  count(*) from actor group by actor_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

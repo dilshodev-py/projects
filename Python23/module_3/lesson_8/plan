@@ -1,0 +1,27 @@
+TgCLone
+    multi_lang
+
+
+pandas
+matrix
+numpy
+
+collection -> to'plam ko'rinishida malumotlarni saqlash holatiga
+
+0. str           (collection)
+0. dict          (collection)
+0. tuple         (collection)
+0. set           (collection)
+0. list          (collection)
+0. numpy         (collection)
+1. UserString    (collections)
+2. UserList      (collections)
+3. OrderDict     (collections)
+4. NamedTuple    (collections)
+5. Counter       (collections)
+6. Enum          (enum)(collection)
+
+
+
+
+

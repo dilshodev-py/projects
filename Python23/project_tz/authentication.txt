@@ -1,0 +1,30 @@
+======================= auth ===========================
+main()
+1) Register
+2) Login
+3) exit
+
+                ----------------------- Register -----------------------
+                >>> fullname
+                >>> phone
+                >>> username # unique
+                >>> password
+
+                ----------------------- Login --------------------------
+
+                >>> username
+                >>> password
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+
+======================= Account ========================
+welcome !
+15:15
+
+global session_user
+
+if is_bool:
+    session_user = response
+

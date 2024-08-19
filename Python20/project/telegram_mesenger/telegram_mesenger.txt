@@ -1,0 +1,168 @@
+users
+    id
+    fullname
+    phone_number
+    username
+    photo
+    bio
+
+contacts
+    id
+    user_id
+    phone_number
+
+groups
+    id
+    name
+    username
+    status [PRIVATE , PUBLIC]
+    bio
+    link
+    photo
+
+channels
+    id
+    name
+    username
+    status [PRIVATE , PUBLIC]
+    link
+    bio
+    photo
+
+
+message
+    id
+    message
+    type [GROUP , CHANNEL , LICHKA]
+    chat_id
+    datetime
+
+
+
+
+======================= auth ===========================
+
+1) Register
+2) Login
+3) exit
+
+                ----------------------- Register -----------------------
+                >>> fullname
+                >>> phone     # unique
+                >>> username  # unique
+                >>> bio
+
+                ----------------------- Login --------------------------
+
+                >>> phone
+                >>> code
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+
+======================= Account ========================
+1) chat (+0)
+2) group (+0)
+3) channel (+0)
+4) contact
+5) settings
+0) logout
+
+                ----------------------- chat --------------------------
+                *) search messanger
+                (yozishmalari bor messangerlar)
+                id1) username1
+                id2) username2
+                .....
+                0) <-back
+                >>> key
+                                    +++++++++++++++++++++++++++++ search messanger +++++++++++++++++++++++++
+                                    >>> username
+                                    find users list
+                                    id) username
+                                    .....
+                                    0) <-back
+
+                                    >>> user_id
+                                    >>> send message
+                                    <-chat
+
+
+
+                ----------------------- group --------------------------
+                *) search group
+                +) add group
+
+                (yozishmalari bor grupalar)
+                id1) group name1
+                id2) group name2
+                .....
+                0) <-back
+                >>> key
+
+
+                                    +++++++++++++++++++++++++++++ search group +++++++++++++++++++++++++
+                                                        >>> username
+                                                        find users list
+                                                        id) group username (12)
+                                                        .....
+                                                        0) <-back
+
+                                                        >>> group_id
+
+
+                                                        <-chat
+                                    ++++++++++++++++++++++++++++ group name  ++++++++++++++++++++++++++
+
+                                    members - 10
+
+                                    username1 : message
+                                    username2 : message
+                                    username1 : message
+                                    username2 : message
+                                    username3 : message
+                                                                        me : message
+
+
+
+                ----------------------- channel --------------------------
+                *) search channel
+                +) add channel
+                (azo bo'lgan guruhlari)
+                id1) channel name1 (+0)
+                id2) channel name2 (+0)
+                id3) channel name3 (+11)
+                .....
+                0) <-back
+                >>> key
+
+                ----------------------- contact --------------------------
+                1) add messenger
+                (contactida bor messangerlar)
+                id1) name1
+                id2) name2
+                0) <-back
+                >> key
+
+                ----------------------- settings --------------------------
+                1) change
+                2) delete account
+                0) <- back
+                >>> key
+
+                ----------------------- logout --------------------------
+                <-auth
+
+
+Example : [Yil-oy-kun soat-min]
+
+try:
+    d = datetime.datetime.fromisoformat("2024-12-02 09:10")
+except:
+    print("Invalid datetime")
+    self.back()
+
+
+
+

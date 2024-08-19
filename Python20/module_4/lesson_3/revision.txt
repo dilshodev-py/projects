@@ -1,0 +1,57 @@
+SQL
+    RDBMS
+    vertical
+    table
+    web
+
+NOSQL
+    NORDBMS
+    vertical , gorizantal
+    file , graph , key-value
+    mobile
+
+
+SQL
+    SQLITE
+    POSTGRESQL
+    MYSQL
+    ORACLE
+    SQL SERVER
+
+POSTGRESQL
+    DML
+    DDL
+    TCL
+    DCL
+
+DDL
+    create table table_name (col_name type constraint, ..)
+    alter table table_name [drop , alter , rename , add] column
+    drop table table_name CASCADE
+    truncate table table_name
+
+DML
+    select col1 , col2 from table_name where
+    insert into table_name (col_name1 , col_name2, ...) values (value1 , value2, ...)
+    update table_name set col_name1 = 'new_val' , col_name2 = 'new_val' where condition ;
+    delete from table_name where condition;
+
+
+"""
+primary key -> not null , unique , index
+serial -> integer autoincrement
+unique -> yagona
+not null -> bo'sh bo'masin
+default -> oldin ko'rsatilgan qiymat
+foreign key -> table1(id(5)) fkey table2(table1_id)
+    CASCADE
+    SET DEFAULT
+    SET NULL
+    RESTRICT
+    NO ACTION
+"""
+
+
+
+
+

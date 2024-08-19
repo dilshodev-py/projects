@@ -1,0 +1,15 @@
+Generated Columns  ->
+Sequences
+hstore
+ENUM
+EXCEPT
+UNION
+intersect
+index
+self join
+delete join
+update join
+merge
+UPSERT
+TCL
+

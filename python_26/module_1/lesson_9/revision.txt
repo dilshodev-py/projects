@@ -1,0 +1,29 @@
+[slice][start:end:step]
+[].index(data)         - yes
+append(data)           - yes
+list   # type casting  - yes
+clear()                - yes
+insert(index , data)   - yes
+remove(data)           - yes
+[].sort(key=function, reverse = True)
+[].reverse()           - yes
+[][::-1]               - yes
+pop(index)             - yes
+copy()                 - yes
+[][:]                  -
+[].extend([1,2,3,4,5]) - yes
+count(data)            - yes
+list comprehension     - yes
+
+
+Home Work:
+    leetcode string : +30
+    leetcode array: +30
+    leetcode matrix: +5
+    algo  : 130-146
+    set : methods
+
+
+
+
+

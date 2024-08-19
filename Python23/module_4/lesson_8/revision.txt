@@ -1,0 +1,32 @@
+view
+    create view view_name as .... query
+
+copy
+    copy table_name(col_name) [to,from] file_path delimiter ',' csv header;
+
+crontab
+    *      *        *         *        *
+    min   hour     day       month   week
+
+    - => range
+    / => step
+    , => value
+    * => har
+
+
+
+
+interval '70 month'
+interval '3 hours 2 min'
+interval '1 days 10 hours'
+
+
+
+datetime
+   YY-mm-dd HH:MM:SS
+
+date
+   YY-mm-dd
+
+extract(days from 'YY-mm-dd HH:MM:SS'::timestamp)
+extract(months from 'YY-mm-dd'::date)

@@ -1,0 +1,35 @@
+========== task 1 =========
+create 3 ta category table ga
+create 5 ta books table ga
+
+time =>
+
+========== task 2 =========
+books table dagi title ustunning nomini
+name nomiga o'zgartiring
+
+time =>
+
+========== task 3 =========
+users table ga birthday nomli ustun qo'shing !
+Data type date qilib yaratilsin
+
+time =>
+
+========== task 4 =========
+orders table dagi payment_status nomli ustuni olib tashlansin
+
+time =>
+
+========== task 5 =========
+orders table dagi amount ustunining nomini count nomi ga o'zgartirilsin
+
+time =>
+
+========== task 6 =========
+orderitems table dagi count ustuni defaulti 10 qilinsin
+
+time =>
+
+
+

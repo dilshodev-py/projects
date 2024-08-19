@@ -1,0 +1,10 @@
+Column Name	    Data Type	    Description
+
+id	            INT	            Unique identifier for the user (Primary Key)
+username	    VARCHAR(50)	    Username for the user
+email	        VARCHAR(100)	Email address of the user
+password	    VARCHAR(255)	Hashed password of the user
+full_name	    VARCHAR(100)	Full name of the user
+role	        VARCHAR(50)	    Role of the user (e.g., "Admin", "Manager", "Employee")
+created_at	    TIMESTAMP	    Timestamp when the user account was created
+updated_at	    TIMESTAMP	    Timestamp when the user account was last updated

@@ -1,0 +1,146 @@
+users = []
+todos = []
+
+User:
+    id
+    fullname
+    username
+    password
+
+T0D0:
+    id
+    title
+    description
+    execute_at
+    user_id
+
+
+===================== main ========================
+
+1) Register
+2) Login
+3) Exit
+
+              -------------------------------- Register ------------------------------
+              >>> Fullname
+              >>> Username
+              >>> Password
+
+              check : username unique , password length is greater than 4
+              user info save !
+
+              -------------------------------- Login ------------------------------
+              >>> Username
+              >>> Password
+
+              check : account yes or no
+              if yes:
+                account menu
+              elif no:
+                back to main
+
+===================== account ========================
+
+1) T0D0
+2) settings
+3) logout
+
+
+            ----------------------------- T0D0 menu -----------------------------
+            *) search
+            1) create
+            2) delete
+            3) update
+            4) get all
+            5) <- back
+
+                            -------------------------------- search ------------------------------
+                            title >>>
+
+                            id) title
+                            id) title
+                            ....
+                            account
+
+                            -------------------------------- create ------------------------------
+                            >>> id          *default sequence_id
+                            >>> title
+                            >>> description
+                            >>> execute_at
+                            >>> user_id     *default current_user_id
+
+                            save()
+                            <- todo menu
+
+                            -------------------------------- delete ------------------------------
+                            ID >>>
+                            find T0D0 and delete
+
+                            <-todo menu
+
+
+                            -------------------------------- update ------------------------------
+                            >>> ID
+                            >>> field [title , description , execute_at]
+                            >>> new_value
+
+                            find T0D0 and update
+
+                            <- todo menu
+
+                            -------------------------------- get all ------------------------------
+                            all T0D0 list
+                            id) title
+                            id) title
+                            ....
+                            <- todo menu
+
+
+                            -------------------------------- logout ------------------------------
+
+                            out to main
+
+            ----------------------------- settings -----------------------------
+                1) update profile
+                2) delete account
+                0) <- back
+
+                               ----------------------------- update profile -----------------------------
+                                >>> ID                                        *default current_user.id
+                                >>> field [fullname , username , password]
+                                >>> new_value
+
+                                find CURRENT USER and update
+
+                                <- settings
+
+
+                               ----------------------------- delete account -----------------------------
+
+                                find CURRENT USER and delete
+
+                                <- main
+
+                               ----------------------------- back -----------------------------
+
+                                0) <- account
+
+
+
+            ----------------------------- logout -----------------------------
+
+            0) <- main
+
+
+
+
+Project
+
+
+
+
+
+
+
+
+

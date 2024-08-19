@@ -1,0 +1,28 @@
+join
+    inner      bog'langan sohani oladi
+    left       chap full sohasi
+    right      o'ng full sohasi
+    full       chap , o'ng full sohasi
+    cross
+
+UNION -> select .... union select ....
+
+aggregat functions
+    min()         min val
+    max()         max val
+    avg()         o'rtacha qiymat
+    count()       sanoqchi
+    sum()         jami qiymat
+    string_agg()  join
+    array_agg()   massiv
+
+substr()
+length()
+replace()
+lower()
+upper()
+
+
+
+
+

@@ -1,0 +1,24 @@
+[
+   {
+      "id": 1,
+      "title": "Iphone 16 pro max",
+      "description": null,
+      "price": 2000,
+      "discount_percentage": null,
+      "rating": null,
+      "stock": 5,
+      "sku": null,
+      "weight": 0.5,
+      "weight_type": 1,
+      "dimensions": null,
+      "warranty_information": null,
+      "availability_status": null,
+      "shipping_information": null,
+      "minimum_order_quantity": null,
+      "return_policy": null,
+      "thumbnail": null,
+      "category_id": 1,
+      "brand_id": 2,
+      "meta_id": null
+   }
+]

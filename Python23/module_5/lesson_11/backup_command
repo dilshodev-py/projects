@@ -1,0 +1,24 @@
+docker exec pg_con pg_dump -U postgres -F t db_name  > test.tar
+
+
+docker cp /tmp/backup_file pg_con:/backup_file
+docker exec -it pg_con bash
+
+pg_restore -U postgres -d database_name backup_file
+
+
+TIME: 15:40
+
+
+
+COMMAND:
+    pg_dump:
+        docker run --name pg_con -it -d -e POSTGRES_PASSWORD=1 -p 5433:5432 postgres:alpine
+        docker exec -it -u postgres pg_con psql
+        docker exec pg_con pg_dump -U postgres -F t db_name  > test.tar
+
+    pg_restore:
+        docker cp test.tar pg_con:/test.tar
+        docker exec -it pg_con bash
+            pg_restore -U postgres -d db_name test.tar
+

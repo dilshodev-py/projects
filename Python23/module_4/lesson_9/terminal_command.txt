@@ -1,0 +1,13 @@
+ 2003  crontab -e
+ 2004  crontab -e
+ 2005  ls
+ 2006  crontab -e
+ 2007  clear
+ 2008  sudo -i -u postgres psql
+ 2009  sudo -u postgres psql
+ 2010  sudo su postgres
+ 2011  sudo su postgres psql
+ 2012  sudo su postgres
+ 2013  clear
+ 2014  sudo -i -u postgres
+ 2015  history

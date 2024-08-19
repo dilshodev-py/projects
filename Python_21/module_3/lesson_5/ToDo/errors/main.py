@@ -1,0 +1,5 @@
+class ErrorMessage(Exception):
+    pass
+
+
+

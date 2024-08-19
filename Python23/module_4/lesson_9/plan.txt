@@ -1,0 +1,17 @@
+json, jsonb
+crypt
+DCL - grant , revoke
+trigger
+
+RDBMS
+    DDL - create , drop , alter , truncate
+    DML - select , insert , update , delete
+    DCL - grant , revoke
+
+
+team 5:
+    1 team lider
+
+    postgres
+    1
+    4

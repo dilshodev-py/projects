@@ -1,0 +1,12 @@
+======================================= task 1 =====================================
+Kiruvchi malumot accounts !
+eng kotta summaga ega item topilsin
+
+input : accounts = [[1,5],[7,3],[3,5]]
+output : [7,3]
+
+======================================= task 2 =====================================
+
+https://leetcode.com/problems/matrix-diagonal-sum/description/
+
+

@@ -1,0 +1,26 @@
+{
+   "1": {
+      "id": 1,
+      "name": "Admin",
+      "email": "abaitovdev@gmail.com",
+      "password": "1111",
+      "role": "USER",
+      "join_at": "2023-11-17 20:39:45.607257"
+   },
+   "2": {
+      "id": 2,
+      "name": "Salohiddin",
+      "email": "usmonovsalokhiddin@gmail.com",
+      "password": "2222",
+      "role": "ADMIN",
+      "join_at": "2023-11-17 20:41:53.987461"
+   },
+   "3": {
+      "id": 3,
+      "name": "John",
+      "email": "absaitovdev@gmail.com",
+      "password": "1111",
+      "role": "ADMIN",
+      "join_at": "2023-11-18 10:27:00.702748"
+   }
+}

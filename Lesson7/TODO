@@ -1,0 +1,31 @@
+
+google login
+    https://docs.allauth.org/en/latest/
+
+
+send email
+celery
+rabbitmq
+redis
+flower
+celery result
+celery beat (result)
+minio service
+verification link
+docker with django
+
+-p 5432:5432
+
+
+Vazifa:
+    1) pochtaga 6 xonali son yuborib tastiqlash : send_mail + celery + redis
+    2) 42.uz dagidek login qilish imkoniyati (aiogram)
+    3) Kanstovar
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/dilshodev3234/celery_beat_redis_verification_link.git
+git push -u origin main

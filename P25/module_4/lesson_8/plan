@@ -1,0 +1,14 @@
+1. Subquery, ANY, ALL, EXISTS
+2. CONDITIONAL EXPRESSIONS (shartli iboralar) OPERATORS (case, coalesce, nullif, cast)
+
+
+mv file.sql /tmp
+cd /tmp
+sudo -u postgres psql database_name < file.sql
+
+
+backup pg_restore , pg_dump
+
+cd /tmp:
+    sudo -u postgres pg_restore -U postgres -d database_name < tar_file.tar
+    sudo -u postgres pg_dump -U postgres -F tar -f file_name.tar -d database_name

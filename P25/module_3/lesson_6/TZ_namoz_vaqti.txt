@@ -1,0 +1,61 @@
+viloyatlar: https://namozvaqti.uz/viloyat
+
+    1) Tashkent
+    2) Samarqand
+    3) Sirdaryo
+    ...
+
+    >>>1
+    ------------------------------------------
+        tumanlar:   https://namozvaqti.uz/viloyat/viloyat_nomi
+            1)tuman1
+            2)tuman2
+            3)tuman3
+            ...
+
+            >>>
+            -----------------------------------------------
+               namoz vaqti :     https://namozvaqti.uz/shahar/tuman_nomi
+               Bomdod : 03:03
+               Quyosh : 03:03
+               Peshin : 03:03
+               Asr :    03:03
+               Shom :   03:03
+               Xufton : 03:03
+
+
+
+
+
+==================================================
+https://obhavo.uz/
+
+
+viloyatlar: https://namozvaqti.uz/viloyat
+
+    1) tashkent
+    2) andijan
+    3) bukhara
+    ...
+
+    >>>1
+
+    -----------------------------------------------
+               Ob xavo :     https://obhavo.uz/tashkent
+
+               Haftalik
+
+               Ertaga :
+                     Harorat :         +37 , +24
+                     Tfsif   :         bulutli
+                     Yog'ingarchilik:  0%
+
+               Dushanba:
+                     Harorat :         +37 , +24
+                     Tfsif   :         bulutli
+                     Yog'ingarchilik:  0%
+
+
+               .......
+
+Usmonjon :    string , array , dict

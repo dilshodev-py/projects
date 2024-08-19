@@ -1,0 +1,187 @@
+users:
+    id
+    first_name
+    last_name
+    username
+    image
+    phone_number
+    bio
+    birthdate
+    lang [uz , en]
+    created_at
+
+
+groups:
+    id
+    name
+    group_link
+    type [public , private]
+    owner_id
+    members_count
+    bio
+    created_at
+
+
+
+GroupMembers:
+    id
+    group_id
+    user_id
+
+
+
+Channels:
+    id
+    name
+    type [public , private]
+    channel_link
+    owner_id
+    followers_count
+    bio
+
+
+
+ChannelFollowers:
+    id
+    channel_id
+    user_id
+
+
+
+Contacts:
+    id
+    first_name
+    last_name
+    phone_number
+    owner_id
+
+chat:
+    id
+    message
+    type [user_chat , group , channel]
+    receiver_id  # User(id)
+    sender_id  # User(id)
+    is_seen  # default False
+    send_at
+
+
+
+
+======================= auth ===========================
+
+1) Register
+2) Login
+3) language
+4) exit
+
+                ----------------------- Register -----------------------
+                >>> first_name  # required
+                >>> last_name   # Optional
+                >>> phone       # unique | required
+                >>> username    # unique | Optional
+                >>> bio         # Optional
+
+                ----------------------- Login --------------------------
+
+                >>> phone
+                >>> code
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+
+======================= Account ========================
+1) chat (+0)
+2) group (+0)
+3) channel (+0)
+4) contact
+5) settings
+0) logout
+
+                ----------------------- chat --------------------------
+                *) search messanger
+                (yozishmalari bor messangerlar)
+                1) username1
+                2) username2
+                .....
+                0) <-back
+                >>> key
+                                    +++++++++++++++++++++++++++++ search messanger +++++++++++++++++++++++++
+                                    >>> username
+                                    find users list
+                                    id) username
+                                    .....
+                                    0) <-back
+
+                                    >>> user_id
+                                    >>> send message
+                                    <-chat
+
+
+
+                ----------------------- group --------------------------
+                *) search group
+                +) create group
+
+                (yozishmalari bor grupalar)
+                id1) group name1 (+0)
+                id2) group name2 (+0)
+                .....
+                0) <-back
+                >>> key
+
+
+                                    +++++++++++++++++++++++++++++ search group +++++++++++++++++++++++++
+                                                        >>> username
+                                                        find users list
+                                                        id) group username (12)
+                                                        .....
+                                                        0) <-back
+
+                                                        >>> group_id
+
+
+                                                        <-chat
+                                    ++++++++++++++++++++++++++++ group name  ++++++++++++++++++++++++++
+
+                                    members - 10
+
+                                    username1 : message
+                                    username2 : message
+                                    username1 : message
+                                    username2 : message
+                                    username3 : message
+                                                                        me : message
+
+
+
+                ----------------------- channel --------------------------
+                *) search channel
+                +) create channel
+                (azo bo'lgan guruhlari)
+                id1) channel name1 (+0)
+                id2) channel name2 (+0)
+                id3) channel name3 (+11)
+                .....
+                0) <-back
+                >>> key
+
+                ----------------------- contact --------------------------
+                1) create contact
+                (contactida bor messangerlar)
+                id1) name1
+                id2) name2
+                0) <-back
+                >> key
+
+                ----------------------- settings --------------------------
+                1) change
+                2) delete account
+                0) <- back
+                >>> key
+
+                ----------------------- logout --------------------------
+                <-auth
+
+
+

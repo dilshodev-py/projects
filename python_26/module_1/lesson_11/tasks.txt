@@ -1,0 +1,7 @@
+string = "absdd"
+output: 4
+
+a : 1
+b : 1
+s : 1
+d : 2

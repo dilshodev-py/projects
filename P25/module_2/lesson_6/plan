@@ -1,0 +1,19 @@
+file open
+    mode: r(read) , a(append) , w(write) , x(create)
+
+    .py
+    .txt
+    .xlsx
+    .cpp
+    .json
+    .html
+    .scc
+    .pdf
+    .zip
+    .........
+
+Absolute path -> /home/directory/file_name.py
+Relative path -> file_name.py
+
+
+

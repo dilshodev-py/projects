@@ -1,0 +1,5 @@
+Stack        - LIFO
+Queue        - FIFO or LILO
+LinkedList   - Node(data , next)
+
+

@@ -1,0 +1,4 @@
+venv
+.env
+telegram bot api
+telegram bot (aiogram)

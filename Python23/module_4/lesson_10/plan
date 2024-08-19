@@ -1,0 +1,17 @@
+trigger
+
+
+user
+    id(1)
+    fullname(Botir)
+    product_count(2)
+
+
+product
+    name(Laptop)
+    user_id(1)
+
+    name(Telefon)
+    user_id(1)
+
+

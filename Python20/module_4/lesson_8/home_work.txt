@@ -1,0 +1,12 @@
+clone functions
+
+    REPLACE()
+    CONCAT   -> join
+    LOWER()
+    UPPER()
+    TRIM    - > strip()
+    LENGTH  - > len()
+    MOD()   - > qoldiqli bulish
+    POWER() - > daraja
+    SQRT    - > ildiz
+    SIGN    - > manfiy -1 and musbat 1

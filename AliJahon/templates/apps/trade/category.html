@@ -1,0 +1,111 @@
+{% extends 'apps/include_base/base.html' %}
+{% load thumbnail %}
+{% load humanize %}
+
+
+{% block body %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="container border-bottom-4">
+                <div class="header_tab_menu">
+                    <div class="header_menu active" style="overflow: auto">
+                        <a href="{% url 'category_trade' %}"
+                           class="btn btn-default {% if not request.GET.slug %} active {% endif %}">
+                            Barchasi
+                        </a>
+                        {% for category in categories %}
+                            <a href="{% url 'category_trade' %}?slug={{ category.slug }}"
+                               class="btn btn-default {% if request.GET.slug == category.slug %} active {% endif %}">
+                                {{ category.name }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="productsList">
+                <div class="content_grid">
+                    <div class="row  mt-4">
+                        {% for product in products %}
+                            <div class="mb-4 col-md-6 col-lg-4">
+                                <div class="border rounded-1 h-100 d-flex flex-column justify-content-between pb-3">
+                                    <div class="overflow-hidden">
+                                        <div class="position-relative rounded-top overflow-hidden">
+                                            {% thumbnail product.first_image.image "200x200" format="PNG" as im %}
+                                                <a class="d-block"
+                                                        {#                                           href="{% url 'product_detail' product.slug %}"><img#}
+                                                   href="{% url 'product_detail' product.slug %}"><img
+                                                        class="img-fluid rounded-top"
+                                                        src="{{ im.url }}"
+                                                        alt=""/>
+                                                </a>
+                                            {% endthumbnail %}
+                                            <span
+                                                    {% if product.is_new %}
+                                                        class="badge rounded-pill bg-success position-absolute mt-2 me-2 z-index-2 top-0 end-0"
+                                                        >New</span>
+                                                    {% endif %}
+
+
+                                        </div>
+                                        <div class="p-3">
+                                            <h5 class="fs-0">
+                                                {#                                        <a class="text-dark" href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>#}
+                                                <a class="text-dark"
+                                                   href="{% url 'product_detail' product.slug %}">{{ product.name }}</a>
+                                            </h5>
+                                            <p class="fs--1 mb-3"><a class="text-500" href="#!">Computer &amp;
+                                                Accessories</a></p>
+                                            <h5 class="fs-md-2 text-warning mb-0 d-flex align-items-center mb-3">
+                                                ${{ product.price|floatformat:"0"|intcomma }}</h5>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-between-center px-3">
+                                        <div>
+                                            <a class="wish-btn btn btn-sm btn-falcon-default me-2 bg-white like-button {% if product.id in user.wishlists_all %}bg-danger{% else %}bg-white{% endif %}"
+                                               data-bs-toggle="tooltip" data-bs-placement="top"
+                                               data-post-id="{{ product.slug }}"
+                                               title="Add to Wish List"><span class="far fa-heart"></span></a><a
+                                                class="btn btn-sm btn-falcon-default"
+                                                href="{% url 'product_detail' product.slug %}"
+                                                data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Add to Cart"><span
+                                                class="fas fa-cart-plus"></span></a></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        {% endfor %}
+                    </div>
+                    <div class="card-footer bg-light d-flex justify-content-center">
+                        <div>
+                            {% if page_obj.has_previous %}
+                                <a class="btn btn-falcon-default btn-sm me-2" type="button"
+                                   data-bs-toggle="tooltip" data-bs-placement="top" title="Prev"
+                                   href="?slug={{ slug }}&page={{ page_obj.previous_page_number }} "><span
+                                        class="fas fa-chevron-left"></span></a>
+                            {% endif %}
+                            <a class="btn btn-sm btn-falcon-default text-primary me-2"
+                               href="?slug={{ slug }}&page={{ page_obj.number }}">{{ page_obj.number }}</a>
+
+                            {% if page_obj.number != page_obj.paginator.num_pages %}
+                                <a class="btn btn-sm btn-falcon-default me-2"
+                                   href="?slug={{ slug }}&page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                            {% endif %}
+                            {% if page_obj.has_next %}
+                                <a class="btn btn-falcon-default btn-sm" data-bs-toggle="tooltip"
+                                   data-bs-placement="top" title="Next"
+                                   href="?slug={{ slug }}&page={{ page_obj.next_page_number }}"><span
+                                        class="fas fa-chevron-right">  </span>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

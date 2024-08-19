@@ -1,0 +1,970 @@
+groups:
+    id
+    name
+    status : True
+    max_space
+    teacher_id
+    subject_id
+
+subjects:
+    id
+    name
+
+users:
+    id
+    first_name
+    last_name
+    role   : admin , teacher , student
+    phone_number
+    password default None
+    ball default 0
+    group_id default None
+    subject_id default
+    created_at
+
+
+
+================================ main ============================
+1) Login
+0) exit
+
+                                ------------------------- login ---------------------------
+                                >>> phone number
+                                >>> password
+
+                                🟢 is_exists
+
+                                🟢 role == 'admin'
+                                ⬇️ Admin panel
+
+                                🟢 role == 'teacher'
+                                ⬇️ Teacher panel
+
+                                🟢 role == 'student'
+                                ⬇️ Student panel
+
+
+                                🔴⬅️main
+
+
+=============================== ️Admin System ================================
+1) Panel
+2) settings
+0) logout
+
+                                ------------------------ Panel --------------------------
+                                1) Teacher
+                                2) Student
+                                3) Subject
+                                4) Group
+                                0) back
+                                                $$$$$$$$$$$$$$$$$$ Teacher $$$$$$$$$$$$$$$$$$$$$$
+                                                *) search
+                                                1) add
+                                                2) teachers list
+                                                0) back
+                                                                                    ##################### search ######################
+                                                                                    >>> 🔎 search :
+                                                                                    1) Teacher1
+                                                                                    2) Teacher2
+                                                                                    3) Teacher3
+                                                                                    ....
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    0) back
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    Fullname :
+                                                                                                                    Phone NUmber
+                                                                                                                    Groups :
+                                                                                                                            group name :
+                                                                                                                            student count :
+                                                                                                                            status :
+
+
+                                                                                                                            group name :
+                                                                                                                            student count :
+                                                                                                                            status :
+
+
+                                                                                                                            group name :
+                                                                                                                            student count :
+                                                                                                                            status :
+                                                                                                                            ......................
+
+                                                                                                                    Enter click !
+
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) phone number
+                                                                                                                    2) subject
+                                                                                                                    0) back
+                                                                                                                    key>>>
+                                                                                                                    if  key == 2:
+                                                                                                                        1) Subject1
+                                                                                                                        2) Subject2
+                                                                                                                        ...
+                                                                                                                        sub_id>>>
+                                                                                                                       🟢subject_id = sub_id  (update)
+
+                                                                                                                    else:
+                                                                                                                        new_number >>>
+                                                                                                                        🟢field = new_number  (update)
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢teacher remove
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Teacher
+
+
+                                                                                    ######################## add ###############################
+                                                                                    1) subject1
+                                                                                    2) subject2
+                                                                                    ...
+                                                                                    sub_id >>>
+
+                                                                                    >>> phone number
+
+
+                                                                                    🟢teacher save
+                                                                                    ⬅️ Teacher
+
+
+                                                                                    ######################## teachers list ###############################
+
+                                                                                    1) Teacher1
+                                                                                    2) Teacher2
+                                                                                    3) Teacher3
+                                                                                    ...
+                                                                                    >>>
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    0) back
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    Fullname :
+                                                                                                                    Phone NUmber
+                                                                                                                    Groups :
+                                                                                                                            group name :
+                                                                                                                            student count :
+                                                                                                                            status :
+
+
+                                                                                                                            group name :
+                                                                                                                            student count :
+                                                                                                                            status :
+
+
+                                                                                                                            group name :
+                                                                                                                            student count :
+                                                                                                                            status :
+                                                                                                                            ......................
+
+                                                                                                                    Enter click !
+
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) phone number
+                                                                                                                    2) subject
+                                                                                                                    0) back
+                                                                                                                    key>>>
+                                                                                                                    if  key == 2:
+                                                                                                                        1) Subject1
+                                                                                                                        2) Subject2
+                                                                                                                        ...
+                                                                                                                        sub_id>>>
+                                                                                                                       🟢subject_id = sub_id  (update)
+
+                                                                                                                    else:
+                                                                                                                        new_number >>>
+                                                                                                                        🟢field = new_number  (update)
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢teacher remove
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Teacher
+
+
+                                                                                    ###################### back ###############################
+                                                                                    ⬅️ Panel
+
+
+
+                                                $$$$$$$$$$$$$$$$$$ Student $$$$$$$$$$$$$$$$$$$$$$
+
+                                                *) search
+                                                1) add
+                                                2) New student list
+                                                3) Student list
+                                                0) back
+
+
+
+===============================Teacher System ================================
+1) Panel
+2) settings
+0) logout
+
+
+                                      $$$$$$$$$$$$$$$$$$ Groups $$$$$$$$$$$$$$$$$$$$$$
+
+                                      *) group search 🔎
+                                      1) group list
+                                      0) back
+
+
+                                                                                                ###################### search ###############################
+                                                                                                group_name >>>
+                                                                                                1) group1
+                                                                                                2) group2
+                                                                                                ...
+
+                                                                                                >>>
+
+                                                                                                1) about
+                                                                                                2) students
+                                                                                                0) back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    Group name :
+                                                                                                                    status :
+                                                                                                                    subject of the group :
+                                                                                                                    max_student :
+                                                                                                                    schedule
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  students   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Student1
+                                                                                                                    2) Student2
+                                                                                                                    3) Student3
+                                                                                                                    ...
+
+                                                                                                                     student>>>
+
+                                                                                                                    1) + rate
+                                                                                                                    2) - rate
+                                                                                                                    2) attendance
+                                                                                                                    0) back
+
+                                                                                                                                                    &&&&&&&&&&&&&&&  + Rate &&&&&&&&&&&&&&&&&
+
+                                                                                                                                                    ball>>>5
+                                                                                                                                                    add rate
+
+                                                                                                                                                    &&&&&&&&&&&&&&&  - Rate &&&&&&&&&&&&&&&&&
+
+                                                                                                                                                    ball>>>5
+                                                                                                                                                    sub rate
+
+
+                                                                                                                                                    ⬅️ Students
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Groups
+
+
+
+
+
+
+                                                                                                ###################### groups list ###############################
+
+                                                                                                1) group1
+                                                                                                2) group2
+                                                                                                3) group3
+
+                                                                                                >>>
+
+                                                                                                1) about
+                                                                                                2) students
+                                                                                                0) back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    Group name :
+                                                                                                                    status :
+                                                                                                                    subject of the group :
+                                                                                                                    max_student :
+
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  students   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Student1
+                                                                                                                    2) Student2
+                                                                                                                    3) Student3
+                                                                                                                    ...
+
+                                                                                                                     student>>>
+
+                                                                                                                    1) rate
+                                                                                                                    0) back
+
+                                                                                                                                                    &&&&&&&&&&&&&&&  Rate &&&&&&&&&&&&&&&&&
+
+                                                                                                                                                    ball>>>
+
+
+
+                                                                                                                                                    ⬅️ Students
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Groups
+
+
+
+
+                                                                                                ####################### Back #####################
+
+
+                                                                                                ⬅️ Panel
+
+
+
+
+                                                      $$$$$$$$$$$$$$ Back $$$$$$$$$$$$$$$$$$$$$
+
+
+
+
+                                                      ⬅️ Teacher System
+
+
+                                -------------------- Settings ----------------------
+
+
+                                1) Update
+                                0) back
+                                                     &&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&
+                                                     1) Fisrt name
+                                                     2) Second name
+                                                     3) phone number
+                                                     4) password
+
+                                                     new_value >>>>
+
+
+                                                     🟢 change
+                                                     ⬅️ back
+
+
+
+                                                     $$$$$$$$$$$$$$ Back $$$$$$$$$$$$$$$$$$$$$
+
+
+                                                      ⬅️ Teacher System
+
+===============================Student System ================================
+1) Self Group
+2) settings
+0) logout
+
+
+
+
+
+			  ###################### Self Group #####################
+
+			  1) Student ball
+			  2) Student ball
+			  3) Student ball
+			  4) Student ball
+			  5) Student ball
+			  6) Student ball
+
+			  Enter click !
+
+
+
+
+
+	              --------------------Settings----------------------------
+
+
+
+	              1) Update
+	              0) back
+	                                     &&&&&&&&&&&&&& Update &&&&&&&&&&&&&&&&&&&
+
+	                                     1) password
+	                                     new_value >>>>
+
+
+	                                     🟢 change
+	                                     ⬅️ back
+
+
+
+	                                     $$$$$$$$$$$$$$ Back $$$$$$$$$$$$$$$$$$$$$
+
+
+	                                      ⬅️ Student System
+
+                                                                                    ##################### search ######################
+                                                                                    >>> 🔎 search :
+                                                                                    1) Student1
+                                                                                    2) Student2
+                                                                                    3) Student3
+                                                                                    ....
+                                                                                    ID>>>
+
+                                                                                    1) about
+                                                                                    2) add to group
+                                                                                    3) change to group
+                                                                                    4) delete
+                                                                                    0) back
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    Fullname :
+                                                                                                                    Phone Number
+                                                                                                                    Group : Group name
+
+
+                                                                                                                    Enter click !
+
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) phone number
+                                                                                                                    0) back
+                                                                                                                    >>>
+
+                                                                                                                    new_number >>>
+                                                                                                                    🟢field = new_number  (update)
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢student remove
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Student
+
+
+                                                                                    ######################## add ###############################3
+                                                                                    >>> first_name
+                                                                                    >>> last_name
+                                                                                    >>> phone number
+
+                                                                                    🟢 save
+                                                                                    ⬅️ Student
+
+
+                                                                                    ######################## New student list ###############################
+
+                                                                                    1) Student1
+                                                                                    2) Student2
+                                                                                    3) Student3
+                                                                                    ...
+                                                                                    >>>
+
+                                                                                    1) about
+                                                                                    2) add to group
+                                                                                    2) change to group
+                                                                                    3) delete
+                                                                                    0) back
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    Fullname :
+                                                                                                                    Phone Number :
+                                                                                                                    ball :
+                                                                                                                    Group : Group name
+
+
+                                                                                                                    Enter click !
+
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  add to group   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) subject1
+                                                                                                                    2) subject2
+                                                                                                                    3) subject3
+                                                                                                                    0) back
+                                                                                                                    >>>
+
+
+
+                                                                                                                    1) group1
+                                                                                                                    2) group2
+                                                                                                                    3) group3
+                                                                                                                    4) group4
+                                                                                                                    >>>1
+
+                                                                                                                    add [Y/n] :
+
+
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢student remove
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ student
+
+
+                                                                                    ######################  Student list ###############################
+                                                                                    1) subject1
+                                                                                    2) subject2
+                                                                                    3) subject3
+                                                                                    0) back
+                                                                                    >>>
+
+
+
+                                                                                    1) group1
+                                                                                    2) group2
+                                                                                    3) group3
+                                                                                    4) group4
+                                                                                    >>>1
+
+                                                                                    1) Student1
+                                                                                    2) Student2
+                                                                                    3) Student3
+                                                                                    ...
+
+                                                                                    Enter Click !
+                                                                                    ⬅️ Student
+
+
+
+
+                                                                                    ###################### back ###############################
+                                                                                    ⬅️ Panel
+
+
+
+
+                                                $$$$$$$$$$$$$$$$$$ Group $$$$$$$$$$$$$$$$$$$$$$
+
+                                                *) search 🔎
+                                                1) add
+                                                2) incomplete group list
+                                                3) full group list
+                                                4) graduated group list
+                                                0) back
+                                                                                    ###################### search 🔎 ###############################
+                                                                                    group name >>>
+
+                                                                                    1) Group1
+                                                                                    2) Group2
+                                                                                    3) Group3
+                                                                                    ...
+                                                                                    >>>
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    4) students
+                                                                                    0) back
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    Group name :
+                                                                                                                    status : True
+                                                                                                                    max_student :
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) name
+                                                                                                                    2) status
+                                                                                                                    3) max_student
+                                                                                                                    4) teacher
+                                                                                                                    field >>>
+
+                                                                                                                    if filed == '4':
+                                                                                                                        1) Subject1
+                                                                                                                        2) Subject2
+                                                                                                                        4) Subject3
+                                                                                                                        >>>
+
+                                                                                                                        1) Teacher1
+                                                                                                                        2) Teacher2
+                                                                                                                        3) Teacher3
+                                                                                                                        ...
+                                                                                                                        >>>
+
+                                                                                                                    new_value :
+
+                                                                                                                    🟢 change
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢 delete
+                                                                                                                    ⬅️ Group
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  students   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Student1
+                                                                                                                    2) Student2
+                                                                                                                    ...
+
+                                                                                                                    Enter Click !
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Group
+
+
+
+                                                                                    ###################### add ###############################
+                                                                                    1) subject1
+                                                                                    2) subject2
+                                                                                    3) subject3
+                                                                                    ...
+                                                                                    sub_id >>>
+
+                                                                                    Group name >>>
+                                                                                    max student >>>
+
+                                                                                    🟢 save
+                                                                                    ⬅️ Group
+
+                                                                                    ###################### incomplete group list ###############################
+
+                                                                                    1) Group1
+                                                                                    2) Group2
+                                                                                    3) Group3
+                                                                                    ...
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    4) students
+                                                                                    0) back
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    Group name :
+                                                                                                                    status : True
+                                                                                                                    max_student :
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) name
+                                                                                                                    2) status
+                                                                                                                    3) max_student
+                                                                                                                    4) teacher
+                                                                                                                    field >>>
+
+                                                                                                                    if filed == '4':
+                                                                                                                        1) Subject1
+                                                                                                                        2) Subject2
+                                                                                                                        4) Subject3
+                                                                                                                        >>>
+
+                                                                                                                        1) Teacher1
+                                                                                                                        2) Teacher2
+                                                                                                                        3) Teacher3
+                                                                                                                        ...
+                                                                                                                        >>>
+
+                                                                                                                    new_value :
+
+                                                                                                                    🟢 change
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢 delete
+                                                                                                                    ⬅️ Group
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  students   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Student1
+                                                                                                                    2) Student2
+                                                                                                                    ...
+
+                                                                                                                    Enter Click !
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Group
+
+
+
+                                                                                    ###################### full group list ###############################
+                                                                                    1) Group1
+                                                                                    2) Group2
+                                                                                    3) Group3
+
+                                                                                    Enter CLick !
+                                                                                    ⬅️ Group
+
+
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    Group name :
+                                                                                                                    status : True
+                                                                                                                    max_student :
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) name
+                                                                                                                    2) status
+                                                                                                                    3) max_student
+                                                                                                                    4) teacher
+                                                                                                                    field >>>
+
+                                                                                                                    if filed == '4':
+                                                                                                                        1) Subject1
+                                                                                                                        2) Subject2
+                                                                                                                        4) Subject3
+                                                                                                                        >>>
+
+                                                                                                                        1) Teacher1
+                                                                                                                        2) Teacher2
+                                                                                                                        3) Teacher3
+                                                                                                                        ...
+                                                                                                                        >>>
+
+                                                                                                                    new_value :
+
+                                                                                                                    🟢 change
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢 delete
+                                                                                                                    ⬅️ Group
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  students   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Student1
+                                                                                                                    2) Student2
+                                                                                                                    ...
+
+                                                                                                                    Enter Click !
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Group
+
+
+                                                                                    ###################### graduated group list ###############################
+
+                                                                                    1) Group1
+                                                                                    2) Group2
+                                                                                    3) Group3
+                                                                                    ...
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    4) students
+                                                                                    0) back
+
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    Group name :
+                                                                                                                    status : True
+                                                                                                                    max_student :
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) name
+                                                                                                                    2) status
+                                                                                                                    3) max_student
+                                                                                                                    4) teacher
+                                                                                                                    field >>>
+
+                                                                                                                    if filed == '4':
+                                                                                                                        1) Subject1
+                                                                                                                        2) Subject2
+                                                                                                                        4) Subject3
+                                                                                                                        >>>
+
+                                                                                                                        1) Teacher1
+                                                                                                                        2) Teacher2
+                                                                                                                        3) Teacher3
+                                                                                                                        ...
+                                                                                                                        >>>
+
+                                                                                                                    new_value :
+
+                                                                                                                    🟢 change
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    🟢 delete
+                                                                                                                    ⬅️ Group
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  students   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Student1
+                                                                                                                    2) Student2
+                                                                                                                    ...
+
+                                                                                                                    Enter Click !
+                                                                                                                    ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  back   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    ⬅️ Group
+
+
+                                                                                    ###################### back ###############################
+
+                                                                                    ⬅️ Panel
+
+
+                                                $$$$$$$$$$$$$$$$$$ Subject $$$$$$$$$$$$$$$$$$$$$$
+
+                                                *) search 🔎
+                                                1) add
+                                                2) subject list
+                                                0) back
+                                                                                    ###################### search ###############################
+                                                                                    subject_name >>>
+                                                                                    1) subject
+                                                                                    2) subject
+                                                                                    ...
+
+                                                                                    >>>
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    4) teachers
+                                                                                    0) back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    subject name :
+                                                                                                                    group count :
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    1) name
+                                                                                                                    0) back
+
+                                                                                                                    key >>>
+                                                                                                                    if key == 0:
+                                                                                                                        ⬅️ back
+
+                                                                                                                    else:
+                                                                                                                        new_value >>>
+                                                                                                                        🟢 change
+                                                                                                                        ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    🟢 delete
+                                                                                                                    ⬅️ Subject
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  teachers   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Teacher1
+                                                                                                                    2) Teacher2
+                                                                                                                    3) Teacher3
+                                                                                                                    ...
+
+                                                                                                                    Enter Click !
+
+
+
+                                                                                    ###################### add ###############################
+                                                                                    name >>>
+                                                                                    🟢 save
+                                                                                    ⬅️ Subject
+
+
+                                                                                    ###################### Subject list ###############################
+                                                                                    1) subject
+                                                                                    2) subject
+                                                                                    ...
+
+                                                                                    >>>
+
+                                                                                    1) about
+                                                                                    2) update
+                                                                                    3) delete
+                                                                                    4) teachers
+                                                                                    0) back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  about   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    subject name :
+                                                                                                                    group count :
+
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  update   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    1) name
+                                                                                                                    0) back
+
+                                                                                                                    key >>>
+                                                                                                                    if key == 0:
+                                                                                                                        ⬅️ back
+
+                                                                                                                    else:
+                                                                                                                        new_value >>>
+                                                                                                                        🟢 change
+                                                                                                                        ⬅️ back
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  delete   %%%%%%%%%%%%%%%%%%%%%%%
+                                                                                                                    🟢 delete
+                                                                                                                    ⬅️ Subject
+
+                                                                                                                    %%%%%%%%%%%%%%%%%%%%%  teachers   %%%%%%%%%%%%%%%%%%%%%%%
+
+                                                                                                                    1) Teacher1
+                                                                                                                    2) Teacher2
+                                                                                                                    3) Teacher3
+                                                                                                                    ...
+
+                                                                                                                    Enter Click !
+
+
+
+                                                                                    ###################### back ###############################
+                                                                                    ⬅️ Panel
+
+
+
+
+
+
+
+
+
+
+

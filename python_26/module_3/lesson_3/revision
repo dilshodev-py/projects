@@ -1,0 +1,78 @@
+decorator
+time
+random
+datetime
+calendar
+generator
+iterator
+iterable
+itertools
+
+iterable , list , massiv , array : list , dict , tuple , set , str
+generator : def , yield
+
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+
+def a():
+    return 1
+
+a()
+
+for i in my_generator()
+
+    lazy
+
+iterator :
+    a = iter(my_generator())
+    next(a)
+
+itertools - generator functions
+
+
+import calendar
+
+calendar.month(2024 , 8)
+calendar.calendar(2024)
+
+
+random:
+    randint(start , end)
+    randrange(start , end , step)
+
+    random()   -   0 ... 1 : 0.1234543234
+    choice(iterable)
+    choices(iterable , 2)
+    shuffle()
+
+
+names = [
+    "Botir",
+    "Komil",
+    "Mustaffo",
+    "Asilbek",
+    "Nodir",
+    "Komila",
+    "Jasur",
+    "Jamshid",
+    "Parvoz",
+    "Ikrom"
+]
+
+
+
+group1
+
+    name1
+    name1
+    name1
+    name1
+
+group3
+    name1
+    name1
+    name1
+    name1
+    name1

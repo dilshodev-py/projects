@@ -1,0 +1,30 @@
+select DISTINCT col_name1 , col_name2 new_colname
+from table_name where col_name like '%abs' [or , and] col_name between 10 and 20
+order by col_name1 , col_name2 desc
+[offset number] limit number
+[offset number] FETCH FIRST number ROW ONLY;
+
+set(1,1,1,1) - >set(1)
+
+===========================================================
+
+backup.sh
+
+database.tar
+sudo -u postgres pg_restore -d database_name < database.tar
+
+
+select * from table
+update table_name set column_name = 'new value' where cond from other_table where con
+delete from table_name where cond
+insert into table_name (col_name1 , col_name2) values (value1 , value2)
+
+truncate table_name;
+
+category
+    1
+
+
+product
+    1
+    c_id 2

@@ -1,0 +1,64 @@
+# ========================= TZ =======================
+database
+
+
+users.txt
+    {
+    "id" : id,
+    "fullname" : fullname,
+    "username" : username,
+    "phone_number" : phone_number,
+    "bio" : bio,
+    "photo" : photo
+    }
+
+groups.txt
+    {"id" : id,
+    "name" : name,
+    "status" : status,
+    "description" : description,
+    "username" : username,
+    "admin_id" : admin_id}
+
+
+groups_member.txt
+{
+    "id": id,
+    "group_id": group_id,
+    "user_id": user_id
+}
+
+
+
+channels.txt
+{
+    "id" : id ,
+    "name" : name ,
+    "username" : username ,
+    "admin_id" : admin_id
+}
+
+channels_members.txt
+{
+    "id" : id,
+    "channel_id" : channel_id,
+    "user_id" : user_id
+    }
+
+messages.txt
+    {
+    "id" : id,
+    "type" : type, [GROUP]
+    "message" : message,
+    "status" : status
+    }
+
+
+
+contacts.txt
+    {
+    "id" : id,
+    "user_id" : user_id,
+    "owner_id" : owner_id
+    }
+

@@ -1,0 +1,88 @@
+-- users
+--    id        int
+--    name      varchar
+--    age       int
+--    birthday  date
+
+-- create table if not exists users(
+--     id serial primary key ,
+--     name varchar(50) not null, -- default 'botir'
+--     age int , -- int -> bigint
+--     birthday date
+-- );
+
+-- drop table if exists users cascade ;
+
+-- truncate table users;
+
+-- alter table users alter column first_name set default 'botir';
+
+-- alter TABLE users
+-- RENAME COLUMN name
+-- TO first_name;
+-- alter table users alter column age type bigint;
+
+
+-- ALTER TABLE table_name
+-- ADD COLUMN column_name datatype column_constraint;
+
+-- ALTER TABLE table_name
+-- DROP COLUMN column_name;
+
+
+-- ALTER TABLE table_name
+-- ALTER COLUMN column_name
+-- [SET DEFAULT value | DROP DEFAULT];
+
+-- ALTER TABLE table_name
+-- ALTER COLUMN column_name
+-- [SET NOT NULL| DROP NOT NULL];
+--
+-- ALTER TABLE table_name
+-- ADD CHECK expression;
+--
+-- ALTER TABLE table_name
+-- ADD CONSTRAINT constraint_name constraint_definition;
+--
+-- ALTER TABLE table_name
+-- RENAME TO new_table_name;
+
+
+-- select - get
+-- delete - remove
+-- insert - add
+-- update - change
+
+
+-- insert into table_name(col1 , col2 , col3)
+-- values (val1 , val2 , val3);
+-- insert into users(name , age , birthday)
+-- values
+--        ('Jo''rabek' , 13 , '2011-12-01') ,
+--        ('Oktam' , 13 , '2011-12-01') ,
+--        ('Polat' , 13 , '2011-12-01');
+
+-- delete from table_name where col1 = '?';
+
+-- delete from users where id = 2 and name = 'Botir' returning id , name;
+
+-- id = 2 delete
+-- name = 'Botir' delete
+
+
+-- update table_name set col1 = 'New val', col2 = 'New value' where id = ?;
+
+
+-- id = 3 va name = 'John' update name = 'Botir'
+-- update users set name='Botir' where id=4 and name='Oktam' returning id;
+--
+-- select col1 , col2 from table_name where col1 = ?;
+--
+-- select name , id from users where name = 'Botir' ;
+
+-- name = 'Botir' select *
+
+-- 5 users add
+
+
+select * from users;

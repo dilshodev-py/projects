@@ -1,0 +1,37 @@
+
+select actor_id my_column from actor as a;
+
+
+select * from actor where actor_id > 10 and actor_id  <= 20;
+select a.* from actor a order by a.first_name, a.last_name;
+select a.* from actor a order by a.first_name desc ;
+select f.* from film f order by f.film_id offset (4-1)*10 fetch first 10 row only;
+select f.* from film f order by f.film_id offset (3-1)*10 limit 10;
+select f.* from film f where film_id in (1,5,10);
+select f.* from film f where film_id between 10 and 15;
+select f.* from film f where film_id >= 10 and film_id <=15;
+select f.* from film f where title ilike '%g__%';
+select f.* from film f where film_id  is null;
+
+--  table and column aliases
+--  where
+--  order by
+--  offset fetch
+--  limit
+--  in
+--  between
+--  like
+--  ilike
+--  is null
+-- ==============task 1 ===============
+
+-- payment : amount ustunidagi eng maximum qiymatga ega bo'lgan customer_id
+-- select customer_id , amount from payment order by amount desc limit 2;
+
+
+
+
+
+
+
+

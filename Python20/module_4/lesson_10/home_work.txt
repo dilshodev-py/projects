@@ -1,0 +1,15 @@
+payment , rental , film  - delete trigger yozilsin (qo'shimcha ustun sifatida delete qilingan vaqtni ham qo'shing)
+category , actor - update trigger (qo'shimcha ustun sifatida eski ustun malumoti va yangi ustun malumotini ham qo'shing)
+
+
+admin , staff - user yaratilsin
+admin - role ga '1234' password berilsin
+project_db - database yarating va database ga postgres owner qiling !
+
+A (id , a int)
+B (id, b int)
+C (id , c int) table lar yaratilsin
+
+admin -> role uchun project_db database tablelariga insert , select , update permission lari ochilsin
+staff -> role uchun project_db database dagi B table uchun faqat select so'ro'vi ishlasin ! Boshaqa tablelar ustuda hech qaysi query bajara olmasin !
+

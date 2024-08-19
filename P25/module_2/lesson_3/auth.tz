@@ -1,0 +1,19 @@
+lesson_3/self_auth.py:
+
+    users : list['User'] = []
+
+    User(id , fullname,username ,password):
+        sequence_id()
+        is_valid()
+        save()
+        is_login()
+
+    UI:
+        main()
+        register()
+        login()
+
+    TIME : 15:40
+
+
+

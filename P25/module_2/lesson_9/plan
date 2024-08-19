@@ -1,0 +1,13 @@
+revision      -   o'tilgan mavzularni qaytarish
+import , from -   kutibxonani chaqirish usullari
+file built var-   python fayl o'zida default bo'ladigan o'zgaruvchilar
+os            -   os methodlari bilan tanishish
+path          -   file / directory
+join          -   samarali yo'llarni birlashtirish
+try/except    -   xatoliklarni ushash va ularni tahlil qilish
+dataclass     -
+
+o'tilgan mavzularimiz tg_clone va todo proyektlarida ishlatib ko'rilsin
+
+mustaqil o'qish uchun:
+    pydantic kutibxonasini o'rganib kelish

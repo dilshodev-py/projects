@@ -1,0 +1,6 @@
+iterable
+iterator
+generator
+itertools -> library
+
+

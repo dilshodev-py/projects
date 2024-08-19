@@ -1,0 +1,3 @@
+revision:
+    magic filter - F[type , text , context.in_()] , lambda , def
+    python + postgersql

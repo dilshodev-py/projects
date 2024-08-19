@@ -1,0 +1,10 @@
+create table specialities (
+	id INT,
+	name VARCHAR(8)
+);
+insert into specialities (id, name) values (1, 'C#');
+insert into specialities (id, name) values (2, 'Java');
+insert into specialities (id, name) values (3, 'Frontend');
+insert into specialities (id, name) values (4, 'PHP');
+insert into specialities (id, name) values (5, 'Python');
+insert into specialities (id, name) values (6, 'Frontend');

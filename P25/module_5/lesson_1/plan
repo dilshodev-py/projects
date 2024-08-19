@@ -1,0 +1,14 @@
+venv - global , local
+.env
+telegram start
+filter
+button
+
+
+command:
+    sudo apt install python3.10-venv
+    python3 -m venv .venv
+    . .venv/bin/activate
+    deactivate
+    pip freeze
+    rm -rf .venv

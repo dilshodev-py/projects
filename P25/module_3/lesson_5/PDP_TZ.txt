@@ -1,0 +1,127 @@
+                      PDP RP system Project 🟢
+
+    database
+
+directs.txt:
+    id
+    name
+
+
+groups.txt
+    id
+    direct_id
+    max_student
+    time
+    is_active     default False
+    is_full       default False
+    mentor_id     default null
+
+
+staffs:
+    id
+    first_name
+    last_name
+    phone_number
+    role        [mentor , admin]
+    email
+    direct_id    default null
+
+
+
+
+students
+    id
+    first_name
+    last_name
+    phone_number
+    email
+    is_payment   default False
+    group_id
+    is_block   default False
+    created_at   default now()
+
+
+
+
+======================= admin ===========================
+1) Login
+2) exit
+
+
+                ----------------------- Login --------------------------
+
+                    >>> username
+                    >>> password
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+
+======================= Account ========================
+1) Students
+2) Group
+3) Staff
+5) settings
+0) logout
+
+             ======================= Students ========================
+                *) search
+                1) add
+                2) delete
+                0) back
+                               ----------------------- search -----------------------
+
+                                    >>> first_name
+                                    1) stundent1
+                                    2) stundent2
+                                    3) stundent3
+                                    4) stundent4
+
+                                    >>> choose
+                                    info  : dict
+                                    1) delete
+                                    2) update
+                                    3) back -> Students
+
+                               ----------------------- add -----------------------
+                                    >>> first name
+                                    >>> last name
+                                    >>> phone number
+                                    >>> email
+                                    >>> group [y/N]
+                                        if input == 'y':
+                                            1) direct1
+                                            2) direct2
+                                            3) direct3
+
+                               ----------------------- delete -----------------------
+                                    1) group1
+                                    2) group1
+                                    3) group1
+
+                                    >>> ID
+                                    Group delete with ID
+
+                               ----------------------- back -----------------------
+                               Account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

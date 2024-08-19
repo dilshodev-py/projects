@@ -1,0 +1,59 @@
+-- Subquery
+
+
+-- course name
+select c.*
+from courses c
+where c.course_id in (select s.course_id from students s);
+
+
+-- course name 1 - studenti ko'p bo'lgan course
+
+
+-- select name from courses where course_id = (select course_id from students s
+--     order by s.created_at limit 1);
+
+
+-- select * from courses where course_id > any(subquery); -- or
+-- select * from courses where course_id > all(subquery); -- and
+
+
+select *
+from students s
+where exists(select 1 from courses c where c.course_id = 6);
+
+
+
+set timezone = 'Asia/Tashkent';
+set role = 'postgres';
+
+select *
+from students;
+
+-- case, coalesce, nullif, cast
+
+-- select
+--            case
+--            when s.id % 2 = 0 then 'Juft'
+--             end as id
+--
+-- from students s;
+
+
+-- select coalesce(null,null , null);
+--
+-- select nullif('1',4);
+-- juft
+-- toq
+-- juft
+-- toq
+
+-- select right('body', 2);
+
+select cast('10' as integer);
+select '10'::integer;
+
+
+
+
+

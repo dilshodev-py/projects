@@ -1,0 +1,36 @@
+virtual environments
+requirements.txt
+telegram api
+    telethon
+    pyrogram
+
+telegram bot api
+    aiogram3.7 , 2.5 - async
+    telebot
+    python-telegram-bot
+    ....
+
+    HTTPS orqli api ishlatish
+
+    aiogram document
+    simple tg bot code
+    Magic filters
+    Manual filter
+
+
+Home work :
+
+1 - task
+    botga /start bosgan odamlarni telegramdagi malumotlarini postgresql database ga saqlab qo'yasin !
+    Etiborli bo'ling bir marta malumoti saqlangan odamlarni malumotlari qayta saqlanmasin !
+
+2 - task
+    Botga rasm , video , document file tashaladigan bo'lsa postgresql ga saqlanadigan qilinsin !
+    Jo'natvotgan odamni ham malumotlarini birga saqlaysiz !
+
+3 - task
+    Qr Code yasab beruvchi bo't tayorlab kelamiz !     example : @QRcodegen_bot
+
+
+
+

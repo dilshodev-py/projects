@@ -1,0 +1,12 @@
+
+serial (integer , sequence)
+sequence
+    create sequence sequence_name
+    INCREMENT 1
+    START 1
+    drop sequence sequence_name;
+
+==========================================
+
+TCL
+index

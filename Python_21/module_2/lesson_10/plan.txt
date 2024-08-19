@@ -1,0 +1,11 @@
+telegram_messenger 16:20
+Modules
+theme:
+    1. Import Modules in Python
+    6. Structure of Python Packages
+    7. Import Modules from Packages
+    3. Python Module Search Path
+    2. Execute Python Modules as Scripts
+    5. Python dir() Function
+
+

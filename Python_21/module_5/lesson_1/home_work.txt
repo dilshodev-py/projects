@@ -1,0 +1,35 @@
+# copyMessage,
+# sendMessage,
+# sendPhoto,
+# sendVideo,
+# sendAnimation,
+# sendAudio,
+# sendDocument,
+# sendSticker
+# sendVoice,
+# sendLocation,
+# sendContact
+
+
+=====================================================
+
+
+# ============== photo save ============
+"""psycopg2"""
+"""botga yuborilgan rasmlarni file id isini postgresql ga saqlimiz"""
+
+# ============== video save ============
+"""botga yuborilgan videolarni file id isini postgresql ga saqlimiz"""
+
+# ============== tarjima bot ============
+"""biror bir gap botga yozib jo'natilsa, yuborilgan gapni eng tiliga tarjima qilib bersin """
+
+# ============== Get Me ID ==============
+"""botga /start bosgan foydalanuvchilarga id sini qaytaradigan """
+
+# ============== Get File ID ============
+"""botga yuborilgan rasmlarni 3 xil file_id larini format qilib (chiroyli qilib) qaytaradigan qilinsin """
+
+
+# ============== Get Users Count from Group ============
+"""Group dan kelgan habardan group_id olib shu id ga tegishli guruhni userlar soni"""

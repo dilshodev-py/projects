@@ -1,0 +1,37 @@
+Uyga vazifa:
+    0) FUNCTION -> fibanachi sonlarni chiqaradigan function yozing
+    1) FUNCTION -> eng max payment(amount) qilgan customer topadigan query yozilsin (from_date , to_date)
+    2) FUNCTION -> Language, Film ! ANY LANGUAGE tarjima qilingan hamma kinolarni chiqaradigan query yozilsin
+    3) FUNCTION -> Eng uzun fullname bo'lgan actorlarni top 2 taligini chiqaruvchi query yozilsin
+    4) FUNCTION -> count_customer(country) -> Country , Customer !      country_name | count(customer)
+    5) FUNCTION -> pow(num , num)
+
+
+column between from_date to to_date
+
+
+    clone functions
+
+    REPLACE()
+    CONCAT   -> join
+    LOWER()
+    UPPER()
+    TRIM    - > strip()
+    LENGTH  - > len()
+    MOD()   - > qoldiqli bulish
+    POWER() - > daraja
+    SQRT    - > ildiz
+    SIGN    - > manfiy -1 and musbat 1
+
+
+
+
+cars table (id , name , model, price) 1000
+orders table(id , user_id(1,2000), car_id(1,1000)) 300
+users table (id , fullname , age) 2000
+books table (id , title , language , author_name) 3000
+
+backup.tar
+
+
+

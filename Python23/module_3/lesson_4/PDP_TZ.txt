@@ -1,0 +1,132 @@
+                      PDP RP system Project 🟢
+
+
+    database
+
+directs:
+    id
+    name
+
+
+groups
+    id
+    direct_id
+    max_student
+    is_active
+    is_full
+    mentor_id    default null
+
+
+staffs:
+    id
+    first_name
+    last_name
+    phone_number
+    role          [mentor , admin]
+    email
+    direct_id
+
+
+
+
+students
+    id
+    first_name
+    last_name
+    phone_number
+    email
+    is_payment   default False
+    group_id
+    is_block     default False
+    created_at   default now()
+
+
+
+
+======================= admin ===========================
+1) Login
+2) exit
+
+
+                ----------------------- Login --------------------------
+
+                    >>> username
+                    >>> password
+
+                ----------------------- Exit --------------------------
+                Process finish !
+
+
+======================= Account ========================
+1) Students
+2) Group
+3) Teacher
+5) settings
+0) logout
+
+             ======================= Students ========================
+                *) search
+                1) add
+                               ----------------------- search -----------------------
+
+                                    >>> first_name
+                                    1) stundent1
+                                    2) stundent2
+                                    3) stundent3
+                                    4) stundent4
+
+                                    >>> choose
+                                    info  : dict
+                                    1) delete
+                                    2) update
+                                    3) back -> Students
+
+                               ----------------------- add -----------------------
+                                    >>> first name
+                                    >>> last name
+                                    >>> phone number
+                                    >>> email
+                                    >>> group [y/N]
+                                        if input == 'y':
+                                            1) direct1
+                                            2) direct2
+                                            3) direct3
+
+             ======================= Group ========================
+                *) search
+                1) add
+                               ----------------------- search -----------------------
+
+                                    >>> first_name
+                                    1) stundent1
+                                    2) stundent2
+                                    3) stundent3
+                                    4) stundent4
+
+                                    >>> choose
+                                    info  : dict
+                                    1) delete
+                                    2) update
+                                    3) back -> Students
+
+                               ----------------------- add -----------------------
+                                    >>> first name
+                                    >>> last name
+                                    >>> phone number
+                                    >>> email
+                                    >>> group [y/N]
+                                        if input == 'y':
+                                            1) direct1
+                                            2) direct2
+                                            3) direct3
+
+
+
+
+
+
+
+
+
+
+

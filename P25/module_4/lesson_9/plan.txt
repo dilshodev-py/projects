@@ -1,0 +1,34 @@
+view
+function
+crontab
+auto backup
+
+
+create view view_name as select * from table1
+join table2 on col1 = col2
+join table3 on col1 = col2
+join table4 on col1 = col2
+group by
+order by
+limit len;
+
+select * from view_name;
+drop view view_name;
+
+
+
+
+function : search_books(ilike_title varchar)
+    books *
+
+17:30
+
+function : pagination_genres(2) # 2 chi 10 talik
+    genres *
+
+17:40
+
+
+
+
+

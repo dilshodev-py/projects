@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{% url 'regions' %}">Back</a>
+    {% for district in districts %}
+    	<div>
+            <h1>{{ district.name }}</h1>
+        </div>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+postgres password -> '2' ☑
+DATABASE ->     LESSON_3 ☑
+
+DML - DATA Manupulation Language
+    insert into table_name (col1 , col2) values (val1 , val2)
+    update table_name set col_name = 'Val' ... where condition
+    delete from table_name where conditon
+    select [* , col_name] from table_name where condition;
+    Foreign Key : O2O , O2M , M2O , M2M
+
+1)
+constraint con_name
+    foreign key (column_name)
+    references table_name(column_name) on delete [RESTRICT]
+
+
+2)# table1 and table2 # con_name : tables2_table1_id_fkey
+foreign key (column_name)
+    references table_name(column_name) on delete
+
+
+3)column_name type default = 1 references table_name(column_name) on delete SET DEFAULT
+
+
+constraint :
+    primary key : not null , index , unique
+    foreign key : O2O , O2M , M2O , M2M :
+        methods :
+            CASCADE - parent o'chirilsa childlar ham o'chib ketadi
+            SET NULL - parent o'chirilsa childlar uchun null qiymatni o'rnatadi
+            SET DEFAULT - parent o'chirilsa childlar uchun o'rnatilgan default olinsin
+            RESTRICT - childlar bor bo'lgan parent o'chirilmaydi
+            NO ACTION - hech narsa qimasin
+    not null : bo'sh masalika tekshiradi
+    unique : yagonalika tekshiradi
+    default : qiymat kirmasa o'rnatilgan qiymat olinsin
+    check : custom condition
+
+
+
+
+
+

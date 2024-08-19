@@ -1,0 +1,24 @@
+
+0) https://leetcode.com/problems/to-lower-case/
+1) https://leetcode.com/problems/defanging-an-ip-address/
+2) https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
+3) https://leetcode.com/problems/jewels-and-stones/
+4) https://leetcode.com/problems/goal-parser-interpretation/
+5) https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
+6) https://leetcode.com/problems/shuffle-string/
+7) https://leetcode.com/problems/truncate-sentence/
+8) https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/
+9) https://leetcode.com/problems/check-if-the-sentence-is-pangram/
+10) https://leetcode.com/problems/reverse-words-in-a-string-iii/
+11) https://leetcode.com/problems/remove-outermost-parentheses/
+12) https://leetcode.com/problems/count-asterisks/
+13) https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
+14) https://leetcode.com/problems/rings-and-rods/
+15) https://leetcode.com/problems/replace-all-digits-with-characters/
+
+
+
+
+
+def number(a:int , b:int) -> int:
+    return a + b
