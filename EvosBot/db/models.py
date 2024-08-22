@@ -3,16 +3,16 @@ from db.configs import DB
 
 class User(DB):
 
-    def __init__(self ,
+    def __init__(self,
                  *cols,
-                 id : int = None,
-                 user_id : int = None,
-                 first_name : str = None,
-                 last_name : str = None,
-                 phone_number : str = None,
-                 username : str = None,
-                 lang : str = None,
-                 created_at : str = None,
+                 id: int = None,
+                 user_id: int = None,
+                 first_name: str = None,
+                 last_name: str = None,
+                 phone_number: str = None,
+                 username: str = None,
+                 lang: str = None,
+                 created_at: str = None,
                  ):
         self.cols = cols
         self.id = id
@@ -26,16 +26,16 @@ class User(DB):
 
 
 class SiteSetting(DB):
-    def __init__(self ,
+    def __init__(self,
                  *cols,
-                 id : int = None,
-                 contact : str = None,
-                 address : str = None,
-                 description : str = None,
-                 longitude : float = None,
-                 latitude : float = None,
-                 about_company : str = None,
-                 logo : str = None
+                 id: int = None,
+                 contact: str = None,
+                 address: str = None,
+                 description: str = None,
+                 longitude: float = None,
+                 latitude: float = None,
+                 about_company: str = None,
+                 logo: str = None
                  ):
         self.cols = cols
         self.id = id
@@ -47,10 +47,11 @@ class SiteSetting(DB):
         self.about_company = about_company
         self.logo = logo
 
+
 class Region(DB):
-    def __init__(self ,*cols,
-                 id : int = None,
-                 name : str = None,
+    def __init__(self, *cols,
+                 id: int = None,
+                 name: str = None,
                  ):
         self.cols = cols
         self.id = id
@@ -77,11 +78,10 @@ class Region(DB):
                     join workplaces wp on bw.work_place_id = wp.id
                     where r.name = %s and wp.name = %s;
                 """
-        self.cur.execute(query, (choose_region,workplace))
+        self.cur.execute(query, (choose_region, workplace))
         return self.cur.fetchall()
 
-
-    def branches_list(self , choose_region: str , workplace : str , district_name: str):
+    def branches_list(self, choose_region: str, workplace: str, district_name: str):
         query = """
                             select b.* from regions r 
                             join districts d on r.id = d.region_id
@@ -93,6 +93,37 @@ class Region(DB):
         self.cur.execute(query, (choose_region, workplace, district_name))
         return self.cur.fetchall()
 
+
+class Category(DB):
+    def __init__(self, *cols,
+                 id: int = None,
+                 name: str = None
+                 ):
+        self.cols = cols
+        self.id = id
+        self.name = name
+
+
+class Product(DB):
+    def __init__(self, *cols,
+                 id: int = None,
+                 name: str = None,
+                 discount: float = None,
+                 price: float = None,
+                 aksiya: bool = None,
+                 description: str = None,
+                 photo: str = None,
+                 category_id: int = None,
+                 ):
+        self.cols = cols
+        self.id = id
+        self.name = name
+        self.discount = discount
+        self.price = price
+        self.aksiya = aksiya
+        self.description = description
+        self.photo = photo
+        self.category_id = category_id
 
 
 

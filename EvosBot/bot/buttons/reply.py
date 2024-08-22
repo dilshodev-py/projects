@@ -25,7 +25,7 @@ def main_buttons():
 def regions_button():
     rkb = ReplyKeyboardBuilder()
     rkb.add(*[
-        KeyboardButton(text = region[0]) for region in Region('name').select()
+        KeyboardButton(text = region.name) for region in Region('name').select()
     ])
     rkb.add(
         KeyboardButton(text = ignore_text),

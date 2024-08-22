@@ -1,5 +1,7 @@
 import psycopg2
 
+
+
 class DB:
     con = psycopg2.connect(
         dbname='evos_db',
@@ -10,6 +12,19 @@ class DB:
     )
 
     cur = con.cursor()
+
+    def get_dict_resultset(self,sql, params=()):
+        self.cur.execute(sql , params)
+        columns = list(self.cur.description)
+        result = self.cur.fetchall()
+        results = []
+        for row in result:
+            row_dict = {}
+            for i, col in enumerate(columns):
+                row_dict[col.name] = row[i]
+            results.append(row_dict)
+
+        return results
 
     def insert(self):
         d = self.__dict__
@@ -39,8 +54,14 @@ class DB:
         query = f"""
              select {col_names} from {table_name} {conditions_format}
         """
-        self.cur.execute(query, params)
-        return self.cur.fetchall()
+        # self.cur.execute(query, params)
+        # return self.cur.fetchall()
+
+        result: list = self.get_dict_resultset(query , params)
+        for i , data in enumerate(result):
+            result[i] = self.__class__(**data)
+        return result
+
 
     def delete(self, **conditions):
         table_name = self.__class__.__name__.lower() + "s"
@@ -70,6 +91,8 @@ class DB:
         params = tuple(values + list(conditions.values()))
         self.cur.execute(query, params)
         self.con.commit()
+
+
 
 
 

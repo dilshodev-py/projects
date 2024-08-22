@@ -1,0 +1,116 @@
+create table users
+(
+    id           serial primary key,
+    user_id      bigint,
+    first_name   varchar,
+    last_name    varchar,
+    phone_number varchar unique,
+    username     varchar unique,
+    lang         lang_type,
+    created_at   timestamp default CURRENT_TIMESTAMP
+);
+
+
+create table sitesettings
+(
+    id            serialprimary key,
+    contact       varchar,
+    address       varchar,
+    description   text,
+    longitude     double precision,
+    latitude      double precision,
+    about_company text,
+    logo          varchar
+);
+
+
+
+create table regions
+(
+    id   serial primary key,
+    name varchar
+);
+
+
+
+
+create table districts
+(
+    id        serial primary key,
+    name      varchar,
+    region_id integer references regions
+);
+
+
+
+create table branches
+(
+    id          serial primary key,
+    name        varchar,
+    longitude   double precision,
+    latitude    double precision,
+    address     varchar,
+    district_id integer references districts,
+    photo       varchar default 'https://telegra.ph/file/1b8ae56aec0c786543f5e.png'
+);
+
+
+create table workplaces
+(
+    id   serial primary key,
+    name varchar
+);
+
+
+
+create table branches_workplace
+(
+    id            serial primary key,
+    branches_id   integer references branches,
+    work_place_id integer references workplaces
+);
+
+
+create table categorys
+(
+    id   serial primary key,
+    name varchar
+);
+
+
+
+
+create table products
+(
+    id          serial primary key,
+    name        varchar,
+    discount    double precision,
+    price       double precision,
+    aksiya      boolean,
+    description text,
+    photo       varchar,
+    category_id integer references categorys
+);
+
+
+
+create table orders
+(
+    id           serial primary key,
+    user_id      integer references users,
+    phone_number varchar,
+    location     jsonb,
+    status       order_status default 'new'::order_status
+);
+
+
+
+create table orderitems
+(
+    id         serial  primary key,
+    count      integer,
+    order_id   integer references orders,
+    product_id integer references products
+);
+
+

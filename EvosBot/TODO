@@ -7,14 +7,6 @@ EVOS BOT:
     2) buttons ni qurish
 
 
-
-
-
-
-
-
-
-
 state
 redis
 buttons manager
@@ -27,6 +19,23 @@ db config
 
 sudo apt-get install redis
 pip install redis
+
+
+Get My Id
+
+webhook
+1000000 send message
+
+poll
+webhook
+
+
+
+
+ROUTER
+FICTURES - category , product
+web hook
+evos other tugatish
 
 
 

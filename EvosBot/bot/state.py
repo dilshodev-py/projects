@@ -7,3 +7,7 @@ class ButtonsState(StatesGroup):
     change_lang = State()
     district_choose = State()
     branches_choose = State()
+
+class MenuState(StatesGroup):
+    category = State()
+    pagination = State()

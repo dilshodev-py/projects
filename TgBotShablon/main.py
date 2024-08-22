@@ -1,11 +1,15 @@
 import asyncio
 import logging
 import sys
-from aiogram import Bot
+from aiogram import Bot, Dispatcher, html
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from bot.handlers import *
+from aiogram.filters import CommandStart
+from aiogram.types import Message
+from bot.dispatcher import dp
 from confs import Config
+from bot.handlers import *
+
 
 TOKEN = Config.bot.BOT_TOKEN
 

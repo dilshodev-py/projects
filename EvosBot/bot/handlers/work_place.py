@@ -1,4 +1,4 @@
-from aiogram import F
+from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
@@ -9,18 +9,18 @@ from db.models import Region
 from dispatcher import dp
 from aiogram.utils.i18n import lazy_gettext as __
 from aiogram.utils.i18n import gettext as _
-
-
-@dp.message(ButtonsState.workplace_buttons , F.text == __('🔙 Back'))
-@dp.message(F.text == work_place_text)
+work_place_router = Router()
+work_place_router.message.filter(F.from_user.id == 1148477816)
+@work_place_router.message(ButtonsState.workplace_buttons , F.text == __('🔙 Back'))
+@work_place_router.message(F.text == work_place_text)
 async def work_place(message: Message , state : FSMContext):
     await state.set_state(ButtonsState.region_buttons)
     await message.answer(text = _("Join the EVOS team!"))
     await message.answer(text = _("📍 Select a city."), reply_markup= regions_button())
 
 
-@dp.message(ButtonsState.district_choose , F.text == __('🔙 Back'))
-@dp.message(ButtonsState.region_buttons)
+@work_place_router.message(ButtonsState.district_choose , F.text == __('🔙 Back'))
+@work_place_router.message(ButtonsState.region_buttons)
 async def work_place(message: Message , state : FSMContext):
     region_name = message.text
     if message.text == __('🔙 Back'):
@@ -35,8 +35,8 @@ async def work_place(message: Message , state : FSMContext):
         await state.set_state(ButtonsState.workplace_buttons)
 
 
-@dp.message(ButtonsState.branches_choose , F.text == __('🔙 Back'))
-@dp.message(ButtonsState.workplace_buttons)
+@work_place_router.message(ButtonsState.branches_choose , F.text == __('🔙 Back'))
+@work_place_router.message(ButtonsState.workplace_buttons)
 async def work_place_handler(message: Message , state : FSMContext):
     await state.set_state(ButtonsState.district_choose)
     data = await state.get_data()
@@ -48,7 +48,7 @@ async def work_place_handler(message: Message , state : FSMContext):
     await message.answer("O'zizga qulay tumandi tanlang !" , reply_markup=make_button(d_list))
 
 
-@dp.message(ButtonsState.district_choose)
+@work_place_router.message(ButtonsState.district_choose)
 async def district_handler(message: Message , state : FSMContext):
     await state.set_state(ButtonsState.branches_choose)
     data = await state.get_data()
@@ -58,7 +58,7 @@ async def district_handler(message: Message , state : FSMContext):
     await message.answer("O'zizga qulay filialni tanlang !" , reply_markup=make_branches_button(b_list , icon="📍"))
 
 
-@dp.message(ButtonsState.branches_choose)
+@work_place_router.message(ButtonsState.branches_choose)
 async def branches_handler(message: Message, state: FSMContext):
     data = await state.get_data()
     await state.clear()
