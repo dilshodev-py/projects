@@ -1,6 +1,7 @@
 from aiogram import Router, F
 from aiogram.fsm.context import FSMContext
-from aiogram.types import Message, CallbackQuery, InputMediaPhoto
+from aiogram.types import Message, CallbackQuery, InputMediaPhoto, InlineQuery, InlineQueryResultArticle, \
+    InputTextMessageContent
 from aiogram.utils.i18n import lazy_gettext as __
 
 from bot.buttons.inline import category_inline_button, product_inline_button
@@ -48,6 +49,23 @@ async def back_handler(callback : CallbackQuery , state : FSMContext):
     await callback.message.edit_media( photo, reply_markup=(await category_inline_button()))
 
 
+
+@menu_router.inline_query()
+async def inline_query(inline : InlineQuery):
+    print(inline.query)
+    products = Product().filter_name(inline.query)
+    result = []
+    for product in products:
+        result.append(
+            InlineQueryResultArticle(
+                id = str(product.id),
+                title=product.name,
+                description= product.description + f"\nPrice: {product.price}",
+                thumbnail_url=product.photo,
+                input_message_content=InputTextMessageContent(message_text=f"{product.id}")
+            )
+        )
+    return inline.answer(result,cache_time=5, is_personal=True)
 # name
 # description
 # price

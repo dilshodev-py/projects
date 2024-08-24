@@ -125,5 +125,16 @@ class Product(DB):
         self.photo = photo
         self.category_id = category_id
 
+    def filter_name(self , value):
+        query = """
+            select * from products where name ilike %s
+        """
+        params = (f"%{value}%",)
+        self.cur.execute(query , params)
+        result: list = self.get_dict_resultset(query, params)
+        for i, data in enumerate(result):
+            result[i] = self.__class__(**data)
+        return result
+
 
 

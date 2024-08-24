@@ -5,8 +5,9 @@ from apps.views import HomePage, set_language_view
 
 urlpatterns = [
     path('', HomePage.as_view(), name='home'),
-    path('setlanguage', set_language_view, name='set_language'),
-
+    path('setlanguage', set_language_view, name='language'),
 ]
+
+
 
 

@@ -1,0 +1,78 @@
+Abay Axmedov
+Abdurauf Qo'ldoshev
+Abror Komilov
+Akbar To'xtamurodov
+Amirsaid Samig'jonov
+Asadbek O'ktamov
+Bilolxo'ja Yo'lchixo'jayev
+Husanova Tanzila
+Islomjon Sotiboldiev
+Izzatillo Zikirllayev
+Javohirbek Bekmurodov
+Miraxmad Yusupov
+Murodilla Azamov
+Navrozova Ruxshona
+Panjiyev Azizjon
+Raxmatillo Abdujabborov
+Samiya Mahmudova
+Sarvar Bahtiyorov
+Shoxrux Razakov
+Sitora Kodirkulova
+Umar Abdurahmanov
+Umarov Bunyod
+Zufar Allamurodov
+
+
+
+comment
+print
+variable
+stack , heap
+taqoslash operator
+data type
+mantiqiy operatorlar
+packing , unpacking
+shart operatorlari
+if / elif / else
+type casting
+type hint
+math
+type hint
+string slice - "text"[start:end:step]
+o'zlashtirish operatorlar
+is , in
+
+
+
+
+"1001" - 2 lik -> 10 lik
+int("1001" , 2)
+
+bin() - 10 lik -> 2 lik
+
+
+
+
+
+
+
+
+
+
+print(10 + data)
+
+
+
+a, b, c = 1,2,3
+a = 1,2,3
+
+
+# , """""" , '''''' - comment
+>
+<
+>=
+<=
+==
+!=
+
+

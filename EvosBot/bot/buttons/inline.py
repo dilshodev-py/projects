@@ -9,6 +9,9 @@ async def category_inline_button():
     ikb.add(*[
         InlineKeyboardButton(text=category.name , callback_data=str(category.id)) for category in Category('id' , 'name').select()
     ])
+    ikb.add(
+        InlineKeyboardButton(text = "Qidiruv 🔎" , switch_inline_query_current_chat="")
+    )
     ikb.adjust(2 , repeat=True)
     return ikb.as_markup()
 
@@ -26,3 +29,5 @@ async def product_inline_button(page_num ,count=0):
     ])
     ikb.adjust(2, 3  ,1 , 2)
     return ikb.as_markup()
+
+

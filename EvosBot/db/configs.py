@@ -54,8 +54,7 @@ class DB:
         query = f"""
              select {col_names} from {table_name} {conditions_format}
         """
-        # self.cur.execute(query, params)
-        # return self.cur.fetchall()
+
 
         result: list = self.get_dict_resultset(query , params)
         for i , data in enumerate(result):

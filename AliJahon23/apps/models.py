@@ -105,7 +105,7 @@ class Category(BaseSlugModel):
 #     name = CharField(max_length=255)
 
 class Product(BaseSlugModel, BaseModel):
-    description = RichTextUploadingField()
+    description = TextField()
     price = FloatField()
     payment = FloatField()
     quantity = IntegerField()
@@ -144,6 +144,18 @@ class Order(BaseModel):
     product = ForeignKey('apps.Product', CASCADE, related_name='orders')
     user = ForeignKey('apps.User', CASCADE, related_name='orders')
 
+
+class NewOrder(Order):
+    class Meta:
+        proxy = True
+        verbose_name = 'New Order'
+        verbose_name_plural = 'New Orders'
+
+class CanceledOrder(Order):
+    class Meta:
+        proxy = True
+        verbose_name = 'Canceled Order'
+        verbose_name_plural = 'Canceled Orders'
 
 class WishList(BaseModel):
     product = ForeignKey('apps.Product', CASCADE, related_name='wishlists', to_field='slug')

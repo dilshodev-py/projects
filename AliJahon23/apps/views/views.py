@@ -1,29 +1,25 @@
 import re
 import time
 
-from allauth.account.decorators import verified_email_required
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.mixins import LoginRequiredMixin
-
 from django.db.models import F, Count, Q, Sum
 from django.http import JsonResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse_lazy
+from django.utils.translation import gettext as _
 from django.views import View
 from django.views.generic import TemplateView, ListView, FormView, DetailView
-import django.contrib.auth.password_validation as validators
 
 from apps.forms import OrderForm, StreamForm
-from apps.models import Category, Product, User, WishList, Order, Stream, Comment, SiteSettings
+from apps.models import Category, Product, User, WishList, Order, Stream, SiteSettings
 from apps.tasks import send_email
-from django.utils.translation import gettext as _
 
 
 class SendEmailView(View):
     def get(self, request):
         user_pk = request.GET.get('pk')
         start = time.time()
-        data = send_email.delay(user_pk)
+        send_email.delay(user_pk)
         end = time.time()
         return JsonResponse({"status": _("Yuborildi") , "time": end-start, "email" : user_pk})
 class CategoryListView(ListView):
@@ -45,7 +41,7 @@ class ProductListView(ListView):
 
     def get_queryset(self):
         cat_slug = self.request.GET.get("category")
-        query = super().get_queryset()
+        query = super().get_queryset().filter()
         if cat_slug:
             query = query.filter(category__slug=cat_slug)
         return query

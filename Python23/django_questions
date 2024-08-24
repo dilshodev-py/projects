@@ -1,0 +1,23 @@
+Tool bar
+proxy models
+admin model fieldsets
+
+pythonanywhere
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Models:
+    1) phone_number = models.CharField(db_column='user_phone_number', max_length=30) - tablening shu ustuni "user_phone_number" shu nom bilan yaratilsin
+    2) Modelni abstract=True qilishimiz nima uchun ishlatiladi
+

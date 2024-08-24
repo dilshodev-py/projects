@@ -3,7 +3,7 @@ from django.contrib.admin import ModelAdmin, StackedInline
 from django.utils.html import format_html
 from mptt.admin import DraggableMPTTAdmin
 
-from apps.models import Category, Product, ProductImage, User, SiteSettings
+from apps.models import Category, Product, ProductImage, User, SiteSettings, Order, CanceledOrder, NewOrder
 
 admin.site.site_header = "Alijahon Admin"
 admin.site.index_title = "Welcome to Alijahon Portal"
@@ -13,16 +13,6 @@ admin.site.register(User)
 @admin.register(Category)
 class CategoryAdmin(ModelAdmin):
     exclude = 'slug',
-    # list_display = 'id', 'name', 'image_photo', 'product_count'
-
-    # @admin.display(empty_value="?")
-    # def image_photo(self, obj):
-    #     photo = obj.image.url
-    #     return format_html("<img src='{}' style='width: 50px' />", photo)
-
-    # @admin.display(empty_value="?")
-    # def product_count(self, obj):
-    #     return obj.products.count()
 
 
 class ProductImageInline(StackedInline):
@@ -38,6 +28,23 @@ class ProductAdmin(ModelAdmin):
     ordering = '-created_at',
     list_filter = 'quantity',
 
+    fieldsets = (
+        ("Page 1",
+         {"fields":
+              ("description",
+               "price",
+               "payment",
+               "quantity",
+               )
+          }),
+        ("Page 2",
+         {"fields": (
+             'for_stream_price',
+             'tg_id',
+             'category')}
+         ),
+    )
+
     @admin.display(empty_value="?")
     def is_exists(self, obj):
         icon_url = 'https://img.icons8.com/?size=100&id=9fp9k4lPT8us&format=png&color=000000'
@@ -51,10 +58,22 @@ class SiteSettingsModelAdmin(ModelAdmin):
     pass
 
 
-# plan:
-    # module 6 django jinja
-    # module 7 django jinja
-    # module 8 drf django
-    # module 9 drf django
-    # module 10 DEVOPS , DOCKER
+@admin.register(Order)
+class OrderModelAdmin(admin.ModelAdmin):
+    pass
 
+
+@admin.register(CanceledOrder)
+class DeliveredOrderAdmin(admin.ModelAdmin):
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.filter(status=Order.StatusType.DELIVERED)
+
+
+@admin.register(NewOrder)
+class NewOrderAdmin(admin.ModelAdmin):
+
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        return qs.filter(status=Order.StatusType.NEW)
